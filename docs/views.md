@@ -6,17 +6,17 @@
 ## New Session
 ![new-session]
 
-## NotesIndex / NoteIndexItem / NoteForm
-![notes]
+## Front Page (Root)
+![front-page]
 
-## NotebooksIndex / NotebookIndexItem
-![notebooks]
+## RestaurantIndex / RestaurantIndexItem
+![index-page]
 
-## NotebookForm
-![notebook-form]
+## ReservationSearch
+![search-form]
 
 [new-user]: ./wireframes/new_user.png
 [new-session]: ./wireframes/new_session.png
-[notes]: ./wireframes/root_notes.png
-[notebooks]: ./wireframes/root_notebooks.png
-[notebook-form]: ./wireframes/notebook_form.png
+[front-page]: ./wireframes/Root.png
+[index-page]: ./wireframes/RestaurantIndex.png
+[search-form]: ./wireframes/ReservationSearch.png
