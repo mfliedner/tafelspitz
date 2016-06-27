@@ -1,30 +1,25 @@
-# Phase 5: Reviews and Ratings
+# Phase 5: Favorites
 
 ## Rails
 ### Models
-* Review
+* Favorite
 
 ### Controllers
-* Api::ReviewsController (create, index, show)
+* Api::FavoritesController (create, destroy)
 
 ### Views
-* reviews/index.json.jbuilder
 
 ## Flux
 ### Views (React Components)
-* Review
-* ReviewForm
 
 ### Stores
-* Reviews
 
 ### Actions
-* ApiActions.receiveAllReviews -> triggered by ApiUtil
-* ReviewActions.fetchAllReviews -> triggers ApiUtil
-* ReviewActions.addReview
+* Favoritections.removeFavorite -> triggers ApiUtil
+* Favoritections.createFavorite -> triggered by ApiUtil
 
 ### ApiUtil
-* ApiUtil.fetchAllReviews
-* ApiUtil.addReview
+* ApiUtil.deleteFavorite
+* ApiUtil.createFavorite
 
 ## Gems/Libraries

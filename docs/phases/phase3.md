@@ -1,4 +1,4 @@
-# Phase 3: Reservations (1.5 days)
+# Phase 3: Reservations (2 days)
 
 ## Rails
 ### Models

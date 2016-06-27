@@ -1,4 +1,4 @@
-# Phase 2: Restaurants (1.5 days)
+# Phase 2: Restaurants (2 days)
 
 ## Rails
 ### Models
