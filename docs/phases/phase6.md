@@ -2,7 +2,7 @@
 
 ## Rails
 ### Models
-* Favorites
+* Favorite
 
 ### Controllers
 * Api::FavoritesController (create, destroy)

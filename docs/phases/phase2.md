@@ -4,7 +4,7 @@
 ### Models
 
 ### Controllers
-* Api::RestaurantController (create, index, show)
+* Api::RestaurantsController (create, index, show)
 
 ### Views
 * restaurants/index.json.jbuilder

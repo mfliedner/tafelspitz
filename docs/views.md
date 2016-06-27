@@ -13,7 +13,7 @@
 ![index-page]
 
 ## RestaurantIndexItem
-![index-page]
+![item-page]
 
 ## Show Page / Restaurant
 ![show-page]
@@ -30,6 +30,9 @@
 ## AddRestaurantForm
 ![add-restaurant-form]
 
+## ReviewForm
+![review-form]
+
 [new-user]: ./wireframes/new_user.png
 [new-session]: ./wireframes/new_session.png
 [front-page]: ./wireframes/Root.png
@@ -40,3 +43,4 @@
 [reservation-form]: ./wireframes/ReservationForm.png
 [update-form]: ./wireframes/ReservationUpdate.png
 [add-restaurant-form]: ./wireframes/AddRestaurantForm.png
+[review-form]: ./wireframes/Review.png

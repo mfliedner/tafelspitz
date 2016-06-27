@@ -74,7 +74,7 @@ user interface.
 - [ ] create `Reservation` model
 - [ ] setup the flux loop with skeleton files
 - [ ] setup React Router
-- [ ] implement the `ReservationController`.
+- [ ] implement the `ReservationsController`.
 - [ ] create the reservation form views
 
 ### Phase 4: Start Styling (1 day, W2 Mon 6pm)
@@ -89,7 +89,7 @@ user interface.
 
 **Objective:** User can add reviews and restaurants indexed by rating.
 
-- [ ] create `Reviews` model
+- [ ] create `Review` model
 - build out API, Flux loop, and components for:
   - [ ] `ReviewsController`
   - [ ] create ratings-filtered index
@@ -100,7 +100,7 @@ user interface.
 
 **Objective:** Restaurants can be liked/unliked and filtered to favorites.
 
-- [ ] create `Favorites` model and join table
+- [ ] create `Favorite` model and join table
 - [ ] build toggle logic
 - [ ] create store filter of favorite restaurants
 
