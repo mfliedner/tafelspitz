@@ -1,51 +1,62 @@
 # Schema Information
 
-## notes
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-title       | string    | not null
-body        | text      | not null
-author_id   | integer   | not null, foreign key (references users), indexed
-notebook_id | integer   | not null, foreign key (references notebooks), indexed
-archived    | boolean   | not null, default: false
-
-## notebooks
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users), indexed
-title       | string    | not null
-description | string    | 
-
-## reminders
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key (references users), indexed
-note_id     | string    | not null, foreign key (references notes), indexed
-date        | datetime  | not null
-type        | string    | not null
-prev_id     | integer   | foreign key (references reminders), indexed
-
-## tags
+## restaurants
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
+description | text      | not null
+owner_id    | integer   | not null, foreign key (references users), indexed
+address     | string    | not null
+phone       | string    | not null
+price_range | integer   | not null
+lat         | float     | not null
+lon         | float     | not null
+opening     | time      | not null
+closing     | time      | not null
+seats       | integer   | not null
+img_url     | string    |
+menu        | text      |
 
-## taggings
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-name        | string    | not null
-note_id     | integer   | not null, foreign key (references notes), indexed, unique [tag_id]
-tag_id      | integer   | not null, foreign key (references tags), indexed
+## reservations
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+guest_id      | integer   | not null, foreign key (references users), indexed
+restaurant_id | integer   | not null, foreign key (references restaurants), indexed
+date          | datetime  | not null
+time          | time      | not null
+guest_count   | integer   | not null
+requests      | text      |
+
+## reviews
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+user_id       | integer   | not null, foreign key (references users), indexed
+restaurant_id | integer   | not null, foreign key (references restaurants), indexed
+date          | datetime  | not null
+rating        | integer   | not null
+rate_food     | integer   |
+rate_ambience | integer   |
+rate_service  | integer   |
+rate_value    | integer   |
+body          | text      |
+
+## favorites
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+user_id       | integer   | not null, foreign key (references users), indexed
+restaurant_id | integer   | not null, foreign key (references restaurants), indexed
 
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-username        | string    | not null, indexed, unique
+email           | string    | not null, indexed, unique
+first_name      | string    | not null
+last_name       | string    | not null
+phone           | string    |
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique

@@ -1,40 +1,30 @@
-# Phase 5: Reminders and Garbage Collection
+# Phase 5: Reviews and Ratings
 
 ## Rails
 ### Models
-* Reminder
+* Review
 
 ### Controllers
-* Api::RemindersController (create, destroy, index, show, update)
+* Api::ReviewsController (create, index, show)
 
 ### Views
-* reminders/index.json.jbuilder
+* reviews/index.json.jbuilder
 
 ## Flux
 ### Views (React Components)
-* RemindersIndex
-  - ReminderIndexItem
-* ReminderShow
-* ReminderForm
+* Review
+* ReviewForm
 
 ### Stores
-* Reminder
+* Reviews
 
 ### Actions
-* ApiActions.receiveAllReminders -> triggered by ApiUtil
-* ApiActions.receiveSingleReminder
-* ApiActions.deleteReminder
-* ReminderActions.fetchAllReminders -> triggers ApiUtil
-* ReminderActions.fetchSingleReminder
-* ReminderActions.createReminder
-* ReminderActions.updateReminder
-* ReminderActions.destroyReminder
+* ApiActions.receiveAllReviews -> triggered by ApiUtil
+* ReviewActions.fetchAllReviews -> triggers ApiUtil
+* ReviewActions.addReview
 
 ### ApiUtil
-* ApiUtil.fetchAllReminders
-* ApiUtil.fetchSingleReminder
-* ApiUtil.createReminder
-* ApiUtil.updateReminder
-* ApiUtil.destroyReminder
+* ApiUtil.fetchAllReviews
+* ApiUtil.addReview
 
 ## Gems/Libraries

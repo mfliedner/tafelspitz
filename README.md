@@ -43,44 +43,41 @@ Tafelspitz is a web application inspired by Opentable that will be build using R
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (1 day, W1 Tu 6pm)
+### Phase 1: Backend setup and Front End User Authentication (1 day, W1 Tue 6pm)
 
 **Objective:** Functioning rails project with Authentication
 
 - [ ] create new project
-- [ ] create `User` model
+- [ ] create `User` and `Restaurant` models
 - [ ] authentication
 - [ ] user signup/signin pages
 - [ ] blank landing page after signin
 
-### Phase 2: Notes Model, API, and basic APIUtil (1.5 days, W1 Th 12pm)
+### Phase 2: Restaurant Model, API, and basic APIUtil (1.5 days, W1 Thu 12pm)
 
-**Objective:** Notes can be created, read, edited and destroyed through
-the API.
+**Objective:** Restaurants can be created and shown.
 
-- [ ] create `Note` model
-- [ ] seed the database with a small amount of test data
-- [ ] CRUD API for notes (`NotesController`)
-- [ ] jBuilder views for notes
+- [ ] create `Restaurant` views and forms
+- [ ] seed the database with test data
+- [ ] CRUD API for restaurants (`RestaurantsController`)
+- [ ] jBuilder views for restaurants
 - [ ] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.
+- [ ] use Google Map API for restaurant map
 
-### Phase 3: Flux Architecture and Router (1.5 days, W1 F 6pm)
+### Phase 3: Reservations, Flux Architecture and Router (1.5 days, W1 Fri 6pm)
 
 **Objective:** Notes can be created, read, edited and destroyed with the
 user interface.
 
+- [ ] create `Reservation` model
 - [ ] setup the flux loop with skeleton files
 - [ ] setup React Router
-- implement each note component, building out the flux loop as needed.
-  - [ ] `NotesIndex`
-  - [ ] `NoteIndexItem`
-  - [ ] `NoteForm`
-- [ ] save Notes to the DB when the form loses focus or is left idle
-  after editing.
+- [ ] implement the `ReservationController`.
+- [ ] create the reservation form views
 
-### Phase 4: Start Styling (0.5 days, W2 M 12pm)
+### Phase 4: Start Styling (1 day, W2 Mon 6pm)
 
 **Objective:** Existing pages (including signup/signin) will look good.
 
@@ -88,42 +85,26 @@ user interface.
 - [ ] position elements on the page
 - [ ] add basic colors & styles
 
-### Phase 5: Notebooks (1 day, W2 Tu 12pm)
+### Phase 5: Reviews and Ratings (1 day, W2 Tue 6pm)
 
-**Objective:** Notes belong to Notebooks, and can be viewed by notebook.
+**Objective:** User can add reviews and restaurants indexed by rating.
 
-- [ ] create `Notebook` model
+- [ ] create `Reviews` model
 - build out API, Flux loop, and components for:
-  - [ ] Notebook CRUD
-  - [ ] adding notes requires a notebook
-  - [ ] moving notes to a different notebook
-  - [ ] viewing notes by notebook
+  - [ ] `ReviewsController`
+  - [ ] create ratings-filtered index
+  - [ ] add reviews to restaurants show page
 - Use CSS to style new views
 
-Phase 3 adds organization to the Notes. Notes belong to a Notebook,
-which has its own `Index` view.
+### Phase 6: Favorites (1 day, W2 Wed 6pm)
 
-### Phase 6: Tags (1 days, W2 Th 12pm)
+**Objective:** Restaurants can be liked/unliked and filtered to favorites.
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+- [ ] create `Favorites` model and join table
+- [ ] build toggle logic
+- [ ] create store filter of favorite restaurants
 
-- [ ] create `Tag` model and join table
-- build out API, Flux loop, and components for:
-  - [ ] fetching tags for notebook
-  - [ ] adding tags to notebook
-  - [ ] creating tags while adding to notebooks
-  - [ ] searching notebooks by tag
-- [ ] Style new elements
-
-### Phase 7: Allow Complex Styling in Notes (0.5 days, W2 Th 6pm)
-
-**objective:** Enable complex styling of notes.
-
-- [ ] Integrate `react-quill` (based on Quill.js).
-- [ ] Use Rails helpers to sanitize HTML before rendering.
-- [ ] Style the new Quill elements.
-
-### Phase 8: Styling Cleanup and Seeding (1 day, W2 F 6pm)
+### Phase 7: Styling Cleanup (2 day, W2 Fri 6pm)
 
 **objective:** Make the site feel more cohesive and awesome.
 
@@ -134,12 +115,13 @@ which has its own `Index` view.
 ### Bonus Features (TBD)
 - [ ] Discover/explore
 - [ ] Points for bookings and usage of site
-- [ ] Help page
-- [ ] Regional sites
-- [ ] Restaurateur sign-up
+- [ ] Tags
+- [ ] Help/Community page
+- [ ] Photo gallery
+- [ ] Diner/Restaurateur email contact
 
 [phase-one]: docs/phases/phase1.md
 [phase-two]: docs/phases/phase2.md
 [phase-three]: docs/phases/phase3.md
-[phase-four]: docs/phases/phase4.md
 [phase-five]: docs/phases/phase5.md
+[phase-six]: docs/phases/phase6.md
