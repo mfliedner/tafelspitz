@@ -48,7 +48,7 @@ const LoginForm = React.createClass({
 			last_name: this.state.last_name,
 			phone: this.state.phone
 		};
-debugger
+		
     if (this.props.location.pathname === "/login") {
       SessionActions.logIn(formData);
     } else {
