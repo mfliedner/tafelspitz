@@ -48,12 +48,8 @@ const SignupForm = React.createClass({
 			last_name: this.state.last_name,
 			phone: this.state.phone
 		};
-		
-    if (this.props.location.pathname === "/login") {
-      SessionActions.logIn(formData);
-    } else {
-      SessionActions.signUp(formData);
-    }
+
+		SessionActions.signUp(formData);
 	},
 
   fieldErrors(field) {
@@ -77,13 +73,7 @@ const SignupForm = React.createClass({
   },
 
 	render() {
-
-    let navLink;
-    if (this.formType() === "login") {
-      navLink = <Link to="/signup">sign up</Link>;
-    } else {
-      navLink = <Link to="/login">log in</Link>;
-    }
+    const navLink = <Link to="/login">log in</Link>;
 
 		return (
 			<div className="signup-form-container">

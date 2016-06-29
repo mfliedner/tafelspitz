@@ -11,7 +11,9 @@ const IndexRoute = ReactRouter.IndexRoute;
 const hashHistory = ReactRouter.hashHistory;
 // Components
 const App = require('./components/app');
-// const Search = require('./components/search');
+const Search = require('./components/search');
+const RestaurantForm = require('./components/restaurant_form');
+const RestaurantShow = require('./components/restaurant_show');
 const LoginForm = require('./components/login_form');
 const SignupForm = require('./components/signup_form');
 //Auth
@@ -34,9 +36,12 @@ function _ensureLoggedIn(nextState, replace) {
 
 const routes = (
   <Router history={ hashHistory }>
-    <Route path="/" component={ App } onEnter={ _ensureUserFetched }>
+    <Route path="/" component={ App }>
+      <IndexRoute component={ Search } />
       <Route path="/login" component={ LoginForm } />
       <Route path="/signup" component={ SignupForm } />
+      <Route path="/restaurants/new" component={ RestaurantForm } onEnter={ _ensureLoggedIn }/>
+      <Route path="/restaurants/:restaurantId" component={ RestaurantShow }/>
     </Route>
   </Router>
 );

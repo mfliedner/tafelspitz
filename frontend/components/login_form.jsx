@@ -15,10 +15,7 @@ const LoginForm = React.createClass({
   getInitialState() {
     return {
       email: "",
-			password: "",
-			first_name: "",
-			last_name: "",
-			phone: ""
+			password: ""
     };
   },
 
@@ -43,17 +40,10 @@ const LoginForm = React.createClass({
 
 		const formData = {
 			email: this.state.email,
-			password: this.state.password,
-			first_name: this.state.first_name,
-			last_name: this.state.last_name,
-			phone: this.state.phone
+			password: this.state.password
 		};
-		
-    if (this.props.location.pathname === "/login") {
-      SessionActions.logIn(formData);
-    } else {
-      SessionActions.signUp(formData);
-    }
+
+    SessionActions.logIn(formData);
 	},
 
   fieldErrors(field) {
@@ -77,13 +67,7 @@ const LoginForm = React.createClass({
   },
 
 	render() {
-
-    let navLink;
-    if (this.formType() === "login") {
-      navLink = <Link to="/signup">sign up</Link>;
-    } else {
-      navLink = <Link to="/login">log in</Link>;
-    }
+    const navLink = <Link to="/signup">sign up</Link>;
 
 		return (
 			<div className="login-form-container">
