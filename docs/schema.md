@@ -10,11 +10,11 @@ owner_id    | integer   | not null, foreign key (references users), indexed
 address     | string    | not null
 phone       | string    | not null
 price_range | integer   | not null
-lat         | float     | not null
-lon         | float     | not null
-opening     | time      | not null
-closing     | time      | not null
-seats       | integer   | not null
+lat         | float     |
+lng         | float     |
+opening     | time      |
+closing     | time      |
+seats       | integer   | 
 img_url     | string    |
 menu        | text      |
 

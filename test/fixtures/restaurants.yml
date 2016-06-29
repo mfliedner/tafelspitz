@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner_id: 1
+  description: MyText
+  name: MyString
+  address: MyString
+  price_range: 1
+  lat: 1.5
+  lng: 1.5
+  opening: 2016-06-29 04:49:50
+  closing: 2016-06-29 04:49:50
+  seats: 1
+  img_url: MyString
+  phone: MyString
+  menu: MyText
+
+two:
+  owner_id: 1
+  description: MyText
+  name: MyString
+  address: MyString
+  price_range: 1
+  lat: 1.5
+  lng: 1.5
+  opening: 2016-06-29 04:49:50
+  closing: 2016-06-29 04:49:50
+  seats: 1
+  img_url: MyString
+  phone: MyString
+  menu: MyText

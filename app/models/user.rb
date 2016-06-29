@@ -21,6 +21,11 @@ class User < ActiveRecord::Base
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness
 
+  has_many :restaurants,
+    foreign_key: :owner_id,
+    primary_key: :id,
+    class_name: "Restaurant"
+
   attr_reader :password
 
   def password= password
