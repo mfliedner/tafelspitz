@@ -35,8 +35,8 @@ const LoginForm = React.createClass({
     }
   },
 
-	handleSubmit(e) {
-		e.preventDefault();
+	handleSubmit(event) {
+		event.preventDefault();
 
 		const formData = {
 			email: this.state.email,
@@ -44,10 +44,11 @@ const LoginForm = React.createClass({
 		};
 
     SessionActions.logIn(formData);
+		this.props.closeModal();
 	},
 
   fieldErrors(field) {
-    const errors = ErrorStore.formErrors(this.formType());
+    const errors = ErrorStore.formErrors(this.login);
 
     if (!errors[field]) { return; }
 
@@ -58,23 +59,15 @@ const LoginForm = React.createClass({
     return <ul>{ messages }</ul>;
   },
 
-  formType() {
-    return this.props.location.pathname.slice(1);
-  },
-
   update(property) {
     return (e) => this.setState({[property]: e.target.value});
   },
 
 	render() {
-    const navLink = <Link to="/signup">sign up</Link>;
-
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 	        Welcome to Tafelspitz!
-					<br/>
-					Please { this.formType() } or { navLink }
 
 	        { this.fieldErrors("base") }
 					<div className="login-form">

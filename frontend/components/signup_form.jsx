@@ -38,8 +38,8 @@ const SignupForm = React.createClass({
     }
   },
 
-	handleSubmit(e) {
-		e.preventDefault();
+	handleSubmit(event) {
+		event.preventDefault();
 
 		const formData = {
 			email: this.state.email,
@@ -50,10 +50,11 @@ const SignupForm = React.createClass({
 		};
 
 		SessionActions.signUp(formData);
+		this.props.closeModal();
 	},
 
   fieldErrors(field) {
-    const errors = ErrorStore.formErrors(this.formType());
+    const errors = ErrorStore.formErrors(this.signup);
 
     if (!errors[field]) { return; }
 
@@ -64,23 +65,15 @@ const SignupForm = React.createClass({
     return <ul>{ messages }</ul>;
   },
 
-  formType() {
-    return this.props.location.pathname.slice(1);
-  },
-
   update(property) {
     return (e) => this.setState({[property]: e.target.value});
   },
 
 	render() {
-    const navLink = <Link to="/login">log in</Link>;
-
 		return (
 			<div className="signup-form-container">
 				<form onSubmit={this.handleSubmit} className="signup-form-box">
 	        Sign up for Tafelspitz!
-					<br/>
-					Please { this.formType() } or { navLink }
 
 	        { this.fieldErrors("base") }
 					<div className="signup-form">
