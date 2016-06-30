@@ -48,34 +48,45 @@ const Header = React.createClass({
   navbar() {
     if (SessionStore.isUserLoggedIn()) {
     	return (
-    		<nav className="logout">
-          <ul>
-            <li className="header-name">{SessionStore.currentUser().email}</li>
-            <li>
-              <button id="logout-button" className="header-button"
-                      onClick={this._handleLogOut}>
-                Sign out
-              </button>
+    		<nav className="header-nav logout group">
+          <ul className="header-list">
+            <li className="user">
+              <a href="#">Hello!</a>
+              <span className="cover"></span>
+              <ul className="user-menu">
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Favorites</a></li>
+                <li><a href="#">Restaurants to review</a></li>
+                <li>
+                  <button id="logout-button" className="logout-button"
+                          onClick={this._handleLogOut}>
+                    Sign out
+                  </button>
+                </li>
+              </ul>
             </li>
+            <li></li>
+            <li></li>
           </ul>
     		</nav>
     	);
     } else {
       return (
-        <nav className="login-signup">
-          <ul>
-            <li>
-              <button id="signup-button" className="header-button"
+        <nav className="header-nav login-signup group">
+          <ul className="header-list">
+            <li className="signup">
+              <button id="signup-button" className="signup-button"
                       onClick={this._handleClick.bind(this, false)}>
                 Sign up
               </button>
             </li>
-            <li>
-              <button id="login-button" className="header-button"
+            <li className="login">
+              <button id="login-button" className="login-button"
                       onClick={this._handleClick.bind(this, true)}>
                 Sign in
               </button>
             </li>
+            <li></li>
           </ul>
         </nav>
       );
@@ -88,7 +99,12 @@ const Header = React.createClass({
       <SignupForm closeModal={this.closeModal}/>;
 
     return (
-      <div>
+      <div className="header">
+        <div className="header-logo group">
+          <Link to="/" >
+            <img src="/tafelspitz-logo.png" alt="Tafelspitz-Logo"/>
+          </Link>
+        </div>
         { this.navbar() }
         <Modal
           isOpen={this.state.modalOpen}

@@ -44,7 +44,6 @@ const Search = React.createClass({
     return(
       <div className="user-pane">
         <div className="left-half">
-          <h5>Click Map to Add Restaurant!</h5>
           <RestaurantMap restaurants={this.state.restaurants}/>
         </div>
         <div className="right-half">
