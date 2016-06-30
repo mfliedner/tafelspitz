@@ -30,6 +30,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Hide secret keys in config/application.yml
+gem 'figaro'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -49,5 +52,4 @@ end
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor' # error feedback
-  gem 'figaro'
 end

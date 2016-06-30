@@ -1,3 +1,5 @@
+
+
 class Restaurant < ActiveRecord::Base
   validates :description, :name, :owner_id, :price_range, :address, presence: true
   validates :price_range, inclusion: { in: (1..4) }
@@ -5,6 +7,18 @@ class Restaurant < ActiveRecord::Base
     foreign_key: :owner_id,
     primary_key: :id,
     class_name: "User"
+
+  def self.address_to_coords(address)
+    query = "select *"
+    url = "https://maps.googleapis.com/maps/api/geocode/json?address="
+    url.concat(address.split.join("+"))
+    api_key = "&key=#{ENV['gmap_key']}"
+    url.concat(api_key)
+    uri = URI(url)
+    response = Net::HTTP.post_form(uri, { query => nil })
+    body = JSON.parse(response.body)
+    body["results"][0]["geometry"]["location"]
+  end
 
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
