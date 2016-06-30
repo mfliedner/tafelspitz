@@ -47,8 +47,9 @@ const RestaurantForm = React.createClass({
                 onChange={this.update("name")} className="restaurant-field"/>
 
               <label className="restaurant-field">Description</label>
-              <input type="text" value={this.state.description}
-                onChange={this.update("description")} className="restaurant-field"/>
+              <textarea value={this.state.description}
+                onChange={this.update("description")} className="restaurant-field">
+              </textarea>
 
               <label className="restaurant-field">Address</label>
               <input type="text" value={this.state.address}
@@ -59,8 +60,9 @@ const RestaurantForm = React.createClass({
                 onChange={this.update("phone")} className="restaurant-field"/>
 
               <label className="restaurant-field">Menu</label>
-              <input type="text" value={this.state.menu}
-                onChange={this.update("menu")} className="restaurant-field"/>
+              <textarea value={this.state.menu}
+                onChange={this.update("menu")} className="restaurant-field">
+              </textarea>
 
               <label className="restaurant-field">Image URL</label>
               <input type="text" value={this.state.imageURL}

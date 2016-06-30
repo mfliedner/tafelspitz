@@ -10,7 +10,10 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.create!(restaurant_params)
+    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.owner_id = current_user.id
+    @restaurant.save!
+    @restaurant
     render :show
   end
 
