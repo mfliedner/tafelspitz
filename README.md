@@ -37,13 +37,13 @@ day (all day by default) that does not vary with date or day of the week,
 seating capacity is fixed (unlimited by default), booking time slots are
 fixed to 30 minute intervals.
 
-## The name
+## The Name
 
 Tafelspitz (German, literally meaning tip (of meat) for the table) is
 boiled veal or beef in broth, served with a mix of minced apples and
 horseradish. It is considered to be one of the many national dishes of
-Austria and is equally popular in the neighboring German state of Bavaria.
-[Reference][reference]
+Austria and is equally popular in the neighboring German state of Bavaria
+()[Wkipedia Reference][reference]).
 [reference]: https://en.wikipedia.org/wiki/Tafelspitz
 
 This application is inspired by Opentable.
