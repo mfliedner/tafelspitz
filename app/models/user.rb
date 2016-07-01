@@ -29,11 +29,11 @@ class User < ActiveRecord::Base
     foreign_key: :guest_id,
     primary_key: :id,
     class_name: "Reservation"
-  has_many :reserved
+  has_many :reserved,
     through: :reservations,
     source: :restaurant
   has_many :reviews
-  has_many :reviewed
+  has_many :reviewed,
     through: :reviews,
     source: :restaurant
   has_many :favorites
