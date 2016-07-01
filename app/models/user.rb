@@ -25,6 +25,21 @@ class User < ActiveRecord::Base
     foreign_key: :owner_id,
     primary_key: :id,
     class_name: "Restaurant"
+  has_many :reservations,
+    foreign_key: :guest_id,
+    primary_key: :id,
+    class_name: "Reservation"
+  has_many :reserved
+    through: :reservations,
+    source: :restaurant
+  has_many :reviews
+  has_many :reviewed
+    through: :reviews,
+    source: :restaurant
+  has_many :favorites
+  has_many :favorite_reaturants,
+		through: :favorites,
+		source: :restaurant
 
   attr_reader :password
 

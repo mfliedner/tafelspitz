@@ -7,6 +7,17 @@ class Restaurant < ActiveRecord::Base
     foreign_key: :owner_id,
     primary_key: :id,
     class_name: "User"
+  has_many :reservations
+  has_many :guests
+    through: :reservations,
+    source: :user
+  has_many :reviews
+  has_many :reviewers
+    through: :reviews,
+    source: :user
+  has_many :fans,
+		through: :favorites,
+		source: :user
 
   def self.address_to_coords(address)
     query = "select *"

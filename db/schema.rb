@@ -11,10 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629114950) do
+ActiveRecord::Schema.define(version: 20160701022544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "user_id",       null: false
+    t.integer  "restaurant_id", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "favorites", ["restaurant_id"], name: "index_favorites_on_restaurant_id", using: :btree
+  add_index "favorites", ["user_id", "restaurant_id"], name: "index_favorites_on_user_id_and_restaurant_id", unique: true, using: :btree
+  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer  "guest_id",      null: false
+    t.integer  "restaurant_id", null: false
+    t.datetime "date",          null: false
+    t.time     "time",          null: false
+    t.integer  "guest_count",   null: false
+    t.text     "requests"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "reservations", ["guest_id"], name: "index_reservations_on_guest_id", using: :btree
+  add_index "reservations", ["restaurant_id"], name: "index_reservations_on_restaurant_id", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
     t.integer  "owner_id",    null: false
@@ -35,6 +60,23 @@ ActiveRecord::Schema.define(version: 20160629114950) do
   end
 
   add_index "restaurants", ["owner_id"], name: "index_restaurants_on_owner_id", using: :btree
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "user_id",       null: false
+    t.integer  "restaurant_id", null: false
+    t.datetime "date",          null: false
+    t.integer  "rating",        null: false
+    t.integer  "rate_food"
+    t.integer  "rate_ambience"
+    t.integer  "rate_service"
+    t.integer  "rate_value"
+    t.text     "body"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "reviews", ["restaurant_id"], name: "index_reviews_on_restaurant_id", using: :btree
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "password_digest", null: false

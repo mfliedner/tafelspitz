@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  restaurant_id: 1
+  date: 2016-06-30 19:25:03
+  rating: 1
+  rate_food: 1
+  rate_ambience: 1
+  rate_service: 1
+  rate_value: 1
+  body: MyText
+
+two:
+  user_id: 1
+  restaurant_id: 1
+  date: 2016-06-30 19:25:03
+  rating: 1
+  rate_food: 1
+  rate_ambience: 1
+  rate_service: 1
+  rate_value: 1
+  body: MyText
