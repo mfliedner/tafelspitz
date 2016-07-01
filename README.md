@@ -37,7 +37,7 @@ day (all day by default) that does not vary with date or day of the week,
 seating capacity is fixed (unlimited by default), booking time slots are
 fixed to 30 minute intervals.
 
-## The Name
+### The Name
 
 Tafelspitz (German, literally meaning tip (of meat) for the table) is
 boiled veal or beef in broth, served with a mix of minced apples and
