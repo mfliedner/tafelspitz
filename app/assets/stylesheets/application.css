@@ -74,6 +74,12 @@
   background: #3798bc;
 }
 
+.chevron{
+  font-size: 20px;
+  padding-left: 5px;
+  color: #ccc;
+}
+
 .user-menu {
   display: none;
   position: absolute;

@@ -40,8 +40,8 @@ const Header = React.createClass({
     SessionStore.addListener(this.forceUpdate.bind(this));
   },
 
-  _handleLogOut(e){
-    e.preventDefault();
+  _handleLogOut(event) {
+    event.preventDefault();
     SessionActions.logOut();
   },
 
@@ -51,8 +51,7 @@ const Header = React.createClass({
     		<nav className="header-nav logout group">
           <ul className="header-list">
             <li className="user">
-              <a href="#">Hello!</a>
-              <span className="cover"></span>
+              <a href="#">Hello! <i className="chevron">&or;</i></a>
               <ul className="user-menu">
                 <li><a href="#">My Profile</a></li>
                 <li><a href="#">Favorites</a></li>
