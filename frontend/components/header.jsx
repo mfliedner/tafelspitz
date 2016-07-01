@@ -47,11 +47,15 @@ const Header = React.createClass({
 
   navbar() {
     if (SessionStore.isUserLoggedIn()) {
+      let greeting = "Hello!";
+      if (SessionStore.currentUser().first_name) {
+        greeting = "Hi, " + SessionStore.currentUser().first_name;
+      }
     	return (
     		<nav className="header-nav logout group">
           <ul className="header-list">
             <li className="user">
-              <a href="#">Hello! <i className="chevron">&or;</i></a>
+              <a href="#">{greeting} <i className="chevron">&or;</i></a>
               <ul className="user-menu">
                 <li><a href="#">My Profile</a></li>
                 <li><a href="#">Favorites</a></li>
@@ -104,7 +108,9 @@ const Header = React.createClass({
             <img src="/tafelspitz-logo.png" alt="Tafelspitz-Logo"/>
           </Link>
         </div>
-        { this.navbar() }
+
+        {this.navbar()}
+
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
