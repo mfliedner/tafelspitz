@@ -1,0 +1,62 @@
+.content {
+  position: relative;
+  margin: 0 auto;
+  background: #f7f7f7;
+  min-height: 500px;
+  width: 100%;
+}
+
+.content-sidebar {
+  float: left;
+  width: 20%;
+  padding: 20px;
+}
+
+.content-main {
+  float: left;
+  width: 80%;
+  padding: 16px;
+}
+
+.content-header {
+  float: left;
+  display: block;
+  background: url("https://cdn.shopify.com/s/files/1/0285/5164/files/Blog-_l_22016691.jpg?44245");
+  background-size: cover;
+  color: #fff;
+  font-size: 36px;
+  text-shadow: rgba(0,0,0,.3) 0 1px 4px;
+  padding-top: 232px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.column {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.content-header-title {
+  font-size: 21px;
+  padding-bottom: 8px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.content-header-add-friend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #000;
+  background: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.content-header-add-friend:hover {
+  background: #eee;
+}
