@@ -4,6 +4,8 @@ const React = require('react');
 const RestaurantStore = require('../stores/restaurant_store');
 const FilterParamsStore = require('../stores/filter_params_store');
 const Link = require('react-router').Link;
+const Header = require('./header');
+const Footer = require('./footer');
 const RestaurantDetail = require('./restaurant');
 const RestaurantMap = require('./restaurant_map');
 const RestaurantActions = require('../actions/restaurant_actions');
@@ -38,19 +40,18 @@ const RestaurantShow = React.createClass({
 
     return (
         <div className="single-restaurant-show">
+          <Header/>
+          <div className="page-header">
+            
+          </div>
           <div className="single-restaurant-map">
             <Link to="/" >Back to Restaurants Index</Link>
-            <RestaurantMap
-              singleRestaurant={true}
-              restaurants={restaurants}
-              onMapClick={this.handleMapClick}
-              onMarkerClick={this.handleMarkerClick} />
           </div>
           <div className="right-half restaurant-details">
             <RestaurantDetail restaurant={this.state.restaurant} />
-            {this.props.children}
           </div>
-        </div>
+          <Footer/>
+      </div>
       );
   }
 });

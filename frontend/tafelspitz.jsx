@@ -38,8 +38,8 @@ const routes = (
   <Router history={ hashHistory }>
     <Route path="/" component={ App }>
       <Route path="/restaurants/new" component={ RestaurantForm } onEnter={ _ensureLoggedIn }/>
-      <Route path="/restaurants/:restaurantId" component={ RestaurantShow }/>
     </Route>
+    <Route path="/restaurants/:restaurantId" component={ RestaurantShow }/>
   </Router>
 );
 

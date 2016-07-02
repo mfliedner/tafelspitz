@@ -12,18 +12,19 @@ const IndexItem = React.createClass({
 
   render() {
     const restaurant = this.props.restaurant;
+    const route = "/restaurants/" + restaurant.id;
     return (
         <div className="restaurant-index-item"
              onClick={this._handleClick}
              key={restaurant.id}>
           <div className="index-item-restaurant">
             <div className="index-item-image">
-              <Link to="/restaurants/${restaurant.id}" >
+              <Link to={route} >
                 <img src={restaurant.img_url} alt={restaurant.name}/>
               </Link>
             </div>
             <div className="index-item-info">
-              <Link to="/restaurants/${restaurant.id}" className="index-item-name">
+              <Link to={route} className="index-item-name">
                 {restaurant.name}
               </Link>
               <div className="index-item-category">

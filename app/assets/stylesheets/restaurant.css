@@ -1,0 +1,67 @@
+.page-header {
+  display: block;
+  background-color: #222;
+  background-size: cover;
+  color: #fff;
+  font-size: 36px;
+  text-shadow: rgba(0,0,0,.3) 0 1px 4px;
+  padding-top: 232px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.column {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.content-header-title {
+  font-size: 21px;
+  padding-bottom: 8px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.all-index-link {
+  display: inline-block;
+  font-size: 16px;
+  margin-top: -16px;
+  margin-bottom: -16px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+
+/*.content-header-add-friend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #000;
+  background: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.content-header-add-friend:hover {
+  background: #eee;
+}*/
+
+.section-header {
+  padding-top: 32px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 32px;
+  font-size: 24px;
+  color: #333;
+}
+
+.section {
+  padding-top: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+}

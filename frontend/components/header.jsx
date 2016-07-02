@@ -11,7 +11,6 @@ const SignupForm = require('./signup_form');
 const ReactRouter = require('react-router');
 const hashHistory = ReactRouter.hashHistory;
 
-
 const Header = React.createClass({
   getInitialState: function() {
     return({
