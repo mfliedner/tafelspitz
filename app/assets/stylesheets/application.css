@@ -55,7 +55,8 @@
  }
 
  button,
- input[type="submit"] {
+ input[type="submit"],
+ Link {
    cursor: pointer;
  }
 
@@ -68,9 +69,8 @@
  }
 
 .map {
-   width: 500px;
+   width: 100%;
    height: 500px;
-   float: left;
    position: relative;
  }
 

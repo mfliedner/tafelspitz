@@ -16,10 +16,18 @@ function setBounds(bounds) {
   FilterParamsStore.__emitChange();
 }
 
+function clearFilters(){
+  _params = {};
+  FilterParamsStore.__emitChange();
+}
+
 FilterParamsStore.__onDispatch = function(payload) {
   switch(payload.actionType){
     case FilterConstants.UPDATE_BOUNDS:
       setBounds(payload.bounds);
+      break;
+    case FilterConstants.CLEAR_FILTERS:
+      clearFilters();
       break;
   }
 };

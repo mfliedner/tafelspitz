@@ -9,6 +9,12 @@ const FilterActions = {
       actionType: FilterConstants.UPDATE_BOUNDS,
       bounds: bounds
     });
+  },
+
+  clearFilters() {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.CLEAR_FILTERS
+    });
   }
 };
 

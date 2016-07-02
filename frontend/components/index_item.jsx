@@ -4,7 +4,7 @@ const React = require('react');
 const hashHistory = require('react-router').hashHistory;
 
 const IndexItem = React.createClass({
-  handleClick() {
+  _handleClick() {
     const restaurantID = this.props.restaurant.id;
     hashHistory.push("restaurants/" + restaurantID );
   },
@@ -13,7 +13,7 @@ const IndexItem = React.createClass({
     const restaurant = this.props.restaurant;
     return (
         <div className="restaurant-index-item"
-             onClick={this.handleClick}
+             onClick={this._handleClick}
              key={restaurant.id}>
           <div className="index-item-info">
             <span className="index-item-category">Name: </span>

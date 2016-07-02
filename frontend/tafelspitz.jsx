@@ -37,7 +37,6 @@ function _ensureLoggedIn(nextState, replace) {
 const routes = (
   <Router history={ hashHistory }>
     <Route path="/" component={ App }>
-      <IndexRoute component={ Search } />
       <Route path="/restaurants/new" component={ RestaurantForm } onEnter={ _ensureLoggedIn }/>
       <Route path="/restaurants/:restaurantId" component={ RestaurantShow }/>
     </Route>

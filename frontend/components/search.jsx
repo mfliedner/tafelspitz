@@ -4,6 +4,7 @@ const React = require('react');
 const RestaurantStore = require('../stores/restaurant_store');
 const FilterParamsStore = require('../stores/filter_params_store');
 const RestaurantActions = require('../actions/restaurant_actions');
+const SearchBar = require('./search_bar');
 const FilterForm = require('./filter_form');
 const RestaurantIndex = require('./restaurant_index');
 const RestaurantMap = require('./restaurant_map');
@@ -15,6 +16,8 @@ const Search = React.createClass({
     return {
       restaurants: RestaurantStore.all(),
       filterParams: FilterParamsStore.params(),
+      // searchParams: SearchParamsStore.params()
+      searchParams: {}
     };
   },
 
@@ -43,12 +46,15 @@ const Search = React.createClass({
   render() {
     return(
       <div className="user-pane">
-        <div className="left-half">
-          <RestaurantMap restaurants={this.state.restaurants}/>
+        <div className="search-bar">
+          <SearchBar searchParams={this.state.searchParams}/>
         </div>
-        <div className="right-half">
+        <div className="display-index">
           <FilterForm filterParams={this.state.filterParams}/>
           <RestaurantIndex restaurants={this.state.restaurants}/>
+        </div>
+        <div className="display-map">
+          <RestaurantMap restaurants={this.state.restaurants}/>
         </div>
       </div>
     );

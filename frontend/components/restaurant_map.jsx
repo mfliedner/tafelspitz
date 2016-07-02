@@ -61,9 +61,9 @@ const MapContainer = React.createClass({
   },
 
   registerListeners() {
-    const that = this;
+    const self = this;
     google.maps.event.addListener(this.map, 'idle', () => {
-      const mapBounds = that.map.getBounds();
+      const mapBounds = self.map.getBounds();
       const northEast = _getCoordsObj(mapBounds.getNorthEast());
       const southWest = _getCoordsObj(mapBounds.getSouthWest());
       const bounds = { northEast, southWest };
@@ -71,7 +71,7 @@ const MapContainer = React.createClass({
     });
     google.maps.event.addListener(this.map, 'click', event => {
       const coords = { lat: event.latLng.lat(), lng: event.latLng.lng() };
-      that._handleClick(coords);
+      self._handleClick(coords);
     });
   },
 
