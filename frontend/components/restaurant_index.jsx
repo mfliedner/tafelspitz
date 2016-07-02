@@ -14,8 +14,8 @@ const RestaurantIndex = React.createClass({
     const restaurantKeys = Object.keys(restaurants);
     return (
       <div>
-        <div className="section-header">{this.tableCount()} tables available</div>
-        <div className="section">      
+        <div className="section-header">{restaurantKeys.length} tables available</div>
+        <div className="section">
           {
             restaurantKeys.map( key => {
               return (<IndexItem

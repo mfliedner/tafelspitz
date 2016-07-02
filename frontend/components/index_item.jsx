@@ -1,6 +1,7 @@
 "use strict";
 
 const React = require('react');
+const Link = require('react-router').Link;
 const hashHistory = require('react-router').hashHistory;
 
 const IndexItem = React.createClass({
@@ -15,21 +16,28 @@ const IndexItem = React.createClass({
         <div className="restaurant-index-item"
              onClick={this._handleClick}
              key={restaurant.id}>
-          <div className="index-item-info">
-            <span className="index-item-category">Name: </span>
-            <span className="index-item-copy">
-              {restaurant.name}
-            </span>
-            <span className="index-item-category">Price Range: </span>
-            <span className="index-item-copy">
-              {restaurant.price_range || "No reviews yet"}
-            </span>
-            <span className="index-item-category">Description: </span>
-            <span className="index-item-copy">
-              {restaurant.description}
-            </span>
+          <div className="index-item-restaurant">
+            <div className="index-item-image">
+              <Link to="/restaurants/${restaurant.id}" >
+                <img src={restaurant.img_url} alt={restaurant.name}/>
+              </Link>
+            </div>
+            <div className="index-item-info">
+              <Link to="/restaurants/${restaurant.id}" className="index-item-name">
+                {restaurant.name}
+              </Link>
+              <div className="index-item-category">
+                {restaurant.price_range || "No reviews yet"}
+              </div>
+              <div className="index-item-rating">
+              </div>
+              <div className="index-item-location">
+                {restaurant.address}
+              </div>
+            </div>
+            <div className="index-item-review">
+            </div>
           </div>
-          <img src={restaurant.img_url}/>
         </div>
     );
   }

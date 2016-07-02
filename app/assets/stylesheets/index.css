@@ -1,0 +1,26 @@
+.index-item-restaurant {
+  display: table;
+  padding: 14px 16px;
+  height: 80px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.index-item-image {
+  float: left;
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.index-item-info {
+  float: right;
+  padding-left: 16px;
+  min-height: 80px;
+  min-width: 136px;
+  color: #999;
+}
+
+.index-item-name {
+  color: #333;
+}
