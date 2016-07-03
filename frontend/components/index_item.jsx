@@ -13,6 +13,10 @@ const IndexItem = React.createClass({
   render() {
     const restaurant = this.props.restaurant;
     const route = "/restaurants/" + restaurant.id;
+    let imgUrl = restaurant.img_url;
+    if (imgUrl.length < 5) {
+      imgUrl = "/no-image.png";
+    }
     return (
         <div className="restaurant-index-item"
              onClick={this._handleClick}
@@ -20,7 +24,7 @@ const IndexItem = React.createClass({
           <div className="index-item-restaurant">
             <div className="index-item-image">
               <Link to={route}>
-                <img src={restaurant.img_url} alt={restaurant.name}/>
+                <img src={imgUrl} alt={restaurant.name}/>
               </Link>
             </div>
             <div className="index-item-info">
