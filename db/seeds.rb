@@ -715,10 +715,897 @@ Schlacht Platte
 pork chop, sausage & pork shoulder, sauerkraut & potatoes"
   )
 
+Restaurant.create!(
+  name: "Naschmarkt Restaurant",
+  owner_id: 2,
+  description: "Naschmarkt (NASH-MARKed) restaurant is located in historical downtown Campbell. The restaurant is named after the largest open air produce market in Vienna, Austria. The Naschmarkt has been a Viennese institution dating back to the 16th century and is known to locals as the \"city's stomach\". The restaurant, founded in 2011, features local Californian ingredients complimented by modern austrian fare.",
+  price_range: 2,
+  address: "384 E. Campbell Ave, Campbell, CA 95008",
+  phone: "(408) 378-0335",
+  lat: 37.2868000,
+  lng: -121.9429740,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23690475.jpg",
+  opening: 61200,
+  closing: 75600,
+  seats: 20,
+  menu: "Starters
+$11.00
+Smoked Pork Bratwurst
+
+with braised sauerkraut, caramelized onions and Dijon mustard
+$15.00
+Quark Spätzle
+
+with Smoked Chicken, yellow corn, Brussels sprout leaves, tarragon and mushrooms
+$16.00
+Austrian Cold Cuts
+
+saucisson sec, speck, smoked trout, chicken liver mousse, liptauer spread, fresh horseradish, pickles and mustard
+$15.00
+Riesling Steamed Black Mussels
+
+with carrot julienne, shallots, garlic, basil and grilled garlic bread
+Soups & Salads
+$7.00
+Jerusalem Artichoke & Leek Soup
+
+with smoked trout
+$8.00
+Butternut Squash Soup
+
+with toasted pumpkin seeds and Styrian pumpkin seed oil
+$8.00
+Butter Lettuce Salad
+
+with shaved radishes, toasted pumpkin seeds, pumpkin seed oil and citrus vinaigrette
+$11.00
+Goat Cheese Purse Salad
+
+with rosemary, honey, baby spinach, toasted walnuts, pomegranate seeds and balsamic vinegar reduction
+$11.00
+Bitter Green Salad
+
+frisée and trevisio with Point Reyes blue cheese, red wine poached honey crisp apples, shaved pears and bacon-mustard vinaigrette
+Sides
+Potato Salad
+Seasonal Vegetables
+Braised Sauerkraut
+Quark Spätzle
+Braised Red Cabbage
+Fingerling Potatoes
+Entrées
+$19.00
+Fresh Papardelle Pasta
+
+with shredded braised turkey leg meat, Brussels sprouts, roasted butternut squash, sage, pomegranate seeds and orange gastrique
+$25.00
+Pan Roasted Organic Chicken Breast
+
+with spaghetti squash, rapini, roasted baby carrots, Raclette fondue and garlic bread crumbs
+$27.00
+Seared Arctic Char
+
+with butternut squash purée, young carrots, kale, red onion, spiced pumpkin seeds and Styrian pumpkin seed oil
+$30.00
+Roasted White Sea Bass
+
+Mussels and Tiger Prawns California White Chowder with potatoes, fennel, celery, bacon, chili emulsion, leeks and sour dough croutons
+$27.00
+Jäger Schnitzel
+
+pork schnitzel braised in a mushroom cream sauce with spätzle, garlic confit and broccolini
+$23.00
+Kraut Rouladen
+
+beef, pork and smoked bacon filled Savoy cabbage with horseradish cream cabbage, roasted butternut squash, kale, pomegranate and chicken jus
+$31.00
+Classic Wiener Schnitzel
+
+with lingonberry sauce, Austrian potato salad, lemon and crispy parsley
+$29.00
+Hungarian Beef Goulash
+
+Beef Shoulder braised in paprika, served with herbed spätzle, roasted Hungarian pepper and sour cream
+$29.00
+Double Cooked Pork Belly
+
+with celery root purée, glazed champignons, melted leeks and pork au jus
+$38.00
+Grilled 12 oz. Niman Ranch New York Steak
+
+with garlic confit, Blue Lake beans, roasted fingerling potatoes and Zweigelt wine sauce"
+  )
+
 User.create!(
   email: "guest",
   password: "password"
 )
+
+Restaurant.create!(
+  name: "Simply Fondue Livermore",
+  owner_id: 2,
+  description: "Return to this celebrated art of cooking right at your table by selecting from a wide assortment of incredible fondue items. From our succulent lobster and beef to our out-of-this world imported cheese and chocolate fondues, you're guaranteed to please your most desirable tastes.
+At Simply Fondue, we are committed to bringing you simply the best fondue dining experience found anywhere. We guarantee a relaxed and casual dining atmosphere that moves along at a leisurely pace. We use only the finest ingredients and make all of our sauces, batters, and dressings from scratch daily. Enjoy a selection from our extensive wine list or one of the more than 100 hand-crafted martinis and specialty drinks during your visit.",
+  price_range: 3,
+  address: "2300 First Street, Livermore, CA 94550",
+  phone: "(925) 443-6638",
+  lat: 37.6824730,
+  lng: -121.7679410,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23673326.jpg",
+  opening: 57600,
+  closing: 79200,
+  seats: 20,
+  menu: "Salads
+
+$10 each
+Gorgonzola Field Greens
+
+Mixed field greens, cherry tomato, diced cucumber, california choppedwalnuts and herbal croutons tossed in our house raspberry vinaigrette dressing and toppedwith crumbled gorgonzola cheese
+Wedge Salad
+
+Iceberg lettuce, red onion, corn, dried cranberries, almonds, cherry tomato, and bacon toppedwith our house made chunky bleu cheese dressing
+Classic Caesar
+
+Crisp romaine, scraped parmesan cheese, and herbal croutons tossed in a creamy caesar dressing
+Spinach & Apple
+
+Baby spinach, sliced fuji apples, and glazed walnuts tossed in a sweet cider dressing*
+California Caprese
+
+Thick slices of heirloom tomatoes and fresh mozzarella with sliced avocado, red onions, with italian dressing
+Cheese Fondues
+
+$12 per person, served with an assortment of fresh breads, crisp vegetables, and fruits
+Aged Sharp Cheddar
+
+Tillamook sharp cheddar cheese, beer, garlic, and spices
+Traditional Swiss Chalét
+
+Imported gruyere and emmentaler cheeses, chablis, kirshwasser, garlic, and spices
+Spicy Pepper Jack
+
+Creamy monterrey jack cheese, fresh peppers, beer, garlic, and spices
+Loaded Whiskey Cheddar
+
+Aged sharp cheddar, beer, fresh horseradish, bacon, chives, splash of whiskey
+Italian Fontina
+
+A rich blend of imported fontina d'aosta and grated romano cheeses, blended base, garlic, basil pesto, and marinara
+à La Carte Entrées
+
+Served with seasonal vegetables and a threecheese ravioli add an 6oz. Cold water lobster tail for $18
+$32.00
+Chicken Breast
+
+Farm raised chicken breast, roasted garlic chicken, mesquite bbq chicken, lemon pepper chicken, and teriyaki chicken
+$35.00
+Beef Tenderloin
+
+Delicious cuts of aged beef tenderloin, bacon wrapped tenderloin, maple beef tenderloin, six pepper beef, and smoked polish sausage
+$29.00
+Spring Vegetable
+
+An assortment of fresh seasonal vegetables including tofu, yellow squash, zucchini, broccoli florets, cauliflower, red potatoes, sweet potatoes, mushrooms, green bell peppers, red onions, and asparagus
+$37.00
+Seafood Dinner
+
+Black tiger shrimp, pecan crusted salmon, blackened mahimahi, calamari steak, and sesame ahi tuna
+$34.00
+Combination Fondue
+
+Roasted garlic chicken, teriyaki chicken, black tiger shrimp, six pepper beef, and aged beef tenderloin
+$42.00
+Lobster Trio
+
+A pair of 6 oz. Cold water lobster tails, black tiger shrimp, and aged beef tenderloin
+Combination Dinners Designed for Two
+
+Dinners are priced per person with a two person minimum, a childs's fondue feast must be accompanied by an adult fondue feast
+Lobster & Wine Upgrade
+
+Add a pair of 6oz. Cold water lobster tails and any bottle from our wine list priced 30 or less to the fondue feast
+$47.00
+Per couple
+Winemaker's Flight Upgrade
+
+Add a flight of wines paired with each course exclusively by local wine makers. Ask your server for the current pairings and pricing
+Fondue Feast
+Fondue Feast
+
+A complete fourcourse fondue dinner featuring a shared cheese fondue appetizer, gourmet salad, choice of six (6) entrée items, and a shared chocolate fondue dessert. Our endless dinner is available when all guests seated at your table orders this option for $6 per person we do not allow unused portions to be taken from the restaurant endless applies to the entrée course only
+$54.00
+Per person
+$27.00
+For Ages 13 to 17
+$15.00
+Per child age 12 and under
+Entrée Selections
+Beef Tenderloin
+Six Pepper Beef
+Bacon Wrapped Tenderloin
+Maple Beef Tenderloin
+Smoked Polish Sausage
+Herbcrusted Pork Tenderloin
+Breast of Chicken
+Roasted Garlic Chicken
+Teriyaki Chicken
+Honey Almond Chicken
+Lemon Pepper Chicken
+Mesquite Bbq Chicken
+Black Tiger Shrimp
+Coconut Shrimp
+Pecan Crusted Salmon
+Blackened Mahimahi
+Sesame Ahituna
+Calamari Steak
+Entrée Cooking Styles
+Vegetable Bouillon
+
+A flavorful broth blend of fresh vegetables, garlic, and spices
+Cajun Boullion
+
+A southern blend of beef bouillon, fresh garlic, and cajun spices
+Fondue Grill
+
+A healthy and lite cooking style grilled right at your table
+Traditional
+
+Cooked in transfat free oil and served with our housemade sesame batter and famous stuffed mushrooms. Tempura batter served upon request
+Desserts
+
+à La carte, $12 per person, add an individual cheesecake for $4
+Desserts
+
+Our oneofakind incredible chocolate fondues are flambéed tableside and served with moist rich pound cake, jumbo marshmallows, triple chunk brownies, fresh oranges, banana chunks, fresh pineapples, fresh raspberries*, chocolate chip cookie dough, rice krispy squares, rolled cookies, and cinnamon sugar donuts"
+  )
+
+Restaurant.create!(
+  name: "The Melting Pot - Larkspur",
+  owner_id: 2,
+  description: "The Melting Pot is located in the historic Brick Kiln in Larkspur, CA. The Melting Pot offers an extraordinary dining experience that you won't find at any other restaurant. Here you'll discover all the ingredients to a perfect evening, including a relaxed atmosphere, private tables, attentive service, fine wines & fabulous four-course fondue dinners. No matter what the occasion, from a romantic date to a get-together with friends, meetings or large groups, The Melting Pot always hits the spot. The Melting Pot offers the highest quality fresh ingredients, a variety of cooking styles, unique sauces & your favorite chocolate fondue. To highlight your meal we also offer a wide variety of wines to compliment your meal. Make reservations today & come dip into something different.",
+  price_range: 3,
+  address: "125 E. Sir Francis Drake Blvd, Larkspur, CA 94939",
+  phone: "(415) 461-6358",
+  lat: 37.9446300,
+  lng: -122.5057300,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23895842.jpg",
+  opening: 57600,
+  closing: 79200,
+  seats: 20,
+  menu: "Cheese Fondue
+
+The award-winning cheeses in our fondue are melted to order and served with artisan breads, seasonal fruits and veggies for dipping. Choose one cheese per cooktop. Gluten-free bread available upon request. All prices are per person. Artisanal Dippers: Complement your cheese fondue with our selection of hand-cut premium cured meats. (Gluten Free) $4.95 per plate
+$9.95
+Wisconsin Cheddar*
+
+Mild, Comforting; Featured Cheeses: Aged cheddar, Emmenthaler; Melted with: Lager beer, garlic, spices. With Redbridge® beer (Gluten Free)
+$9.95
+Fiesta
+
+Zesty, Flavorful; Featured Cheeses: Aged cheddar, Emmenthaler; Melted with: Lager beer, house-made salsa, jalapeño. With Redbridge® beer (Gluten Free)
+$9.95
+Garlic & Herb Quartet
+
+Tangy, Herbaceous; Featured Cheeses: Butterkäse, Fontina, Garlic & Herb, Chèvrer; Melted with: White wine, lemon, scallions
+$9.95
+Spinach & Artichoke
+
+Classic, Savory; Featured Cheeses: Butterkäse, Fontina; Melted with: Fresh spinach, artichoke hearts, garlic
+Craft Your Own Wisconsin Cheddar
+
+With one of our local brews below. We'll leave the rest behind for the table. Must be 21 or older. Plus additional: Lagunitas, IPA ($6); Oskar Blues, Pale Ale ($6); Maui Brewing Co., Bikini Blonde Lager ($6)
+$9.95
+per person
+$9.95
+Bacon & Brie
+
+Rich, Smooth; Featured Cheeses: Baby Brie, Gruyère, Raclette, Fontina; Melted with: White wine, bacon, lemon, scallions
+$9.95
+Classic Alpine
+
+Rich, Sweet-yet-earthy; Featured Cheeses: Gruyere, Raclette, Fontina; Melted with: White wine, garlic, fresh nutmeg
+Salads
+
+Each of our delicious salads is made to order with fresh greens and toppings. Enjoy yours with one of our signature dressings
+$7.95
+The Melting Pot House Salad*
+
+Romaine & iceburg, cheddar cheese, tomatoes, croutons and sliced egg with choice of house-made dressings: sweet & tangy or peppercorn ranch. Without croutons - Gluten Free
+$7.95
+Caesar
+
+Crisp romaine, shredded Parmesan cheese, croutons and Parmesan-dusted pine nuts, tossed with Caesar dressing. Without croutons - Gluten Free
+$7.95
+Apple Bacon Spinach
+
+Fresh spinach, crimini mushrooms, sliced egg, spicy pecans, Granny Smith apples and apple bacon vinaigrette
+$7.95
+California
+
+Mixed greens, tomatoes, candied pecans and Gorgonzola cheese with raspberry walnut vinaigrette
+Entrees: 4-Course Experience
+
+Our main course features premium ingredients such as hormone and antibiotic-free chicken, Certified Black Angus Beef® and all-natural pork tenderloin. The 4-Course Experience is the ultimate way to fondue and includes four courses: cheese, salad, an entrée below and chocolate dessert. Prices below include all four courses. We'd be happy to prepare any of our entrées gluten-free-just ask! Add a cold water lobster tail to any entrée
+$42.50
+The Classic*
+
+Certified Angus Beef® sirloin, Memphis-style dry rub pork, Pacific white shrimp, Herb-crusted chicken breast, Teriyaki-marinated sirloin
+$42.50
+French Quarter
+
+Cajun-seasoned filet mignon, Cajun-seasoned chicken breast, Cajun-seasoned Pacific white shrimp, Smoky andouille sausage
+$49.95
+Fondue Delight
+
+Premium filet mignon, Cold water lobster tail, All-natural chicken breast, Pacific white shrimp, Wild mushroom sacchetti
+$46.95
+Surf & Turf
+
+Cold water lobster tail, Premium filet mignon, Wild mushroom sacchetti
+$38.50
+Good Earth Vegetarian
+
+Edamame or onion rings, Artichoke hearts, Baby Portobello mushrooms, Fresh asparagus, Marinated tofu, Featured pasta, Wild mushroom sacchetti. Available with Entrée only
+$42.50
+Land & Sea*
+
+Premium filet mignon, Herb-crusted chicken breast, Pacific white shrimp
+$42.50
+Steak Lovers
+
+Premium filet mignon, Teriyaki-marinated sirloin, Certified Angus Beef® sirloin
+$47.95
+Fondue Fusion
+
+Cold water lobster tail, Honey orange duck breast, Wild mushroom sacchetti, Lemon basil chicken, Whiskey BBQ pork medallions
+$42.50
+Pacific Rim
+
+Teriyaki-marinated sirloin, Honey orange duck breast, Pacific white shrimp, Chicken & vegetable potstickers
+Entrees: Create Your Own
+
+Our main course features premium ingredients such as hormone and antibiotic-free chicken, Certified Black Angus Beef® and all-natural pork tenderloin. See individual pricing below or create your own combination of three individual items. Make It a 4-Course - Make it a 4-course Create Your Own with your choice of cheese fondue, salad and chocolate fondue: $43.50
+$25.95
+Premium Filet Mignon
+$24.95
+Sesame-Crusted Ahi Tuna
+$24.95
+Atlantic Salmon Filet
+$25.95
+Honey Orange Duck Breast
+$23.95
+Memphis-Style Dry Rub Pork*
+$24.95
+Whiskey BBQ Pork Medallions
+$17.95
+Wild Mushroom Sacchetti
+$22.95
+Teriyaki-Marinated Sirloin*
+$25.95
+Certified Angus Beef® Sirloin
+$21.95
+Pacific White Shrimp
+$17.95
+All-Natural Breast of Chicken
+$17.95
+Smoky Andouille Sausage
+$18.95
+Lemon Basil Chicken
+$18.95
+Chicken & Vegetable Potstickers
+$19.95
+Featured Pasta
+Cooking Styles
+
+Prepare your entrées with any of our cooking styles. Choose one style per cooktop. Priced per pot
+Seasoned Court Bouillon
+
+Light, Versatile; Fresh, seasoned vegetable broth. Complimentary
+$6.00
+Coq Au Vin*
+
+Classic, Elegant; The classic French tradition of Burgundy wine infused with fresh herbs, spices and mushrooms
+$6.00
+Mojo
+
+Bold, Flavorful; Caribbean-inspired bouillon bursting with flavors of fresh garlic and citrus
+$6.00
+Bourguignonne
+
+Traditional, Hearty; The traditional European style with canola oil, and served with a side of tempura sesame batter. Without batter - Gluten Free"
+  )
+
+Restaurant.create!(
+  name: "The Melting Pot - San Mateo",
+  owner_id: 2,
+  description: "The Melting Pot is located in the San Mateo CalTrain Transit Center in San Mateo, CA. The Melting Pot offers an extraordinary dining experience that you won't find at any other restaurant. Here you'll discover all the ingredients to a perfect evening, including a relaxed atmosphere, private tables, attentive service, fine wines & fabulous four-course fondue dinners. No matter what the occasion, from a romantic date to a get-together with friends, meetings or large groups, The Melting Pot always hits the spot. The Melting Pot offers the highest quality fresh ingredients, a variety of cooking styles, unique sauces & your favorite chocolate fondue. To highlight your meal we also offer a wide variety of wines to compliment your meal. Make reservations today & come dip into something different.",
+  price_range: 3,
+  address: "2 N B Street, San Mateo, CA 94401",
+  phone: "(650) 342-6358",
+  lat: 37.5675590,
+  lng: -122.3246050,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23672874.jpg",
+  opening: 54000,
+  closing: 82800,
+  seats: 20,
+  menu: "Cheese Fondue
+
+The award-winning cheeses in our fondue are melted to order and served with artisan breads, seasonal fruits and veggies for dipping. Choose one cheese per cooktop. Gluten-free bread available upon request. All prices are per person. Artisanal Dippers: Complement your cheese fondue with our selection of hand-cut premium cured meats. Gluten Free $6.95 per plate
+$8.95
+Wisconsin Cheddar*
+
+Mild, Comforting; Featured Cheeses: Aged cheddar, Emmenthaler; Melted with: Lager beer, garlic, spices; with Redbridge® beer
+$8.95
+Loaded Baked Potato Cheddar
+
+Comforting, Savory; Featured Cheeses: Aged cheddar, Emmenthaler; Melted with: Vegetable broth, our Green Goddess, Garlic & Wine seasoning, potatoes, bacon, scallions
+$8.95
+Wisconsin Trio
+
+Robust, Aromatic; Featured Cheeses: Butterkäse, Fontina, Gorgonzola; Melted with: White wine, sherry, shallots, scallionss
+$8.95
+Spinach & Artichoke
+
+Classic, Savory; Featured Cheeses: Butterkäse, Fontina; Melted with: Fresh spinach, artichoke hearts, garlic
+Craft Your Own Wisconsin Cheddar
+
+With one of our local brews below. We'll leave the rest behind for the table. Must be 21 or older. Sierra Nevada, Pale Ale $6.50; Lagunitas, IPA $6.50; Gordon Biersch, Hefeweizen $6.50
+$8.95
+per person
+$8.95
+Bacon & Jalapeño
+
+Smoky, Spicy; Featured Cheeses: Gruyère, Raclette, Fontina; Melted with: White wine, bacon, jalapeños, shallots, garlic
+$9.95
+Classic Alpine
+
+Rich, Sweet-Yet-Earthy; Featured Cheeses: Gruyere, Raclette, Fontina; Melted with: White wine, garlic, fresh nutmeg
+Salads
+
+Each of our delicious salads is made to order with fresh greens and toppings. Enjoy yours with one of our signature dressings
+$7.95
+The Melting Pot House Salad*
+
+Romaine & iceburg, cheddar cheese, tomatoes, croutons and sliced egg with choice of house-made dressings: sweet & tangy or peppercorn ranch. Without croutons Gluten Free
+$7.95
+Caesar
+
+Crisp romaine, shredded Parmesan cheese, croutons and Parmesan-dusted pine nuts, tossed with Caesar dressing. Without croutons Gluten Free
+$7.95
+Mandarin & Almond
+
+Romaine, red cabbage, shredded carrots, honey-roasted almonds, wonton strips, mandarin oranges and Asian dressing
+$7.95
+California
+
+Mixed greens, tomatoes, candied pecans and Gorgonzola cheese with raspberry walnut vinaigrette
+Entrées: 4-Course Experience
+
+Our main course features premium ingredients such as hormone and antibiotic-free chicken, Certified Black Angus Beef® and all-natural pork tenderloin. The 4-Course Experience is the ultimate way to fondue and includes four courses: cheese, salad, an entrée below and chocolate dessert. Prices below include all four courses. We'd be happy to prepare any of our entrées gluten-free - just ask! Add a cold water lobster tail to any entrée for just $45.95
+$44.95
+The Classic*
+
+Certified Angus Beef® sirloin, Memphis-style dry rub pork, Pacific white shrimp, Herb-crusted chicken breast, Teriyaki-marinated sirloin
+$44.95
+French Quarter
+
+Cajun-seasoned filet mignon, Cajun-seasoned chicken breast, Cajun-seasoned Pacific white shrimp, Smoky andouille sausage
+$48.95
+Fondue Delight
+
+Premium filet mignon, Cold water lobster tail, All-natural chicken breast, Pacific white shrimp, Wild mushroom sacchetti
+$49.95
+Surf & Turf
+
+Cold water lobster tail, Premium filet mignon, Wild mushroom sacchetti
+$37.95
+Good Earth Vegetarian
+
+Edamame or onion rings, Artichoke hearts, Baby Portobello mushrooms, Fresh asparagus, Marinated tofu, Featured pasta, Wild mushroom sacchetti
+$18.95
+Entrée only
+$45.95
+Land & Sea*
+
+Premium filet mignon, Herb-crusted chicken breast, Pacific white shrimp
+$47.95
+Steak Lovers
+
+Premium filet mignon, Teriyaki-marinated sirloin, Certified Angus Beef® sirloin
+$48.95
+Fondue Fusion
+
+Cold water lobster tail, Honey orange duck breast, Wild mushroom sacchetti, Whiskey BBQ pork medallion, Sriracha shrimp
+$44.95
+Pacific Rim
+
+Teriyaki-marinated sirloin, Honey orange duck breast, Pacific white shrimp, Chicken & vegetable potstickers
+Entrées: Create Your Own
+
+Our main course features premium ingredients such as hormone and antibiotic-free chicken, Certified Black Angus Beef® and all-natural pork tenderloin. See individual pricing below or create your own combination of three individual items for $24.95
+$45.95
+Make it a 4-Course
+
+Make it a 4-course Create Your Own with your choice of cheese fondue, salad and chocolate fondue
+$24.95
+Premium Filet Mignon
+$24.95
+Sesame-Crusted Ahi Tuna
+$24.95
+Atlantic Salmon Filet
+$19.95
+All-Natural Breast of Chicken
+$19.95
+Smoky Andouille Sausage
+$24.95
+Whiskey BBQ Pork Medallion
+$21.95
+Wild Mushroom Sacchetti
+$24.95
+Teriyaki-Marinated Sirloin*
+$24.95
+Certified Angus Beef® Sirloin
+$24.95
+Pacific White Shrimp
+$24.95
+Sriracha Shrimp
+$24.95
+Honey Orange Duck Breast
+$24.95
+Memphis-Style Dry Rub Pork*
+$21.95
+Chicken & Vegetable Potstickers
+$19.95
+Featured Pasta
+Cooking Styles
+
+Prepare your entrées with any of our cooking styles. Choose one style per cooktop. Priced per pot
+Seasoned Court Bouillon
+
+Light, Versatile; Fresh, seasoned vegetable broth
+Complimentary
+$5.95
+Coq au Vin*
+
+Classic, Elegant; The classic French tradition of Burgundy wine infused with fresh herbs, spices and mushrooms
+$5.95
+Mojo
+
+Bold, Flavorful; Caribbean-inspired bouillon bursting with flavors of fresh garlic and citrus
+$5.95
+Bourguignonne
+
+Traditional, Hearty; The traditional European style with canola oil, and served with a side of tempura sesame batter. Without batter Gluten Free
+"
+  )
+
+Restaurant.create!(
+  name: "La Fondue - Saratoga",
+  owner_id: 2,
+  description: 'The NY Times editorial says "La Fondue is the place to go in the South Bay"! Consistently named the "Best Restaurant", "Best Special Occasion" and "Best Romantic Restaurant" in San Jose by the likes of The San Jose Mercury News, The Metro, The Silicon Valley Concierge Association, and The Wave Magazine. La Fondue brings quality service together with an eclectic chill vibe that caters to the "communal experience" we all crave. Nestled in the Saratoga foothills. La Fondue Restaurant was founded in 1992 as a boutique dining environment. A kind of Alpine wonderland meets Beverly Hills/19th century Paris lounge kind of vibe. Colors of crushed crimson, gold and royal purples blend with champagne oak and European antiques. La Fondue specializes in international fondues. Come, celebrate a memorable evening!',
+  price_range: 3,
+  address: "14550 Big Basin Way, Saratoga, CA 95070",
+  phone: "(408) 867-3332",
+  lat: 37.2563550,
+  lng: -122.0345950,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23677896.jpg",
+  opening: 61200,
+  closing: 79200,
+  seats: 20,
+  menu: "Popular Items
+$53.00
+Cheddar
+
+Beer, Spices
+$55.00
+Garden Vegetable
+Salads - Chef
+
+Romaine, carrots, mozzarella cheese, chef rolls, cucumbers, tomatoes, mushrooms
+$29.00
+Chocolate - The Flaming Tortoise
+
+Milk Chocolate, Caramel, Pecans, Flambé
+$55.00
+Breast of Chicken (Org & Fr)"
+  )
+
+Restaurant.create!(
+  name: "The Matterhorn Swiss Restaurant",
+  owner_id: 2,
+  description: "Located in the heart of San Francisco the Restaurant serves authentic Swiss cuisine in a smart Alpine setting. Our carefully crafted Fondue menu, extensive wine selections, impeccable service and elegant, yet cozy atmosphere brings the best of Switzerland to your dining experience.",
+  price_range: 3,
+  address: "2323 Van Ness Ave., San Francisco, CA 94109",
+  phone: "(415) 885-6116",
+  lat: 37.7970910,
+  lng: -122.4237880,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23895003.jpg",
+  opening: 61200,
+  closing: 73800,
+  seats: 20,
+  menu: 'Fondue Festival
+
+all Fondues are served with a mixed green salad and fresh baguette. all Cheese Fondues contain white wine, garlic and spices $43.50 for 2 people
+The "Original"
+
+Blend of Emmenthal and gruyere cheeses
+$21.75
+Available in appetizer size
+The "Half and Half"
+
+Blend of Fribourg Vacherin and Gruyere cheeses
+The "Spicy One"
+
+Blend of Swiss cheeses with pepperoncinos and tomatoes
+The "Oh la la"
+
+Blend of Raclette and Camembert cheeses
+The "Smoky One"
+
+Blend of smoked cheeses
+The "Mature One"
+
+Swiss Gruyere Cheese
+The "Healthy One"
+
+Blend of Swiss cheeses with mixed organic herbs
+The "Highlander"
+
+Blend of Cheddar and Gruyere cheeses
+The "Lazy One"
+
+Stir free melted Raclette cheese served on a plate with mixed pickles and potatoes
+$20.75
+per person
+Side of Cheese Fondues
+
+Side orders with your Cheese Fondues
+$4.00
+Apples
+$5.00
+Potatoes
+$5.00
+Mushrooms
+$6.00
+Sausages
+Beef Fondues
+
+all beef Fondues are served with a variety of sauces and garnishes! $49 for 2 people
+Fondue "Chinoise"
+
+Thinly sliced aged beef to cook in a vegetable broth
+Fondue "Bacchus"
+
+Thinly sliced aged beef to cook in a delightful red wine broth
+Fondue "Bourguignonne"
+
+Cubes of aged beef to cook in oil
+Side orders
+
+with your Beef Fondues
+$9.50
+Tiger Prawns
+$9.50
+Scallops
+$8.50
+Pork
+$6.50
+Chicken
+A La Carte
+$21.50
+Wienerschnitzel
+$24.50
+Veal Cordon Bleu
+$18.50
+Calves Liver
+$23.50
+Geschnaetzeltes'
+  )
+
+Restaurant.create!(
+  name: "Orchestria Palm Court",
+  owner_id: 2,
+  description: "Our player pianos make us unique! But our food makes us special. We feature rich European-influenced American dishes using things like:
+- Eggs from vegetarian-fed free-range chickens, high in healthy Omega 3 fatty acids
+- White whole wheat flour, a variety naturally high in fiber yet light enough for pastry
+- Vegetables from local farms that are certified organic growers
+- Butter, milk, and ice cream from grass-fed cattle, another Omega 3 source.
+
+Our food is not low-fat or low-calorie, but its ingredients are healthful. The meal will leave you feeling reinvigorated, not weighed down!",
+  price_range: 2,
+  address: "27 E. William St, San Jose, CA 95112",
+  phone: "(408) 288-5606",
+  lat: 37.3290020,
+  lng: -121.8844600,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/24006051.jpg",
+  opening: 63900,
+  closing: 75600,
+  seats: 20,
+  menu: "Small Plates
+$6.40
+Soup of the Day (Potato Leek)
+$7.20
+Mesclun Lettuces Salad
+
+red grapes, walnuts, and Humboldt Fog goat cheese, sherry vinaigrette
+$7.20
+Seasonal Peach Salad
+
+peaches, prosciutto, Gorgonzola cheese, pistachios, mixed organic greens, with peach vinaigrette
+$12.00
+Palm Court Cheese Plate
+
+cheeses change weekly; with fruit
+$13.60
+Smoked Salmon Salad
+
+tangerine, crispy capers, fennel
+$13.60
+Shrimp Scampi
+
+in lemon-garlic butter
+Entrees
+$19.20
+Austrian Goulash
+
+braised beef, whole wheat spaetzle, bell peppers, onions, paprika, organic sour cream
+$16.80
+Vegetable Platter
+
+sauteed market vegetables, wild rice salad, balsamic reduction
+$17.60
+Whole Wheat Pasta
+
+with Butternut squash and mushrooms, in a sage Marsala cream sauce
+$21.60
+Shrimp Puttanesca
+
+tomatoes, artichokes, capers, olives, anchovies, fingerling potatoes
+$24.00
+Chicken Saltimbocca
+
+sage-rubbed, roasted w/provolone, crispy prosciutto, polenta, broccolini, Marsala
+$24.80
+Grass-fed Rib-Eye
+
+mushroom-Swiss cheese Yukon Gold potatoes, Blue Lake beans
+$24.80
+Rainbow Trout
+
+with roasted fennel in bechamel sauce, served with Swiss chard and quinoa"
+  )
+
+Restaurant.create!(
+  name: "Chalet Ticino",
+  owner_id: 2,
+  description: "Our specialties include a wide variety of pasta dishes, cheese & beef fondue, raclette and other favorites from the Italian, French and German regions of Switzerland. Our menu changes on a monthly basis, and we seek to constantly provide you with the most exciting, innovative dishes inspired by the Canton Ticino region of Switzerland. For lunch we also serve salads, pasta and delicious Italian sandwiches. Alfresco dining is available on our terrace. We offer catering services through our Pasta Grotto Catering Division. Private dining can also be arranged for your special events. We look forward to getting to know you, and hope you enjoy our food and our company as well. It is our mission to offer you delicious food, warm and friendly service and charming European ambiance. We are committed to having you, our guest, feel genuinely welcomed while you enjoy a rewarding dining experience. We look forward to getting to know you, and hope you enjoy our food and our company as well.",
+  price_range: 2,
+  address: "1058-C Shell Blvd., Foster City, CA 94404",
+  phone: "(650) 571-0507",
+  lat: 37.5499680,
+  lng: -122.2643790,
+  img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/24009474.jpg",
+  opening: 61200,
+  closing: 75600,
+  seats: 20,
+  menu: "Antipasti
+$7.95
+A Trio Of Bruschetta And Crostini
+
+garden fresh tomatoes, eggplant, roasted garlic, brie cheese and grape crostini
+Antipasto Plate
+
+prosciutto, salami, ham, mozzarella, gruyere, emmentaler cheese, olives and roasted red peppers topped with our roasted garlic marinade
+$8.95
+Small
+$10.95
+Large
+$10.95
+Skewered Rosemary Prawns And Crabcakes
+
+prawns drizzled with pesto and petit crabcakes topped with red bell pepper coulie
+$6.95
+Sautéed Mushrooms
+
+marsala wine, garlic, herbs and spices
+Zuppa
+Minestrone Soup
+$4.50
+Cup
+$5.25
+Bowl
+Wedding Soup
+$4.50
+Cup
+$5.25
+Bowl
+Cheesy Garlic Bread
+$4.95
+1/2 Loaf
+$7.45
+Loaf
+Classic Garlic Bread
+$4.25
+1/2 Loaf
+$6.95
+Loaf
+Insalata
+$11.95
+Grilled Chicken Caesar Salad
+$7.95
+Classic Caesar Salad
+$7.95
+House Salad
+Swiss Specialties
+
+served with our freshly-baked sourdough baguette
+$18.95
+Veal Zurich
+
+strips of veal sautéed in white wine, a touch of cream, onions, and served with rosti potatoes and vegetables
+$17.95
+Rosti Con Salmoné
+
+swiss potato pancake with light dill sauce topped with smoked salmon, capers and purple onions
+$16.95
+Bundener Raclette
+
+gruyére cheese, three different swiss sausages and mixed pickles served with boiled potatoes and dijon mustard
+Cheese Fondue
+
+(two portions minimum) includes a chocolate fondue and your choice of soup or salad. served with our home-made rosti potatoes
+$17.95
+per person
+Other Entrées
+
+served with your choice of soup or salad
+$22.95
+Bistecca A La Maroccaine
+
+new york steak grilled and topped with spicy butter, served with matchstick potatoes and fresh vegetables
+$22.95
+Rack Of Lamb
+
+marinated then grilled and served with a mixed peppercorn sauce, roasted potatoes and fresh vegetables
+$16.95
+Chicken Piccata
+
+served with fettucini
+Pasta
+
+served with our fresh baguette
+$14.95
+Rotolo
+
+medallions of pasta filled with ground chicken, spinach and ricotta cheese, topped with our signature rosé sauce and served with fresh vegetables
+$14.95
+Penne And Grilled Chicken
+
+served with our classic marinara sauce
+$13.95
+Eggplant Parmigiana
+
+grilled eggplant layered in pasta sheets with mozzarella and parmesan cheese and topped with our classic marinara
+$14.95
+Beef Lasagna
+
+ground beef, ricotta and mozzarella cheese in our classic bolognese sauce
+$14.95
+Risotto Ticino
+
+grilled chicken over arborio rice and portobello mushrooms
+Souffle Specials
+Friday - Chocolate Souffle
+Saturday - Grand Marnier Souffle
+Desserts
+
+ask about our dessert specials of the day
+Swiss Bread Pudding
+Chocolate Fondue
+Warm Berries
+
+sautéed in port wine with vanilla ice cream"
+  )
 
 User.create!(
   first_name: "Moritz",
