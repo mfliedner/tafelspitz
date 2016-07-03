@@ -12,9 +12,13 @@ const RestaurantIndex = React.createClass({
   render() {
     const restaurants = this.props.restaurants;
     const restaurantKeys = Object.keys(restaurants);
+    let ent = "tables";
+    if (restaurantKeys.length === 1) {
+      ent = "table";
+    }
     return (
       <div>
-        <div className="section-header">{restaurantKeys.length} tables available</div>
+        <div className="section-header">{restaurantKeys.length} {ent} available</div>
         <div className="section">
           {
             restaurantKeys.map( key => {

@@ -16,7 +16,7 @@ const Content = React.createClass({
       <div className="content">
         <div className="content-header">
           <div className="column">
-            <h1 className="content-header-title">GERMAN CUISINE IN SAN FRANCISCO</h1>
+            <h1 className="content-header-title">GERMAN CUISINE IN THE SAN FRANCISCO BAY AREA</h1>
             <h2>Make a free reservation</h2>
               <Link to="/" className="all-index-link" onClick={this._handleClick}>
                 View all listed restaurants >

@@ -12,6 +12,9 @@ class Api::RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.owner_id = current_user.id
+    coords = Restaurant.address_to_coords(@restaurant.address)
+    @restaurant.lat = coords["lat"]
+    @restaurant.lng = coords["lng"]
     @restaurant.save!
     @restaurant
     render :show
