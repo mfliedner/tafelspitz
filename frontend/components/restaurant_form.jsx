@@ -16,27 +16,23 @@ const RestaurantForm = React.createClass({
       price_range: 1
     };
   },
+
   handleSubmit(event) {
     event.preventDefault();
-    const restaurant = Object.assign({}, this.state, this._coords());
+    const restaurant = Object.assign({}, this.state);
     RestaurantActions.createRestaurant(restaurant);
     this.navigateToSearch();
   },
+
   navigateToSearch() {
     hashHistory.push("/");
   },
-  handleCancel(event) {
-    event.preventDefault();
-    this.navigateToSearch();
-  },
-  _coords() {
-    return this.props.location.query;
-  },
+
   update(property) {
     return (e) => this.setState({[property]: e.target.value});
   },
+
   render() {
-    const lat = this._coords().lat, lng = this._coords().lng;
     return (
         <div className="new-restaurant-container">
           <div className="new-restaurant-form">
@@ -76,9 +72,6 @@ const RestaurantForm = React.createClass({
                 <input type="submit" value="Create Restaurant" className="new-restaurant-button"/>
               </div>
             </form>
-            <div className="button-holder">
-              <button className="new-restaurant-button" onClick={this.handleCancel}>Cancel</button>
-            </div>
           </div>
         </div>
     );
