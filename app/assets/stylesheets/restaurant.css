@@ -1,67 +1,88 @@
-.page-header {
+.show-header {
+  position: relative;
   display: block;
   background-color: #222;
-  background-size: cover;
-  color: #fff;
-  font-size: 36px;
-  text-shadow: rgba(0,0,0,.3) 0 1px 4px;
-  padding-top: 232px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  width: 100%;
+  height: 188px;
 }
 
-.column {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.content-header-title {
-  font-size: 21px;
-  padding-bottom: 8px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.all-index-link {
-  display: inline-block;
-  font-size: 16px;
-  margin-top: -16px;
-  margin-bottom: -16px;
-  padding-top: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
-}
-
-/*.content-header-add-friend {
+.show-header-image {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: #000;
-  background: #fff;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: 1px solid #000;
+  left: 0;
+  top: 80px;
+  padding-left: 32px;
   border-radius: 5px;
+  width: 128px;
+  height: 128px;
 }
 
-.content-header-add-friend:hover {
-  background: #eee;
-}*/
+.show-header-info {
+  padding-top: 80px;
+  padding-left: 216px;
+}
 
-.section-header {
-  padding-top: 32px;
-  padding-left: 36px;
-  padding-right: 36px;
-  padding-bottom: 32px;
-  font-size: 24px;
+.show-header-title {
+  font-size: 36px;
+  color: #fff;
+}
+
+.show-header-rating {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #999;
+}
+
+.show-header-other {
+  margin-top: 8px;
+  color: #999;
+}
+
+.show-header-address {
+  margin-right: 16px;
+  padding-right: 16px;
+  float: left;
+  border-right: 1px solid #999;
+}
+
+.content-sidebar {
+  float: left;
+  display: block;
+  width: 200px;
+  padding-top: 30px;
+  padding-bottom: 16px;
+  min-height: 160px;
+}
+
+.sidebar-nav {
+  position: fixed;
+  padding-left: 32px;
+  display: block;
+}
+
+.sidebar-nav li {
+  display: list-item;
+  text-align: left;
+  color: #999;
+}
+
+.reservation-link {
   color: #333;
 }
 
-.section {
-  padding-top: 14px;
+.sidebar-nav li:hover {
+  color: #da3743;
+}
+
+.content-main {
+  position: relative;
+  float: left;
+  width: 80%;
+  padding-top: 32px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+}
+
+.main-column {
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 14px;
 }

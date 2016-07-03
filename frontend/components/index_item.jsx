@@ -19,7 +19,7 @@ const IndexItem = React.createClass({
              key={restaurant.id}>
           <div className="index-item-restaurant">
             <div className="index-item-image">
-              <Link to={route} >
+              <Link to={route}>
                 <img src={restaurant.img_url} alt={restaurant.name}/>
               </Link>
             </div>

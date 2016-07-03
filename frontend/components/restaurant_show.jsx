@@ -36,19 +36,54 @@ const RestaurantShow = React.createClass({
 
   render() {
     const restaurants = {};
-    restaurants[this.state.restaurant.id] = this.state.restaurant;
+    const restaurant = this.state.restaurant;
+    restaurants[this.state.restaurant.id] = restaurant;
 
     return (
         <div className="single-restaurant-show">
           <Header/>
-          <div className="page-header">
-            
+          <div className="show-header">
+            <div className="show-header-image">
+              <img src={restaurant.img_url} alt={restaurant.name}/>
+            </div>
+            <div className="show-header-info">
+              <h1 className="show-header-title">{restaurant.name}</h1>
+              <div className="show-header-rating">
+                <span clasName="ratingValue">4</span> stars <span itemprop="reviewCount">34</span> reviews
+              </div>
+              <ul className="show-header-other">
+                <li className="show-header-address">{restaurant.address}</li>
+                <li className="show-header-priceRange">{restaurant.price_range}</li>
+              </ul>
+            </div>
+          </div>
+          <div className="show-content">
+            <div className="content-sidebar">
+              <nav className="sidebar-nav group">
+                <ul className="nav-links">
+                  <li key="reservation-link">
+                    <a href="#reservation" className="reservation-link">Reservation</a>
+                  </li>
+                  <li key="info-link">
+                    <a href="#info">About</a>
+                  </li>
+                  <li key="menu-link">
+                    <a href="#menu">Menu</a>
+                  </li>
+                  <li key="review-link">
+                    <a href="#reviews">Reviews</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="content-main">
+              <div className="main-column">
+
+              </div>
+            </div>
           </div>
           <div className="single-restaurant-map">
             <Link to="/" >Back to Restaurants Index</Link>
-          </div>
-          <div className="right-half restaurant-details">
-            <RestaurantDetail restaurant={this.state.restaurant} />
           </div>
           <Footer/>
       </div>
