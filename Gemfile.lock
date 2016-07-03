@@ -151,6 +151,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    time_of_day_attr (1.0.0)
+      rails (>= 3.2.14)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -181,6 +183,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
+  time_of_day_attr
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 

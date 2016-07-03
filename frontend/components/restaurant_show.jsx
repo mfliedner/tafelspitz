@@ -78,7 +78,7 @@ const RestaurantShow = React.createClass({
             </div>
             <div className="content-main">
               <div className="main-column">
-
+                {restaurant.menu}
               </div>
             </div>
           </div>

@@ -12,9 +12,9 @@ phone       | string    | not null
 price_range | integer   | not null
 lat         | float     |
 lng         | float     |
-opening     | time      |
-closing     | time      |
-seats       | integer   | 
+opening     | integer   |
+closing     | integer   |
+seats       | integer   |
 img_url     | string    |
 menu        | text      |
 
