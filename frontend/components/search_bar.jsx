@@ -1,7 +1,8 @@
 "use strict";
 
 const React = require('react');
-const FilterActions = require('../actions/filter_actions');
+import 'react-date-picker/index.css';
+import { DateField } from 'react-date-picker';
 
 const SearchBar = React.createClass({
   render() {

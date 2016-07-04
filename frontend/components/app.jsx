@@ -10,7 +10,11 @@ const Footer = require('./footer');
 const App = React.createClass({
 
   componentDidMount() {
-    SessionStore.addListener(this.forceUpdate.bind(this));
+    this.listener = SessionStore.addListener(this.forceUpdate.bind(this));
+  },
+
+  componentWillUnmount() {
+    this.listener.remove();
   },
 
   render() {

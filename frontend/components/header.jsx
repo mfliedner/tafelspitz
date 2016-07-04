@@ -34,7 +34,11 @@ const Header = React.createClass({
   },
 
   componentDidMount() {
-    SessionStore.addListener(this.forceUpdate.bind(this));
+    this.listener = SessionStore.addListener(this.forceUpdate.bind(this));
+  },
+
+  componentWillUnmount() {
+    this.listener.remove();
   },
 
   _handleLogOut(event) {
