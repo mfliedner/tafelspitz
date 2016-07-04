@@ -110,7 +110,7 @@
   padding-bottom: 0;
 }
 
-.menu-header {
+.header-bottom {
   border-bottom: 1px solid #ccc;
 }
 
@@ -122,6 +122,10 @@
 
 .block-detail {
   padding-top: 24px;
+}
+
+.block-reviews {
+  padding: 24px;
 }
 
 .block-detail p {

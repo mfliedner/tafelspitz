@@ -6,7 +6,7 @@ const FilterParamsStore = require('../stores/filter_params_store');
 const Link = require('react-router').Link;
 const Header = require('./header');
 const Footer = require('./footer');
-const RestaurantDetail = require('./restaurant');
+const DisplayConstants = require('../constants/display_constants');
 const RestaurantMap = require('./restaurant_map');
 const RestaurantActions = require('../actions/restaurant_actions');
 const hashHistory = require('react-router').hashHistory;
@@ -57,7 +57,9 @@ const RestaurantShow = React.createClass({
               </div>
               <ul className="show-header-other">
                 <li className="show-header-address">{restaurant.address}</li>
-                <li className="show-header-priceRange">{restaurant.price_range}</li>
+                <li className="show-header-priceRange">
+                  {DisplayConstants.PRICE_RANGE[restaurant.price_range]}
+                </li>
               </ul>
             </div>
           </div>
@@ -109,7 +111,7 @@ const RestaurantShow = React.createClass({
                   </div>
                 </section>
                 <section id="menu" className="main-section">
-                  <div className="section-header menu-header">
+                  <div className="section-header header-bottom">
                     Menu for {restaurant.name}
                   </div>
                   <div className="section-content">
@@ -119,8 +121,11 @@ const RestaurantShow = React.createClass({
                   </div>
                 </section>
                 <section id="reviews" className="main-section">
-                  <div className="section-header">
+                  <div className="section-header header-bottom">
                     {restaurant.name} Ratings and Reviews
+                  </div>
+                  <div className="block-reviews">
+                    Ratings coming soon
                   </div>
                 </section>
                 <div className="section-content">

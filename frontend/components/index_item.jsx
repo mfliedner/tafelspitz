@@ -10,6 +10,25 @@ const IndexItem = React.createClass({
     hashHistory.push("restaurants/" + restaurantID );
   },
 
+  pricing(n) {
+    let price = "";
+    { for(let i = 0; i < n; i++) {
+        price += "$";
+      }
+    }
+    let rest = "";
+    { for(let j = n; j < 4; j++) {
+        rest += "$";
+      }
+    }
+    return (
+      <div className ="pricing">
+        <i>{price}</i>
+        {rest}
+      </div>
+    )
+  },
+
   render() {
     const restaurant = this.props.restaurant;
     const route = "/restaurants/" + restaurant.id;
@@ -28,16 +47,21 @@ const IndexItem = React.createClass({
               </Link>
             </div>
             <div className="index-item-info">
-              <Link to={route} className="index-item-name">
-                {restaurant.name}
-              </Link>
-              <div className="index-item-category">
-                {restaurant.price_range || "No reviews yet"}
+              <div className="info-left group">
+                <Link to={route} className="index-item-name">
+                  {restaurant.name}
+                </Link>
+                <div className="index-item-rating">
+                  Reviews coming soon
+                </div>
+                <div className="index-item-location">
+                  {restaurant.address}
+                </div>
               </div>
-              <div className="index-item-rating">
-              </div>
-              <div className="index-item-location">
-                {restaurant.address}
+              <div className="info-right group">
+                <div className="index-item-category">
+                  {this.pricing(restaurant.price_range)}
+                </div>
               </div>
             </div>
             <div className="index-item-review">
