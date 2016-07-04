@@ -66,7 +66,9 @@ const LoginForm = React.createClass({
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-	        Welcome to Tafelspitz!
+	        <div className="login-title">
+						Welcome to Tafelspitz! Please sign in
+					</div>
 
 	        { this.fieldErrors("base") }
 					<div className="login-form">
@@ -76,6 +78,7 @@ const LoginForm = React.createClass({
 							<input type="text"
 		            value={this.state.email}
 		            onChange={this.update("email")}
+								placeholder="Email"
 								className="login-input" />
 						</label>
 
@@ -85,11 +88,12 @@ const LoginForm = React.createClass({
 		          <input type="password"
 		            value={this.state.password}
 		            onChange={this.update("password")}
+								placeholder="Password"
 								className="login-input" />
 						</label>
 
 		        <br />
-						<input type="submit" value="Submit" />
+						<input type="submit" value="Sign In" />
 					</div>
 				</form>
 			</div>

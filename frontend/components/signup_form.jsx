@@ -72,7 +72,9 @@ const SignupForm = React.createClass({
 		return (
 			<div className="signup-form-container">
 				<form onSubmit={this.handleSubmit} className="signup-form-box">
-	        Sign up for Tafelspitz!
+					<div className="login-title">
+	        	Welcome to Tafelspitz!
+					</div>
 
 	        { this.fieldErrors("base") }
 					<div className="signup-form">
@@ -82,7 +84,8 @@ const SignupForm = React.createClass({
 							<input type="text"
 		            value={this.state.first_name}
 		            onChange={this.update("first_name")}
-								className="signup-input" />
+								className="signup-input"
+								placeholder="First Name"/>
 						</label>
 
 						<br/>
@@ -91,7 +94,8 @@ const SignupForm = React.createClass({
 							<input type="text"
 		            value={this.state.last_name}
 		            onChange={this.update("last_name")}
-								className="signup-input" />
+								className="signup-input"
+								placeholder="Last Name"/>
 						</label>
 
 						<br/>
@@ -100,7 +104,8 @@ const SignupForm = React.createClass({
 							<input type="text"
 		            value={this.state.email}
 		            onChange={this.update("email")}
-								className="signup-input" />
+								className="signup-input"
+								placeholder="Enter email"/>
 						</label>
 
 						<br/>
@@ -109,7 +114,8 @@ const SignupForm = React.createClass({
 							<input type="text"
 		            value={this.state.phone}
 		            onChange={this.update("phone")}
-								className="signup-input" />
+								className="signup-input"
+								placeholder="Enter telephone number (optional)"/>
 						</label>
 
 		        <br/>
@@ -118,11 +124,12 @@ const SignupForm = React.createClass({
 		          <input type="password"
 		            value={this.state.password}
 		            onChange={this.update("password")}
-								className="signup-input" />
+								className="signup-input"
+								placeholder="Enter password"/>
 						</label>
 
 		        <br/>
-						<input type="submit" value="Submit" />
+						<input type="submit" value="Create Account" />
 					</div>
 				</form>
 			</div>
