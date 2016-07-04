@@ -38,6 +38,10 @@ const RestaurantShow = React.createClass({
     const restaurants = {};
     const restaurant = this.state.restaurant;
     restaurants[this.state.restaurant.id] = restaurant;
+    const coords = restaurant.lat + "%2C" + restaurant.lng;
+    const mapParams = "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
+    let staticMap = "http://maps.google.com/maps/api/staticmap?center=";
+    staticMap += coords + mapParams + coords;
 
     return (
         <div className="single-restaurant-show">
@@ -77,13 +81,55 @@ const RestaurantShow = React.createClass({
               </nav>
             </div>
             <div className="content-main">
-              <div className="main-column">
-                {restaurant.menu}
+              <div className="main-column group">
+                <section id="reservation" className="main-section">
+                  <div className="section-header flush-bottom">
+                    Make a reservation
+                  </div>
+                  <div className="section-content">
+                  </div>
+                </section>
+                <section id="info" className="main-section">
+                  <div className="section-header flush-bottom">
+                    About {restaurant.name}
+                  </div>
+                  <div className="section-content">
+                    <div className="block-map">
+                      <img src={staticMap}/>
+                    </div>
+                    <div className="block-description">
+                      {restaurant.description}
+                    </div>
+                    <div className="block-detail">
+                      <p>
+                        <span className="item-head">Phone number: </span>
+                        {restaurant.phone}
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section id="menu" className="main-section">
+                  <div className="section-header menu-header">
+                    Menu for {restaurant.name}
+                  </div>
+                  <div className="section-content">
+                    <div className="block-menu">
+                      {restaurant.menu}
+                    </div>
+                  </div>
+                </section>
+                <section id="reviews" className="main-section">
+                  <div className="section-header">
+                    {restaurant.name} Ratings and Reviews
+                  </div>
+                </section>
+                <div className="section-content">
+                </div>
               </div>
             </div>
           </div>
-          <div className="single-restaurant-map">
-            <Link to="/" >Back to Restaurants Index</Link>
+          <div className="footer-top">
+            <Link to="/" >See Full Restaurant List ></Link>
           </div>
           <Footer/>
       </div>

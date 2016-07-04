@@ -63,6 +63,8 @@
   display: list-item;
   text-align: left;
   color: #999;
+  padding: 8px;
+  margin-top: 8px;
 }
 
 .reservation-link {
@@ -84,5 +86,54 @@
 
 .main-column {
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 20px;
+}
+
+.main-section {
+  margin-bottom: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: block;
+}
+
+.section-header {
+  padding: 24px;
+}
+
+.section-content {
+  font-size: 16px;
+  padding: 24px;
+}
+
+.flush-bottom {
+  padding-bottom: 0;
+}
+
+.menu-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.block-description {
+  border-bottom: 1px solid #ccc;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.block-detail {
+  padding-top: 24px;
+}
+
+.block-detail p {
+  margin-bottom: 8px;
+}
+
+.item-head {
+  font-weight: bolder;
+}
+
+.footer-top {
+  padding-left: 40px;
+  padding-bottom: 16px;
+  color: #333;
 }
