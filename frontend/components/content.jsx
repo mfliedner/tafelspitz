@@ -8,13 +8,6 @@ const Search = require('./search');
 const SearchBar = require('./search_bar');
 
 const Content = React.createClass({
-  getInitialState() {
-    return {
-      // searchParams: SearchParamsStore.params()
-      searchParams: {}
-    };
-  },
-
   _handleClick() {
     FilterActions.clearFilters();
   },
@@ -27,7 +20,7 @@ const Content = React.createClass({
             <h1 className="content-header-title">GERMAN CUISINE IN THE SAN FRANCISCO BAY AREA</h1>
             <h2>Make a free reservation</h2>
             <div className="search-bar">
-              <SearchBar searchParams={this.state.searchParams}/>
+              <SearchBar/>
             </div>
             <Link to="/" className="all-index-link" onClick={this._handleClick}>
               View all listed restaurants >

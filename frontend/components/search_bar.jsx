@@ -1,28 +1,62 @@
 "use strict";
 
 const React = require('react');
+const Parser = require('parse-address');
 const ReservationForm = require('./reservation_form');
+const RestaurantStore = require('../stores/restaurant_store');
+const RestaurantActions = require('../actions/restaurant_actions');
+const FilterParamsStore = require('../stores/filter_params_store');
+const AutoCompleteForm = require('./auto');
+const hashHistory = require('react-router').hashHistory;
 
 const SearchBar = React.createClass({
+  parseRestaurants() {
+    const restaurants = this.state.restaurants;
+    const restaurantKeys = Object.keys(this.state.restaurants);
+    let list = [];
+    if (restaurantKeys.length > 0) {
+      list = restaurantKeys.map( (key) => {
+        return (restaurants[key].name);
+      });
+      // let parsed;
+      // restaurantKeys.forEach( (key) => {
+      //   parsed = Parser.parseLocation(restaurants[key].address);
+      //   if (parsed.city !== undefined && list.indexOf(parsed.city) === -1) {
+      //     list.push(parsed.city);
+      //   }
+      // });
+    }
+    return list;
+  },
+
   getInitialState() {
     return {
-			searchText: ""
+      restaurants: RestaurantStore.all(),
+      list: [],
     };
+  },
+
+  _restaurantsChanged() {
+    // if (this.state.restaurants.length === 1) {
+    //   hashHistory.push("restaurants/" + this.state.restaurants.first.id);
+    // }
+    this.setState({restaurants: RestaurantStore.all()});
+    this.setState({list: this.parseRestaurants()});
+  },
+
+  componentDidMount() {
+    this.restaurantListener = RestaurantStore.addListener(this._restaurantsChanged);
+  },
+
+  componentWillUnmount() {
+    this.restaurantListener.remove();
   },
 
   handleSubmit(event) {
     event.preventDefault();
-    const restaurant = Object.assign({}, this.state);
-    SearchActions.createRestaurant(restaurant);
-    this.navigateToRestaurant();
-	},
-
-  navigateToRestaurant() {
-    hashHistory.push("/restaurants");
-  },
-
-  update(property) {
-    return (e) => this.setState({[property]: e.target.value});
+    const newFilters = FilterParamsStore.params();
+    newFilters.filter = true;
+    RestaurantActions.fetchAllRestaurants(newFilters);
   },
 
   render() {
@@ -30,11 +64,7 @@ const SearchBar = React.createClass({
       <div className="search-bar">
         <form onSubmit={this.handleSubmit} className="search-bar-fields">
           <ReservationForm/>
-          <div className="search-text">
-            <input type="text" value={this.state.searchText}
-              onChange={this.update("searchText")}
-              placeholder="Location or Restaurant"/>
-          </div>
+          <AutoCompleteForm list={this.state.list}/>
           <div className="search-button">
             <input type="submit" value="Find a Table" className="find-button"/>
           </div>

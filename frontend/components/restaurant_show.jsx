@@ -10,12 +10,10 @@ const DisplayConstants = require('../constants/display_constants');
 const RestaurantMap = require('./restaurant_map');
 const RestaurantActions = require('../actions/restaurant_actions');
 const hashHistory = require('react-router').hashHistory;
-const SearchBar = require('./search_bar');
+const ReservationBar = require('./reservation_bar');
 
 const RestaurantShow = React.createClass({
   getInitialState() {
-    // searchParams: SearchParamsStore.params()
-    searchParams: {}
     const restaurantId = this.props.params.restaurantId;
     const restaurant = RestaurantStore.find(restaurantId) || {} ;
     return { restaurant };
@@ -92,8 +90,8 @@ const RestaurantShow = React.createClass({
                     Make a reservation
                   </div>
                   <div className="section-content flush-top">
-                    <div className="search-bar">
-                      <SearchBar searchParams={this.state.searchParams}/>
+                    <div className="reservation-bar">
+                      <ReservationBar restaurant={restaurant}/>
                     </div>
                   </div>
                 </section>

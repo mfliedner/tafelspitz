@@ -25,7 +25,7 @@ id            | integer   | not null, primary key
 guest_id      | integer   | not null, foreign key (references users), indexed
 restaurant_id | integer   | not null, foreign key (references restaurants), indexed
 date          | datetime  | not null
-time          | time      | not null
+time          | integer   | not null
 guest_count   | integer   | not null
 requests      | text      |
 

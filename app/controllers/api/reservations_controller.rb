@@ -10,15 +10,11 @@ class Api::ReservationsController < ApplicationController
   end
 
   def create
-    reservation = Reservation.new(reservation_params)
-    reservation.user_id = current_user.id
-
-    if reservation.save
-      @restaurant = reservation.restaurant
-      render '/api/restaurants/show'
-    else
-      render json: reservation, status: :unprocessable_entity
-    end
+    @reservation = Reservation.new(reservation_params)
+    @reservation.user_id = current_user.id
+    @reservation.save!
+    @reservation
+    render :show
   end
 
   def update

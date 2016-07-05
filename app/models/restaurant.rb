@@ -1,4 +1,4 @@
-
+require_relative "reservation"
 
 class Restaurant < ActiveRecord::Base
   validates :description, :name, :owner_id, :price_range, :address, presence: true
@@ -36,5 +36,33 @@ class Restaurant < ActiveRecord::Base
         .where("lat > ?", bounds[:southWest][:lat])
         .where("lng > ?", bounds[:southWest][:lng])
         .where("lng < ?", bounds[:northEast][:lng])
+  end
+
+  def self.available(list, params)
+    unfiltered = params[:filter].start_with?("f") ? true : false
+    return list if list.empty? || unfiltered
+    time = Reservation.time_slot_to_time(params[:time_slot].to_i)
+    guests = params[:guests].to_i
+    filtered = []
+    if params[:name].empty?
+      filtered = self.where("opening < ?", time)
+                     .where("closing > ?", time)
+                     .where("seats > ?", guests)
+    else
+      filtered = self.where("opening < ?", time)
+                     .where("closing > ?", time)
+                     .where("seats > ?", guests)
+                     .where("name = ?", params[:name])
+    end
+    return filtered if filtered.empty?
+
+    reservations = Reservation.where("date = ?", params[:date])
+                              .where("time = ?", time)
+    avail = []
+    filtered.each do |restaurant|
+      taken = reservations.inject(0) { |res, table| res + table.guest_count }
+      avail << restaurant if taken + guests <= restaurant.seats
+    end
+    avail
   end
 end

@@ -2,9 +2,16 @@ class Api::RestaurantsController < ApplicationController
   before_action :require_logged_in, only: [:create]
   def index
     @restaurants = Restaurant.all
-    if(bounds)
-      @restaurants = Restaurant.in_bounds(bounds)
+
+    if name.empty?
+      if(bounds)
+        @restaurants = Restaurant.in_bounds(bounds)
+      end
+    else
+      @restaurants = [Restaurant.find_by_name(name)]
     end
+
+    @restaurants = Restaurant.available(@restaurants, params) if filter
 
     render :index
   end
@@ -42,5 +49,13 @@ class Api::RestaurantsController < ApplicationController
 
   def bounds
     params[:bounds]
+  end
+
+  def name
+    params[:name]
+  end
+
+  def filter
+    params[:filter].start_with?("f") ? false : true
   end
 end

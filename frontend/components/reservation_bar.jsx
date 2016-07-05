@@ -1,31 +1,22 @@
 "use strict";
 
 const React = require('react');
-const ReservationForm = require('./reseravtion_form');
-import 'react-date-picker/index.css';
-import { DateField } from 'react-date-picker';
+const ReservationForm = require('./reservation_form');
+const FilterParamsStore = require('../stores/filter_params_store');
+const ReservationActions = require('../actions/reservation_actions');
 
 const ReservationBar = React.createClass({
-  getInitialState() {
-    return {
-      email: "",
-			searchText: ""
-    };
-  },
-
   handleSubmit(event) {
     event.preventDefault();
-    const restaurant = Object.assign({}, this.state);
-    ReservationActions.createRestaurant(restaurant);
-    this.navigateToRestaurant();
-	},
-
-  navigateToRestaurant() {
-    hashHistory.push("/restaurants");
-  },
-
-  update(property) {
-    return (e) => this.setState({[property]: e.target.value});
+    const newFilters = FilterParamsStore.params();
+    const time = newFilters.time_slot * 60 * 30;
+    const reservation = { date: newFilters.date,
+                          time: time,
+                          guest_count: newFilters.guests,
+                          restaurant_id: this.props.restaurant.id,
+                          requests: ""
+                        };
+    ReservationActions.createReservation(reservation);
   },
 
   render() {

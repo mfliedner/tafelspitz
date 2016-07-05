@@ -14,7 +14,7 @@ const Search = React.createClass({
   getInitialState() {
     return {
       restaurants: RestaurantStore.all(),
-      filterParams: FilterParamsStore.params(),
+      filterParams: FilterParamsStore.params()
     };
   },
 

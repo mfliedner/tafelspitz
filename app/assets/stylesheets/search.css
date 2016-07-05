@@ -14,22 +14,35 @@
   text-shadow: unset;
 }
 
+.search-text {
+  background-color: blue;
+  opacity: 0.5;
+  color: yellow;
+}
+
 .search-fields {
-  display: inline-block;
+  display: block;
 }
 
 .search-guests {
   color: #333;
+  opacity: 0.5;
+  background-color: green;
   text-shadow: unset;
 }
 
 .search-time {
   color: #333;
+  opacity: 0.5;
+  background-color: yellow;
   text-shadow: unset;
 }
 
 .search-date {
   color: #333;
+  opacity: 0.5;
+  background-color: orange;
+  display: block;
   text-shadow: unset;
 }
 

@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: reviews
+#
+#  id            :integer          not null, primary key
+#  user_id       :integer          not null
+#  restaurant_id :integer          not null
+#  date          :datetime         not null
+#  rating        :integer          not null
+#  rate_food     :integer
+#  rate_ambience :integer
+#  rate_service  :integer
+#  rate_value    :integer
+#  body          :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 class Review < ActiveRecord::Base
   validates :user_id, :restaurant_id, presence: true
   validates :rating, inclusion: { in: (1..5) }, presence: true

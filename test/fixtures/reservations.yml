@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: reservations
+#
+#  id            :integer          not null, primary key
+#  guest_id      :integer          not null
+#  restaurant_id :integer          not null
+#  date          :datetime         not null
+#  guest_count   :integer          not null
+#  requests      :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  time          :integer
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

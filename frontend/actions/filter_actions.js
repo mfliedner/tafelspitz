@@ -18,6 +18,13 @@ const FilterActions = {
     });
   },
 
+  updateName(value) {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.UPDATE_NAME,
+      name: value
+    });
+  },
+
   updateDate(value) {
     AppDispatcher.dispatch({
       actionType: FilterConstants.UPDATE_DATE,
@@ -35,6 +42,18 @@ const FilterActions = {
   clearFilters() {
     AppDispatcher.dispatch({
       actionType: FilterConstants.CLEAR_FILTERS
+    });
+  },
+
+  setFilter() {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.SET_FILTER
+    });
+  },
+
+  unsetFilter() {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.USET_FILTER
     });
   }
 };
