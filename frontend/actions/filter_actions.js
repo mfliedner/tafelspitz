@@ -11,6 +11,27 @@ const FilterActions = {
     });
   },
 
+  updateTimeSlot(value) {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.UPDATE_TIME_SLOT,
+      time_slot: value
+    });
+  },
+
+  updateDate(value) {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.UPDATE_DATE,
+      date: value
+    });
+  },
+
+  updateGuests(value) {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.UPDATE_GUESTS,
+      guests: value
+    });
+  },
+
   clearFilters() {
     AppDispatcher.dispatch({
       actionType: FilterConstants.CLEAR_FILTERS

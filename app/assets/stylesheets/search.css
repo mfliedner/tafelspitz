@@ -1,0 +1,39 @@
+.search-bar {
+  display: block;
+  position: relative;
+  margin: auto;
+  background: #fff;
+  min-height: 48px;
+  width: 100%;
+  border: 1px solid #999;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  font-size: 16px;
+  height: 46px;
+  text-shadow: unset;
+}
+
+.search-fields {
+  display: inline-block;
+}
+
+.search-guests {
+  color: #333;
+  text-shadow: unset;
+}
+
+.search-time {
+  color: #333;
+  text-shadow: unset;
+}
+
+.search-date {
+  color: #333;
+  text-shadow: unset;
+}
+
+.search-button {
+  background-color: #b8222d;
+  color: #fff;
+}

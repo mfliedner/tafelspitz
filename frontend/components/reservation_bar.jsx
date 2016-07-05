@@ -1,11 +1,14 @@
 "use strict";
 
 const React = require('react');
-const ReservationForm = require('./reservation_form');
+const ReservationForm = require('./reseravtion_form');
+import 'react-date-picker/index.css';
+import { DateField } from 'react-date-picker';
 
-const SearchBar = React.createClass({
+const ReservationBar = React.createClass({
   getInitialState() {
     return {
+      email: "",
 			searchText: ""
     };
   },
@@ -13,7 +16,7 @@ const SearchBar = React.createClass({
   handleSubmit(event) {
     event.preventDefault();
     const restaurant = Object.assign({}, this.state);
-    SearchActions.createRestaurant(restaurant);
+    ReservationActions.createRestaurant(restaurant);
     this.navigateToRestaurant();
 	},
 
@@ -27,14 +30,9 @@ const SearchBar = React.createClass({
 
   render() {
     return (
-      <div className="search-bar">
-        <form onSubmit={this.handleSubmit} className="search-bar-fields">
+      <div className="reservation-bar">
+        <form onSubmit={this.handleSubmit} className="reservation-fields">
           <ReservationForm/>
-          <div className="search-text">
-            <input type="text" value={this.state.searchText}
-              onChange={this.update("searchText")}
-              placeholder="Location or Restaurant"/>
-          </div>
           <div className="search-button">
             <input type="submit" value="Find a Table" className="find-button"/>
           </div>
@@ -44,4 +42,4 @@ const SearchBar = React.createClass({
   }
 });
 
-module.exports = SearchBar;
+module.exports = ReservationBar;

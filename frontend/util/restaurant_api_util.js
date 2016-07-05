@@ -1,6 +1,6 @@
 "use strict";
 
-const ApiUtil = {
+const RestaurantApiUtil = {
   fetchAllRestaurants(filters, success){
     $.get('api/restaurants', filters, success);
   },
@@ -9,4 +9,4 @@ const ApiUtil = {
   },
 };
 
-module.exports = ApiUtil;
+module.exports = RestaurantApiUtil;

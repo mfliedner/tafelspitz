@@ -110,6 +110,10 @@
   padding-bottom: 0;
 }
 
+.flush-top {
+  padding-top: 0;
+}
+
 .header-bottom {
   border-bottom: 1px solid #ccc;
 }
