@@ -42,7 +42,10 @@ const Footer = React.createClass({
   render() {
     const component = (SessionStore.isUserLoggedIn()) ?
       <RestaurantForm closeModal={this.closeModal}/> :
-      <AlertForm closeModal={this.closeModal}/>;
+      <AlertForm closeModal={this.closeModal}
+                 greeting="Get started with Tafelspitz for Restaurants"
+                 message="To add your restaurant to our database, please sign in at the top of the page."
+      />;
 
     return (
       <footer className="footer group">

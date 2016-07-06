@@ -67,7 +67,10 @@ const ReservationBar = React.createClass({
           onRequestClose={this.closeModal}
           onAfterOpen={this.openModal}
           style={ModalStyle}>
-          <AlertForm closeModal={this.closeModal}/>
+          <AlertForm closeModal={this.closeModal}
+            greeting="Almost Done. To complete your reservation"
+            message="please sign in or sign up for Tafelspitz"
+          />
           <button onClick={this.closeModal}>Cancel</button>
         </Modal>
       </div>
