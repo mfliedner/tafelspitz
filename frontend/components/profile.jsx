@@ -2,6 +2,7 @@
 
 const React = require('react');
 const Header = require('./header');
+const User = require('./user');
 const Footer = require('./footer');
 
 const Profile = React.createClass({
@@ -9,6 +10,7 @@ const Profile = React.createClass({
     return (
       <div className="user-profile">
         <Header/>
+        <User/>
         <Footer/>
       </div>
     );

@@ -10,7 +10,6 @@ const Footer = require('./footer');
 const DisplayConstants = require('../constants/display_constants');
 const RestaurantMap = require('./restaurant_map');
 const RestaurantActions = require('../actions/restaurant_actions');
-const hashHistory = require('react-router').hashHistory;
 const ReservationBar = require('./reservation_bar');
 
 const RestaurantShow = React.createClass({

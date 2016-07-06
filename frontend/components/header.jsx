@@ -8,6 +8,7 @@ const SessionStore = require('../stores/session_store');
 const SessionActions = require('../actions/session_actions');
 const LoginForm = require('./login_form');
 const SignupForm = require('./signup_form');
+const hashHistory = require('react-router').hashHistory;
 
 const Header = React.createClass({
   getInitialState: function() {
@@ -52,6 +53,7 @@ const Header = React.createClass({
   _handleLogOut(event) {
     event.preventDefault();
     SessionActions.logOut();
+    hashHistory.push("/");
   },
 
   navbar() {
