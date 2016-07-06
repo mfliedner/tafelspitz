@@ -41,8 +41,10 @@ function setGuestCount(guest_count) {
 };
 
 function clearFilters(){
-  _params = {};
-  _params.filter = false;
+  _params = { time_slot: FilterConstants.DEFAULT_TIME_SLOT,
+                  date: moment().format('ll'),
+                  guest_count: FilterConstants.DEFAULT_GUEST_COUNT,
+                  name: "", filter: false };
   FilterParamsStore.__emitChange();
 };
 
