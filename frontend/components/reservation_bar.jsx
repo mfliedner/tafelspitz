@@ -11,6 +11,7 @@ const ReservationForm = require('./reservation_form');
 const FilterParamsStore = require('../stores/filter_params_store');
 const FilterConstants = require('../constants/filter_constants');
 const ReservationActions = require('../actions/reservation_actions');
+const hashHistory = require('react-router').hashHistory;
 const moment = require('moment');
 
 const ReservationBar = React.createClass({
@@ -53,7 +54,7 @@ const ReservationBar = React.createClass({
                          requests: ""
                        };
       const time = newFilters.time_slot * 60 * 30;
-      
+
       const reservation = { date: newState.date,
                             time: time,
                             guest_count: newState.guest_count,
@@ -62,6 +63,9 @@ const ReservationBar = React.createClass({
                           };
       this.setState(newState);
       ReservationActions.createReservation(reservation);
+
+      const id = SessionStore.currentUser().id;
+      hashHistory.push("users/" + id + "/reservations/");
     } else {
       this.setState( {modalOpen: true} );
     }

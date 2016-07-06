@@ -2,7 +2,7 @@ class Api::ReservationsController < ApplicationController
   before_action :require_logged_in
 
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.where("guest_id = ?", current_user.id)
   end
 
   def show

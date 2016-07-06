@@ -14,6 +14,7 @@ const Modal = require('react-modal');
 // Components
 const App = require('./components/app');
 const Search = require('./components/search');
+const Profile = require('./components/profile');
 const RestaurantForm = require('./components/restaurant_form');
 const RestaurantShow = require('./components/restaurant_show');
 // Auth
@@ -40,6 +41,7 @@ const routes = (
       <Route path="/restaurants/new" component={ RestaurantForm } onEnter={ _ensureLoggedIn }/>
     </Route>
     <Route path="/restaurants/:restaurantId" component={ RestaurantShow }/>
+    <Route path="/users/:userId/reservations" component={ Profile }/>
   </Router>
 );
 

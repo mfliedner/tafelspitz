@@ -39,10 +39,6 @@ const SearchBar = React.createClass({
   _restaurantsChanged() {
     this.setState({restaurants: RestaurantStore.all()});
     this.setState({list: this.parseRestaurants()});
-    // const restaurantIDs = Object.keys(this.state.restaurants);
-    // if (restaurantIDs.length === 1) {
-    //   hashHistory.push("restaurants/" + restaurantIDs[0]);
-    // }
   },
 
   componentDidMount() {
