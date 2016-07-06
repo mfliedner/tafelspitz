@@ -3,6 +3,7 @@
 const React = require('react');
 import 'react-select/dist/react-select.css';
 const DisplayConstants = require('../constants/display_constants');
+const FilterConstants = require('../constants/filter_constants');
 const FilterActions = require('../actions/filter_actions');
 const Select = require('react-select');
 
@@ -13,8 +14,8 @@ const TimeSlotForm = React.createClass({
 
   getOptions() {
     let options = [];
-    for(let i = 0; i < 48; i++) {
-        options.push( {value: i, label: DisplayConstants.TIME_SLOT[i]} );
+    for(let i = 0; i < DisplayConstants.TIME_SLOTS.length; i++) {
+        options.push( {value: i, label: DisplayConstants.TIME_SLOTS[i]} );
     }
     return options;
   },
@@ -22,7 +23,7 @@ const TimeSlotForm = React.createClass({
 	getInitialState () {
 		return {
 			options: this.getOptions(),
-			value: 38
+			value: FilterConstants.DEFAULT_TIME_SLOT
 		};
 	},
 

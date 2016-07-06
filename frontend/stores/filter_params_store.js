@@ -5,8 +5,10 @@ const Store = require('flux/utils').Store;
 const FilterConstants = require('../constants/filter_constants');
 const moment = require('moment');
 
-let _params = { time_slot: 38, date: moment().format('ll'),
-                guests: 2, name: "", filter: false };
+let _params = { time_slot: FilterConstants.DEFAULT_TIME_SLOT,
+                date: moment().format('ll'),
+                guest_count: FilterConstants.DEFAULT_GUEST_COUNT,
+                name: "", filter: false };
 const FilterParamsStore = new Store(AppDispatcher);
 
 FilterParamsStore.params = function() {
@@ -33,8 +35,8 @@ function setDate(date) {
   FilterParamsStore.__emitChange();
 };
 
-function setGuests(guests) {
-  _params.guests = guests;
+function setGuestCount(guest_count) {
+  _params.guest_count = guest_count;
   FilterParamsStore.__emitChange();
 };
 
@@ -68,8 +70,8 @@ FilterParamsStore.__onDispatch = function(payload) {
     case FilterConstants.UPDATE_DATE:
       setDate(payload.date);
       break;
-    case FilterConstants.UPDATE_GUESTS:
-      setGuests(payload.guests);
+    case FilterConstants.UPDATE_GUEST_COUNT:
+      setGuestCount(payload.guest_count);
       break;
     case FilterConstants.CLEAR_FILTERS:
       clearFilters();

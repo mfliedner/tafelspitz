@@ -12,13 +12,13 @@ const ReservationForm = React.createClass({
       <div className="reservation-form">
         <div className="search-fields">
           <div className="search-guests">
-            <GuestsForm/>
+            <GuestsForm count={this.props.guest_count}/>
           </div>
           <div className="search-date">
-            <DateForm/>
+            <DateForm day={this.props.date}/>
           </div>
           <div className="search-time">
-            <TimeSlotForm/>
+            <TimeSlotForm slot={this.props.time_slot}/>
           </div>
         </div>
       </div>

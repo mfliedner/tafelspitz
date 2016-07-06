@@ -32,10 +32,10 @@ const FilterActions = {
     });
   },
 
-  updateGuests(value) {
+  updateGuestCount(value) {
     AppDispatcher.dispatch({
-      actionType: FilterConstants.UPDATE_GUESTS,
-      guests: value
+      actionType: FilterConstants.UPDATE_GUEST_COUNT,
+      guest_count: value
     });
   },
 

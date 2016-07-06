@@ -9,11 +9,18 @@ const SessionActions = require('../actions/session_actions');
 const AlertForm = require('./alert_form');
 const ReservationForm = require('./reservation_form');
 const FilterParamsStore = require('../stores/filter_params_store');
+const FilterConstants = require('../constants/filter_constants');
 const ReservationActions = require('../actions/reservation_actions');
+const moment = require('moment');
 
 const ReservationBar = React.createClass({
   getInitialState: function() {
     return({
+      date: moment().format('ll'),
+      time_slot: FilterConstants.DEFAULT_TIME_SLOT,
+      guest_count: FilterConstants.DEFAULT_GUEST_COUNT,
+      restaurant_id: this.props.restaurant.id,
+      requests: "",
       modalOpen: false
     });
   },
@@ -39,13 +46,21 @@ const ReservationBar = React.createClass({
     event.preventDefault();
     if (SessionStore.isUserLoggedIn()) {
       const newFilters = FilterParamsStore.params();
+      const newState = { date: newFilters.date,
+                         time_slot: newFilters.time_slot,
+                         guest_count: newFilters.guest_count,
+                         restaurant_id: this.props.restaurant.id,
+                         requests: ""
+                       };
       const time = newFilters.time_slot * 60 * 30;
-      const reservation = { date: newFilters.date,
+      
+      const reservation = { date: newState.date,
                             time: time,
-                            guest_count: newFilters.guests,
-                            restaurant_id: this.props.restaurant.id,
+                            guest_count: newState.guest_count,
+                            restaurant_id: newState.restaurant_id,
                             requests: ""
                           };
+      this.setState(newState);
       ReservationActions.createReservation(reservation);
     } else {
       this.setState( {modalOpen: true} );
@@ -56,7 +71,7 @@ const ReservationBar = React.createClass({
     return (
       <div className="reservation-bar">
         <form onSubmit={this.handleSubmit} className="reservation-fields">
-          <ReservationForm/>
+          <ReservationForm reservationParms={this.state}/>
           <div className="search-button">
             <input type="submit" value="Find a Table" className="find-button"/>
           </div>

@@ -3,6 +3,7 @@
 const React = require('react');
 import 'react-select/dist/react-select.css';
 const DisplayConstants = require('../constants/display_constants');
+const FilterConstants = require('../constants/filter_constants');
 const FilterActions = require('../actions/filter_actions');
 const Select = require('react-select');
 
@@ -24,13 +25,13 @@ const GuestsForm = React.createClass({
 	getInitialState () {
 		return {
 			options: this.getOptions(),
-			value: 2
+			value: FilterConstants.DEFAULT_GUEST_COUNT
 		};
 	},
 
 	onChange(value) {
 		this.setState({value});
-    FilterActions.updateGuests(value);
+    FilterActions.updateGuestCount(value);
 	},
 
 	render () {

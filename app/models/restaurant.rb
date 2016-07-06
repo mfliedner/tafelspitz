@@ -1,5 +1,5 @@
 require_relative "reservation"
-require 'byebug'
+
 class Restaurant < ActiveRecord::Base
   validates :description, :name, :owner_id, :price_range, :address, presence: true
   validates :price_range, inclusion: { in: (1..4) }
@@ -44,18 +44,18 @@ class Restaurant < ActiveRecord::Base
 
     return list if list.empty? || unfiltered
     time = Reservation.time_slot_to_time(params[:time_slot].to_i)
-    guests = params[:guests].to_i
+    guest_count = params[:guest_count].to_i
     filtered = []
-    debugger
+
     if name_known
       filtered = self.where("opening < ?", time)
                      .where("closing > ?", time)
-                     .where("seats > ?", guests)
+                     .where("seats > ?", guest_count)
                      .where("name = ?", params[:name])
     else
       filtered = self.where("opening < ?", time)
                      .where("closing > ?", time)
-                     .where("seats > ?", guests)
+                     .where("seats > ?", guest_count)
     end
     return filtered if filtered.empty?
 
@@ -64,7 +64,7 @@ class Restaurant < ActiveRecord::Base
     avail = []
     filtered.each do |restaurant|
       taken = reservations.inject(0) { |res, table| res + table.guest_count }
-      avail << restaurant if taken + guests <= restaurant.seats
+      avail << restaurant if taken + guest_count <= restaurant.seats
     end
     avail
   end
