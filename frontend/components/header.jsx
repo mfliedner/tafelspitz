@@ -62,6 +62,8 @@ const Header = React.createClass({
       let greeting = "Hello!";
       if (SessionStore.currentUser().first_name) {
         greeting = "Hi, " + SessionStore.currentUser().first_name;
+      } else if (SessionStore.currentUser().last_name) {
+        greeting = "Hi, " + SessionStore.currentUser().last_name;
       }
     	return (
     		<nav className="header-nav logout group">
