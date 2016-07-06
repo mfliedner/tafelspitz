@@ -26,7 +26,7 @@
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 5px;
+  padding-left: 20px;
   border: none;
   outline: none; }
 
@@ -52,7 +52,7 @@
   fill: #4d4d4d; }
 
 .react-date-field__calendar-icon:hover {
-  border-color: #4d4d4d; }
+  border-color: #ccc; }
   .react-date-field__calendar-icon:hover:after, .react-date-field__calendar-icon:hover:before,
   .react-date-field__calendar-icon:hover .react-date-field__calendar-icon-inner {
     background: #4d4d4d; }
@@ -2290,7 +2290,7 @@
     color: #349aef;
     fill: #349aef; }
   .react-date-field--theme-default .react-date-field__calendar-icon:hover {
-    border-color: #4d4d4d; }
+    border-color: #ccc; }
     .react-date-field--theme-default .react-date-field__calendar-icon:hover:after, .react-date-field--theme-default .react-date-field__calendar-icon:hover:before,
     .react-date-field--theme-default .react-date-field__calendar-icon:hover .react-date-field__calendar-icon-inner {
       background: #4d4d4d; }
@@ -2318,7 +2318,7 @@
 .react-date-picker__clock--theme-default .react-date-picker__clock-overlay {
   background: white;
   border-style: solid;
-  border-color: gray; }
+  border-color: #ccc; }
 
 .react-date-picker__footer--theme-default {
   padding: 5px; }

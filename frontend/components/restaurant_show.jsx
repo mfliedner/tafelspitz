@@ -86,7 +86,7 @@ const RestaurantShow = React.createClass({
             <div className="content-main">
               <div className="main-column group">
                 <section id="reservation" className="main-section">
-                  <div className="section-header flush-bottom">
+                  <div className="section-header">
                     Make a reservation
                   </div>
                   <div className="section-content flush-top">

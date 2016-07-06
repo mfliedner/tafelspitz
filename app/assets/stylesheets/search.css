@@ -2,47 +2,81 @@
   display: block;
   position: relative;
   margin: auto;
-  background: #fff;
+  background: transparent;
   min-height: 48px;
   width: 100%;
-  border: 1px solid #999;
   margin-top: 16px;
   margin-bottom: 16px;
   border-radius: 3px;
   font-size: 16px;
+}
+
+.search-bar-fields, .reservation-fields {
+  display: flex;
+  color: #333;
+  background-color: transparent;
   height: 46px;
-  text-shadow: unset;
 }
 
 .search-fields {
   display: flex;
+  height: 46px;
 }
 
 .search-text {
-  background-color: blue;
-  color: yellow;
+  background: #fff;
+  min-width: 220px;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  border-left: 1px solid #999;
+}
+
+.search-text > input {
+  min-height: 26px;
+}
+
+.search-bar-fields li {
+  border-top: 1px solid #999;
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.search-bar-fields ul {
+  border-bottom: 1px solid #999;
+  border-right: 1px solid #999;
+  border-left: 1px solid #999;
 }
 
 .search-guests {
-  color: #333;
-  background-color: green;
-  text-shadow: unset;
+  min-width: 107px;
 }
 
 .search-time {
-  color: #333;
-  background-color: yellow;
-  text-shadow: unset;
+  border-radius: 0;
+  min-width: 107px;
 }
 
 .search-date {
-  color: #333;
-  background-color: orange;
-  display: block;
-  text-shadow: unset;
+  background-color: #fff;
+  min-width: 164px;
 }
 
 .search-button {
   background-color: #b8222d;
   color: #fff;
+  min-width: 115px;
+  border: 1px solid #b8222d;
+}
+
+.Select-control {
+  border-radius: 0;
+  border: 1px solid #999;
+  min-height: 46px;
+}
+
+.react-date-field {
+  min-height: 46px;
 }
