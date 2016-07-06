@@ -78,7 +78,7 @@ FilterParamsStore.__onDispatch = function(payload) {
       setFilter();
       break;
     case FilterConstants.UNSET_FILTER:
-      setFilter();
+      unsetFilter();
       break;
   }
 };

@@ -3,6 +3,7 @@
 const React = require('react');
 const RestaurantStore = require('../stores/restaurant_store');
 const FilterParamsStore = require('../stores/filter_params_store');
+const FilterActions = require('../actions/filter_actions');
 const Link = require('react-router').Link;
 const Header = require('./header');
 const Footer = require('./footer');
@@ -33,6 +34,10 @@ const RestaurantShow = React.createClass({
     const restaurantId = this.props.params.restaurantId;
     const restaurant = RestaurantStore.find(restaurantId);
     this.setState({ restaurant });
+  },
+
+  _handleClick() {
+    FilterActions.clearFilters();
   },
 
   render() {
@@ -138,7 +143,7 @@ const RestaurantShow = React.createClass({
             </div>
           </div>
           <div className="footer-top">
-            <Link to="/" >See Full Restaurant List ></Link>
+            <Link to="/" onClick={this._handleClick}>See Full Restaurant List ></Link>
           </div>
           <Footer/>
       </div>

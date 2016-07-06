@@ -1,5 +1,5 @@
 require_relative "reservation"
-
+require 'byebug'
 class Restaurant < ActiveRecord::Base
   validates :description, :name, :owner_id, :price_range, :address, presence: true
   validates :price_range, inclusion: { in: (1..4) }
@@ -40,19 +40,22 @@ class Restaurant < ActiveRecord::Base
 
   def self.available(list, params)
     unfiltered = params[:filter].start_with?("f") ? true : false
+    name_known = !!params[:name] && name.length > 0
+
     return list if list.empty? || unfiltered
     time = Reservation.time_slot_to_time(params[:time_slot].to_i)
     guests = params[:guests].to_i
     filtered = []
-    if params[:name].empty?
-      filtered = self.where("opening < ?", time)
-                     .where("closing > ?", time)
-                     .where("seats > ?", guests)
-    else
+    debugger
+    if name_known
       filtered = self.where("opening < ?", time)
                      .where("closing > ?", time)
                      .where("seats > ?", guests)
                      .where("name = ?", params[:name])
+    else
+      filtered = self.where("opening < ?", time)
+                     .where("closing > ?", time)
+                     .where("seats > ?", guests)
     end
     return filtered if filtered.empty?
 

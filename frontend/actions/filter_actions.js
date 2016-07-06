@@ -53,7 +53,7 @@ const FilterActions = {
 
   unsetFilter() {
     AppDispatcher.dispatch({
-      actionType: FilterConstants.USET_FILTER
+      actionType: FilterConstants.UNSET_FILTER
     });
   }
 };
