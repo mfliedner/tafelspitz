@@ -33,6 +33,14 @@ const Header = React.createClass({
     });
   },
 
+  _handleGuest(event) {
+    const formData = {
+      email: "guest",
+      password: "password"
+    };
+    SessionActions.logIn(formData);
+  },
+
   componentDidMount() {
     this.listener = SessionStore.addListener(this.forceUpdate.bind(this));
   },
@@ -90,7 +98,12 @@ const Header = React.createClass({
                 Sign in
               </button>
             </li>
-            <li></li>
+            <li>
+              <button id="login-button" className="guest-login-button"
+                      onClick={this._handleGuest}>
+                Sign in as Guest
+              </button>
+            </li>
           </ul>
         </nav>
       );
