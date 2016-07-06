@@ -3,7 +3,8 @@ class Api::RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
 
-    if name.empty?
+    # if name_known?
+    if true
       if(bounds)
         @restaurants = Restaurant.in_bounds(bounds)
       end
@@ -53,6 +54,10 @@ class Api::RestaurantsController < ApplicationController
 
   def name
     params[:name]
+  end
+
+  def name_known?
+    !!name && name.length > 0
   end
 
   def filter
