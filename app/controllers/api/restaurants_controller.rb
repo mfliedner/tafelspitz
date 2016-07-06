@@ -3,13 +3,12 @@ class Api::RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
 
-    # if name_known?
-    if true
+    if name_known?
+      @restaurants = [Restaurant.find_by_name(name)]
+    else
       if(bounds)
         @restaurants = Restaurant.in_bounds(bounds)
       end
-    else
-      @restaurants = [Restaurant.find_by_name(name)]
     end
 
     @restaurants = Restaurant.available(@restaurants, params) if filter
