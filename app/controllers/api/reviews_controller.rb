@@ -2,7 +2,7 @@ class Api::ReviewsController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def index
-    @reviews = Review.all
+    @reviews = Review.where("restaurant_id = ?", params[:restaurant_id])
   end
 
   def show
