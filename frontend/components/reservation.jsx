@@ -55,6 +55,9 @@ const Reservation = React.createClass({
                 <div className="index-item-category">
                   {reservation.date}
                 </div>
+                <div className="index-item-category">
+                  {reservation.time}
+                </div>
               </div>
             </div>
             <div className="index-item-review">
