@@ -15,7 +15,7 @@ class Api::ReviewsController < ApplicationController
 
     if review.save
       @restaurant = review.restaurant
-      render '/api/restaurants/show'
+      render '/api/restaurants/review.restaurant.id/show'
     else
       render json: review, status: :unprocessable_entity
     end

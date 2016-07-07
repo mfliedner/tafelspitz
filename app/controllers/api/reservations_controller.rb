@@ -3,10 +3,34 @@ class Api::ReservationsController < ApplicationController
 
   def index
     @reservations = Reservation.where("guest_id = ?", current_user.id)
+                               .includes(:restaurant)
+    @reservation_items = {}
+    @reservations.each do |item|
+      @reservation_items[item.id] = {
+        :id => item.id,
+        :guest_count => item.guest_count,
+        :date => item.date,
+        :time => item.time,
+        :requests => item.requests,
+        :restaurant_id => item.restaurant_id,
+        :name => item.restaurant.name,
+        :img_url => item.restaurant.img_url
+      }
+    end
   end
 
   def show
     @reservation = Reservation.find(params[:id])
+    @reservation_item = {
+      :id => @reservation.id,
+      :guest_count => @reservation.guest_count,
+      :date => @reservation.date,
+      :time => @reservation.time,
+      :requests => @reservation.requests,
+      :restaurant_id => @reservation.restaurant_id,
+      :name => @reservation.restaurant.name,
+      :img_url => @reservation.restaurant.img_url
+    }
   end
 
   def create

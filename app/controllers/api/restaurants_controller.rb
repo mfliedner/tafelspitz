@@ -27,6 +27,10 @@ class Api::RestaurantsController < ApplicationController
     render :show
   end
 
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
+
   private
 
   def restaurant_params
@@ -60,6 +64,7 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def filter
+    return false if params[:filter].nil?
     params[:filter].start_with?("f") ? false : true
   end
 end

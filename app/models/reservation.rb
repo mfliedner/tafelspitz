@@ -10,7 +10,7 @@
 #  requests      :text
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  time          :integer
+#  time          :integer          not null
 #
 
 class Reservation < ActiveRecord::Base
