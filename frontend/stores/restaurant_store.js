@@ -2,6 +2,7 @@
 
 const Store = require('flux/utils').Store;
 const RestaurantConstants = require('../constants/restaurant_constants');
+const FavoriteConstants = require('../constants/favorite_constants.js');
 const AppDispatcher = require('../dispatcher/dispatcher');
 const RestaurantStore = new Store(AppDispatcher);
 
@@ -13,6 +14,17 @@ RestaurantStore.all = function() {
 
 RestaurantStore.find = function(id) {
   return Object.assign({}, _restaurants[id]);
+};
+
+function addFavorite(restaurantId, userId) {
+  _restaurants[restaurantId].favorite_users.push(parseInt(userId));
+  RestaurantStore.__emitChange();
+};
+
+function removeFavorite(restaurantId, userId) {
+  const userIdx = _restaurants[restaurantId].favorite_users.indexOf(parseInt(userId));
+  _restaurants[restaurantId].favorite_users.splice(userIdx, 1);
+  RestaurantStore.__emitChange();
 };
 
 function resetAllRestaurants(restaurants) {
@@ -32,6 +44,12 @@ RestaurantStore.__onDispatch = function(payload) {
       break;
     case RestaurantConstants.RESTAURANT_RECEIVED:
       resetSingleRestaurant(payload.restaurant);
+      break;
+    case FavoriteConstants.FAVORITE_RECEIVED:
+      RestaurantStore.addFavorite(payload.favorite.restaurantId, payload.favorite.userId);
+      break;
+    case FavoriteConstants.FAVORITE_REMOVED:
+      RestaurantStore.removeFavorite(payload.favorite.restaurantId, payload.favorite.userId);
       break;
   }
 };

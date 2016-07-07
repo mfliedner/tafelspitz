@@ -8,9 +8,16 @@ const RestaurantActions = {
   fetchAllRestaurants(filters) {
     RestaurantApiUtil.fetchAllRestaurants(filters, RestaurantActions.receiveAllRestaurants);
   },
-  createRestaurant(restaurant){
+  fetchSingleRestaurant(id) {
+    RestaurantApiUtil.fetchSingleRestaurant(id, RestaurantActions.receiveSingleRestaurant);
+  },
+  createRestaurant(restaurant) {
     RestaurantApiUtil.createRestaurant(restaurant, RestaurantActions.receiveSingleRestaurant);
   },
+  createReview(id, review) {
+    RestaurantApiUtil.createReview(id, review, RestaurantActions.receiveSingleRestaurant);
+  },
+
 
   receiveAllRestaurants(restaurants) {
     AppDispatcher.dispatch({

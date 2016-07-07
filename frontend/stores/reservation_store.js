@@ -7,11 +7,7 @@ const ReservationStore = new Store(AppDispatcher);
 let _reservations = {};
 
 const resetReservations = function (reservations) {
-  _reservations = {};
-
-  reservations.forEach(function (reservation) {
-    _reservations[reservation.id] = reservation;
-  });
+  _reservations = reservations;
 };
 
 const setReservation = function (reservation) {
@@ -23,13 +19,11 @@ const removeReservation = function (reservation) {
 };
 
 ReservationStore.all = function () {
-  return Object.keys(_reservations).map(function (reservationId) {
-    return _reservations[reservationId];
-  });
+  return Object.assign({}, _reservations);
 };
 
 ReservationStore.find = function (id) {
-  return _reservations[id];
+  return Object.assign({}, _reservations[id]);
 };
 
 
@@ -45,7 +39,7 @@ ReservationStore.__onDispatch = function (payload) {
       removeReservation(payload.reservation);
       break;
   }
-  this.__emitChange();
+  ReservationStore.__emitChange();
 };
 
 module.exports = ReservationStore;

@@ -22,13 +22,13 @@
 ### Actions
 * ApiActions.receiveReservation
 * ApiActions.removeReservation
-* ReservationActions.fetchAllReservations -> triggers ApiUtil
+* ReservationActions.fetchReservations -> triggers ApiUtil
 * ReservationActions.createReservation
 * ReservationActions.updateReservation
 * ReservationActions.deleteReservation
 
 ### ApiUtil
-* ApiUtil.fetchAllReservations
+* ApiUtil.fetchReservations
 * ApiUtil.fetchSingleReservation
 * ApiUtil.createReservation
 * ApiUtil.updateReservation
