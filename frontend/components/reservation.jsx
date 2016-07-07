@@ -23,26 +23,26 @@ const Reservation = React.createClass({
   },
 
   render() {
-    const restaurant = this.props.restaurant;
-    const route = "/restaurants/" + restaurant.id;
-    let imgUrl = restaurant.img_url;
+    const reservation = this.props.reservation;
+    const route = "/restaurants/" + reservation.restaurant_id;
+    let imgUrl = reservation.img_url;
     if (imgUrl.length < 5) {
       imgUrl = "/no-image.png";
     }
     return (
         <div className="restaurant-index-item"
              onClick={this._handleClick}
-             key={restaurant.id}>
+             key={reservation.restaurant_id}>
           <div className="index-item-restaurant">
             <div className="index-item-image">
               <Link to={route}>
-                <img src={imgUrl} alt={restaurant.name}/>
+                <img src={imgUrl} alt={reservation.name}/>
               </Link>
             </div>
             <div className="index-item-info">
               <div className="info-left group">
                 <Link to={route} className="index-item-name">
-                  {restaurant.name}
+                  {reservation.name}
                 </Link>
                 <div className="index-item-rating">
                   Write Review

@@ -1,1 +1,1 @@
-json.partial! 'reservation', reservation: @reservation
+json.partial! 'reservation_item', reservation_item: @reservation_item

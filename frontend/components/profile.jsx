@@ -29,8 +29,6 @@ const Profile = React.createClass({
   },
 
   render() {
-    // debugger
-
     return (
       <div className="user-profile">
         <Header/>
