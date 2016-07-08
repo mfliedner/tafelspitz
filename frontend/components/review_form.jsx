@@ -24,24 +24,8 @@ const ReviewForm = React.createClass({
     hashHistory.push(restaurantUrl);
   },
 
-  onStarClick(name, value) {
-      this.setState({rating: value});
-  },
-
-  onStarFClick(name, value) {
-      this.setState({rate_food: value});
-  },
-
-  onStarAClick(name, value) {
-      this.setState({rate_ambience: value});
-  },
-
-  onStarSClick(name, value) {
-      this.setState({rate_service: value});
-  },
-
-  onStarVClick(name, value) {
-      this.setState({rate_value: value});
+  onStarClick(stars, initial, name) {
+    this.setState({[name]: stars});
   },
 
   handleSubmit(event) {
@@ -66,53 +50,53 @@ const ReviewForm = React.createClass({
 
             <label className="review-field">Overall </label>
             <StarRatingComponent
-                name="rate"
+                name="rating"
                 starCount={5}
                 value={this.state.rating}
                 starColor={starColor}
                 editing={true}
-                onStarClick={this.update("rating")}
+                onStarClick={this.onStarClick}
             />
             <span> (required)</span>
             <br/>
             <label className="review-field">Food </label>
             <StarRatingComponent
-                name="rateF"
+                name="rate_food"
                 starCount={5}
                 value={this.state.rate_food}
                 starColor={starColor}
                 editing={true}
-                onStarClick={this.update("rate_food")}
+                onStarClick={this.onStarClick}
             />
             <br/>
             <label className="review-field">Ambience </label>
             <StarRatingComponent
-                name="rateA"
+                name="rate_ambience"
                 starCount={5}
                 value={this.state.rate_ambience}
                 starColor={starColor}
                 editing={true}
-                onStarClick={this.update("rate_ambience")}
+                onStarClick={this.onStarClick}
             />
             <br/>
             <label className="review-field">Service </label>
             <StarRatingComponent
-                name="rateS"
+                name="rate_service"
                 starCount={5}
                 value={this.state.rate_service}
                 starColor={starColor}
                 editing={true}
-                onStarClick={this.update("rate_service")}
+                onStarClick={this.onStarClick}
             />
             <br/>
             <label className="review-field">Value </label>
             <StarRatingComponent
-                name="rateV"
+                name="rate_value"
                 starCount={5}
                 value={this.state.rate_value}
                 starColor={starColor}
                 editing={true}
-                onStarClick={this.update("rate_value")}
+                onStarClick={this.onStarClick}
             />
             <br/>
 
