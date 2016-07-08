@@ -11,10 +11,6 @@ const RestaurantApiUtil = {
 
   createRestaurant(data, success){
     $.post('api/restaurants', { restaurant: data }, success);
-  },
-
-  createReview(id, review, success) {
-    $.post(`api/restaurants/${id}/reviews`, { review }, success);
   }
 };
 

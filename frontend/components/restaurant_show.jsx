@@ -107,7 +107,7 @@ const RestaurantShow = React.createClass({
             <div className="show-header-info">
               <h1 className="show-header-title">{restaurant.name}</h1>
               <div className="show-header-rating">
-                <span className="ratingValue">4</span> stars <span itemprop="reviewCount">34</span> reviews
+                <span className="ratingValue">4</span> stars <span className="reviewCount">34</span> reviews
               </div>
               <ul className="show-header-other">
                 <li className="show-header-address">{restaurant.address}</li>

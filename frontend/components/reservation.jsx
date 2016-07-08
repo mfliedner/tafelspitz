@@ -31,8 +31,8 @@ const Reservation = React.createClass({
   },
 
   _handleClick() {
-    const restaurantID = this.props.restaurant.id;
-    hashHistory.push("restaurant/" + restaurantID );
+    // const restaurantID = this.props.reservation.restaurant_id;
+    // hashHistory.push("restaurants/" + restaurantID );
   },
 
   seating(n) {
@@ -54,7 +54,7 @@ const Reservation = React.createClass({
       time -= 43200;
     }
     let h = floor(time / 3600);
-    
+
   },
 
   render() {
@@ -65,11 +65,11 @@ const Reservation = React.createClass({
       imgUrl = "/no-image.png";
     }
     return (
-        <div className="restaurant-index-item"
-             onClick={this._handleClick}
-             key={reservation.restaurant_id}>
+        <div className="restaurant-index-item">
           <div className="index-item-restaurant">
-            <div className="index-item-image">
+            <div className="index-item-image"
+                 onClick={this._handleClick}
+                 key={reservation.restaurant_id}>
               <Link to={route}>
                 <img src={imgUrl} alt={reservation.name}/>
               </Link>
