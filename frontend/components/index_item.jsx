@@ -29,6 +29,20 @@ const IndexItem = React.createClass({
     )
   },
 
+  display_ratings(average, count) {
+    const restaurant = this.props.restaurant;
+    if (count > 0) {
+      return (
+        <div className="rated">
+          <span className="stars">{restaurant.average_rating}</span>
+          <span className="count">({restaurant.count_rating})</span>
+        </div>
+      )
+    } else {
+      return (<div className="unrated">Reviews coming soon</div>)
+    }
+  },
+
   render() {
     const restaurant = this.props.restaurant;
     const route = "/restaurants/" + restaurant.id;
@@ -52,8 +66,8 @@ const IndexItem = React.createClass({
                   {restaurant.name}
                 </Link>
                 <div className="index-item-rating">
-                  {restaurant.average_rating || "Reviews coming soon"}
-                  ({restaurant.count_rating})
+                  {this.display_ratings(restaurant.average_rating,
+                                        restaurant.count_rating)}
                 </div>
                 <div className="index-item-location">
                   {restaurant.address}

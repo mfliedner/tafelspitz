@@ -88,6 +88,23 @@ const RestaurantShow = React.createClass({
     return likeText;
   },
 
+  display_ratings(average, count) {
+    const restaurant = this.state.restaurant;
+    if (count > 0) {
+      return (
+        <div className="rateValue">
+          <span className="stars">{restaurant.average_rating}</span>
+          <span className="rateCount">
+            {restaurant.count_rating}
+            {" reviews"}
+          </span>
+        </div>
+      )
+    } else {
+      return (<div className="unrated">Reviews coming soon</div>)
+    }
+  },
+
   render() {
     const restaurant = this.state.restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
@@ -105,12 +122,8 @@ const RestaurantShow = React.createClass({
             <div className="show-header-info">
               <h1 className="show-header-title">{restaurant.name}</h1>
               <div className="show-header-rating">
-                <span className="ratingValue">
-                  {restaurant.average_rating || "Reviews coming soon"}
-                </span>
-                <span className="reviewCount">
-                  {restaurant.count_rating} {" reviews"}
-                </span>
+                {this.display_ratings(restaurant.average_rating,
+                                      restaurant.count_rating)}
               </div>
               <ul className="show-header-other">
                 <li className="show-header-address">{restaurant.address}</li>
