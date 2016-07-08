@@ -53,6 +53,7 @@ const IndexItem = React.createClass({
                 </Link>
                 <div className="index-item-rating">
                   {restaurant.average_rating || "Reviews coming soon"}
+                  ({restaurant.count_rating})
                 </div>
                 <div className="index-item-location">
                   {restaurant.address}

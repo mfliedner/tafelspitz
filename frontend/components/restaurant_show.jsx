@@ -108,7 +108,9 @@ const RestaurantShow = React.createClass({
                 <span className="ratingValue">
                   {restaurant.average_rating || "Reviews coming soon"}
                 </span>
-                <span className="reviewCount">34</span> reviews
+                <span className="reviewCount">
+                  {restaurant.count_rating} {" reviews"}
+                </span>
               </div>
               <ul className="show-header-other">
                 <li className="show-header-address">{restaurant.address}</li>
