@@ -89,9 +89,7 @@ const RestaurantShow = React.createClass({
   },
 
   render() {
-    // const restaurants = {};
     const restaurant = this.state.restaurant;
-    // restaurants[this.state.restaurant.id] = restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
     const mapParams = "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
     let staticMap = "http://maps.google.com/maps/api/staticmap?center=";
@@ -107,7 +105,10 @@ const RestaurantShow = React.createClass({
             <div className="show-header-info">
               <h1 className="show-header-title">{restaurant.name}</h1>
               <div className="show-header-rating">
-                <span className="ratingValue">4</span> stars <span className="reviewCount">34</span> reviews
+                <span className="ratingValue">
+                  {restaurant.average_rating || "Reviews coming soon"}
+                </span>
+                <span className="reviewCount">34</span> reviews
               </div>
               <ul className="show-header-other">
                 <li className="show-header-address">{restaurant.address}</li>

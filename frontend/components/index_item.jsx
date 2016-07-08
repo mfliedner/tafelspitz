@@ -52,7 +52,7 @@ const IndexItem = React.createClass({
                   {restaurant.name}
                 </Link>
                 <div className="index-item-rating">
-                  Reviews coming soon
+                  {restaurant.average_rating || "Reviews coming soon"}
                 </div>
                 <div className="index-item-location">
                   {restaurant.address}

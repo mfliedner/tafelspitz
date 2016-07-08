@@ -91,4 +91,9 @@ class Restaurant < ActiveRecord::Base
     end
     avail
   end
+
+  def average_rating
+    reviews.average(:rating)
+  end
+
 end
