@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
     through: :reviews,
     source: :restaurant
   has_many :favorites
-  has_many :favorite_reaturants,
+  has_many :favorite_restaurants,
 		through: :favorites,
 		source: :restaurant
 

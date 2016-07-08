@@ -47,6 +47,16 @@ const Reservation = React.createClass({
     )
   },
 
+  timing(time) {
+    let meridiem = "AM";
+    if (time > 43199) {
+      meridiem = "PM";
+      time -= 43200;
+    }
+    let h = floor(time / 3600);
+    
+  },
+
   render() {
     const reservation = this.props.reservation;
     const route = "/restaurants/" + reservation.restaurant_id;

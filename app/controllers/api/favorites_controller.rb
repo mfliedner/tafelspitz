@@ -9,7 +9,7 @@ class Api::FavoritesController < ApplicationController
     if(@favorite.save)
       render "api/favorites/show", status: 200
     else
-      @errors = favorite.errors.full_messages
+      @errors = @favorite.errors.full_messages
 			render "api/shared/error", status: 422
     end
   end

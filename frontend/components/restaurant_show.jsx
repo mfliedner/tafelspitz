@@ -11,26 +11,43 @@ const DisplayConstants = require('../constants/display_constants');
 const RestaurantMap = require('./restaurant_map');
 const RestaurantActions = require('../actions/restaurant_actions');
 const ReservationBar = require('./reservation_bar');
+const FavoriteActions = require('../actions/favorite_actions');
+const SessionStore = require('../stores/session_store');
 
 const RestaurantShow = React.createClass({
   getInitialState() {
-    const restaurantId = this.props.params.restaurantId;
+    let restaurantId;
+    if (!!this.props) {
+      restaurantId = parseInt(this.props.params.restaurantId);
+    }
     const restaurant = RestaurantStore.find(restaurantId) || {} ;
-    return { restaurant };
+    return ({
+      restaurant: restaurant,
+      currentUser: SessionStore.currentUser()
+    });
   },
 
   componentDidMount() {
     this.restaurantListener = RestaurantStore.addListener(this._restaurantChanged);
+    this.sessionListener = SessionStore.addListener(this._userChanged);
     const params = FilterParamsStore.params();
     RestaurantActions.fetchAllRestaurants(params);
   },
 
   componentWillUnmount() {
     this.restaurantListener.remove();
+    this.sessionListener.remove();
+  },
+
+  _userChanged() {
+    this.setState({ current_user: SessionStore.currentUser() });
   },
 
   _restaurantChanged() {
-    const restaurantId = this.props.params.restaurantId;
+    let restaurantId = this.state.restaurant.id;
+    if (!restaurantId && !!this.props) {
+      restaurantId = parseInt(this.props.params.restaurantId);
+    }
     const restaurant = RestaurantStore.find(restaurantId);
     this.setState({ restaurant });
   },
@@ -39,10 +56,42 @@ const RestaurantShow = React.createClass({
     FilterActions.clearFilters();
   },
 
+  toggleFavorite() {
+    let restaurantId = this.state.restaurant.id;
+    if (!restaurantId && !!this.props) {
+      restaurantId = parseInt(this.props.params.restaurantId);
+    }
+    const data = { restaurant_id: restaurantId };
+
+    if(this._isLiked() === "Like") {
+      FavoriteActions.createFavorite(data);
+    } else {
+      FavoriteActions.deleteFavorite(data);
+    }
+  },
+
+  _isLiked() {
+    let likeText = "Like";
+    const currentUser = this.state.currentUser;
+    let restaurantId = this.state.restaurant.id;
+    if (!restaurantId && !!this.props) {
+      restaurantId = parseInt(this.props.params.restaurantId);
+    }
+
+    if(SessionStore.isUserLoggedIn()) {
+      const currentUserFavs = currentUser.favorite_restaurants;
+      if (currentUserFavs.indexOf(restaurantId) !== -1) {
+        likeText = "Unlike";
+      }
+    }
+
+    return likeText;
+  },
+
   render() {
-    const restaurants = {};
+    // const restaurants = {};
     const restaurant = this.state.restaurant;
-    restaurants[this.state.restaurant.id] = restaurant;
+    // restaurants[this.state.restaurant.id] = restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
     const mapParams = "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
     let staticMap = "http://maps.google.com/maps/api/staticmap?center=";
@@ -64,6 +113,11 @@ const RestaurantShow = React.createClass({
                 <li className="show-header-address">{restaurant.address}</li>
                 <li className="show-header-priceRange">
                   {DisplayConstants.PRICE_RANGE[restaurant.price_range]}
+                </li>
+                <li>
+                  <button onClick={this.toggleFavorite} className="like-button">
+                    {this._isLiked()}
+                  </button>
                 </li>
               </ul>
             </div>

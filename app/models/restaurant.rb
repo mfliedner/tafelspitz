@@ -37,6 +37,7 @@ class Restaurant < ActiveRecord::Base
   has_many :reviewers,
     through: :reviews,
     source: :user
+  has_many :favorites
   has_many :fans,
 		through: :favorites,
 		source: :user

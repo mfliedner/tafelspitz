@@ -17,13 +17,13 @@ RestaurantStore.find = function(id) {
 };
 
 function addFavorite(restaurantId, userId) {
-  _restaurants[restaurantId].favorite_users.push(parseInt(userId));
+  _restaurants[restaurantId].fans.push(parseInt(userId));
   RestaurantStore.__emitChange();
 };
 
 function removeFavorite(restaurantId, userId) {
-  const userIdx = _restaurants[restaurantId].favorite_users.indexOf(parseInt(userId));
-  _restaurants[restaurantId].favorite_users.splice(userIdx, 1);
+  const userIdx = _restaurants[restaurantId].fans.indexOf(parseInt(userId));
+  _restaurants[restaurantId].fans.splice(userIdx, 1);
   RestaurantStore.__emitChange();
 };
 
@@ -46,10 +46,10 @@ RestaurantStore.__onDispatch = function(payload) {
       resetSingleRestaurant(payload.restaurant);
       break;
     case FavoriteConstants.FAVORITE_RECEIVED:
-      RestaurantStore.addFavorite(payload.favorite.restaurantId, payload.favorite.userId);
+      addFavorite(payload.favorite.restaurantId, payload.favorite.userId);
       break;
     case FavoriteConstants.FAVORITE_REMOVED:
-      RestaurantStore.removeFavorite(payload.favorite.restaurantId, payload.favorite.userId);
+      removeFavorite(payload.favorite.restaurantId, payload.favorite.userId);
       break;
   }
 };

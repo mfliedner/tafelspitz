@@ -11,6 +11,7 @@ class Api::RestaurantsController < ApplicationController
       end
     end
 
+    @restaurants = @restaurants.includes(:reviews, :fans)
     @restaurants = Restaurant.available(@restaurants, params) if filter
 
     render :index

@@ -8,7 +8,6 @@ const FavoriteConstants = require('../constants/favorite_constants');
 const SessionStore = new Store(AppDispatcher);
 
 let _currentUser = {};
-// _currentUser.favorite_restaurants = [];
 let _currentUserHasBeenFetched = false;
 
 const _login = function(currentUser) {
@@ -40,11 +39,9 @@ SessionStore.__onDispatch = payload => {
       break;
     case FavoriteConstants.FAVORITE_RECEIVED:
       _addFavorite(payload.favorite.restaurantId);
-      SessionStore.__emitChange();
       break;
     case FavoriteConstants.FAVORITE_REMOVED:
       _removeFavorite(payload.favorite.restaurantId);
-      SessionStore.__emitChange();
       break;
   }
   SessionStore.__emitChange();
