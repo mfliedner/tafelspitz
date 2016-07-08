@@ -4,6 +4,7 @@ const React = require('react');
 const Link = require('react-router').Link;
 const hashHistory = require('react-router').hashHistory;
 const StarRatingComponent = require('react-star-rating-component');
+const Review = require('./review');
 
 const IndexItem = React.createClass({
   _handleClick() {
@@ -51,6 +52,16 @@ const IndexItem = React.createClass({
     }
   },
 
+  display_review() {
+    const restaurant = this.props.restaurant;
+    if (!!restaurant.reviews && restaurant.reviews.length > 0) {
+      const last = restaurant.reviews.length - 1;
+      return ( <Review review={restaurant.reviews[last]}/> )
+    } else {
+      return ( <div className="no-review"></div>)
+    }
+  },
+
   render() {
     const restaurant = this.props.restaurant;
     const route = "/restaurants/" + restaurant.id;
@@ -88,6 +99,7 @@ const IndexItem = React.createClass({
               </div>
             </div>
             <div className="index-item-review">
+              {this.display_review()}
             </div>
           </div>
         </div>

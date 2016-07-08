@@ -166,3 +166,9 @@
   padding-bottom: 16px;
   color: #333;
 }
+
+.full-list {
+  display: block;
+  width: 100%;
+  margin: auto;
+}

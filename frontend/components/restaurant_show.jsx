@@ -8,6 +8,7 @@ const Link = require('react-router').Link;
 const Header = require('./header');
 const Footer = require('./footer');
 const DisplayConstants = require('../constants/display_constants');
+const Review = require('./review');
 const RestaurantMap = require('./restaurant_map');
 const RestaurantActions = require('../actions/restaurant_actions');
 const ReservationBar = require('./reservation_bar');
@@ -212,6 +213,7 @@ const RestaurantShow = React.createClass({
                   </div>
                   <div className="block-reviews">
                     Ratings coming soon
+                    <Review review={restaurant.reviews}/>
                   </div>
                 </section>
                 <div className="section-content">
@@ -220,7 +222,9 @@ const RestaurantShow = React.createClass({
             </div>
           </div>
           <div className="footer-top">
-            <Link to="/" onClick={this._handleClick}>See Full Restaurant List ></Link>
+            <Link to="/" onClick={this._handleClick} className="full-list">
+              {"See Full Restaurant List >"}
+            </Link>
           </div>
           <Footer/>
       </div>

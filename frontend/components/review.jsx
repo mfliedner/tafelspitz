@@ -4,14 +4,19 @@ const React = require('react');
 
 var Review = React.createClass({
   render() {
-    return (
-      <div>
-        <ul>
-          <li>Rating: {this.props.rating}</li>
-          <li>{this.props.body}</li>
-        </ul>
-      </div>
-    );
+    // debugger
+    if (!this.props.review) {
+      return ( <div className="no-review"></div> );
+    } else {
+      return (
+        <div className="single-review">
+          <ul>
+            <li>{this.props.review.body}</li>
+            <li>Member{this.props.review.user_id} - {this.props.review.date}</li>
+          </ul>
+        </div>
+      );
+    }
   }
 });
 
