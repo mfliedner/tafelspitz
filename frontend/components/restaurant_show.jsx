@@ -64,7 +64,7 @@ const RestaurantShow = React.createClass({
     }
     const data = { restaurant_id: restaurantId };
 
-    if(this._isLiked() === "Like") {
+    if(this._isLiked() === "\u2661") {
       FavoriteActions.createFavorite(data);
     } else {
       FavoriteActions.deleteFavorite(data);
@@ -72,7 +72,7 @@ const RestaurantShow = React.createClass({
   },
 
   _isLiked() {
-    let likeText = "Like";
+    let likeText = "\u2661";
     const currentUser = this.state.currentUser;
     let restaurantId = this.state.restaurant.id;
     if (!restaurantId && !!this.props) {
@@ -82,7 +82,7 @@ const RestaurantShow = React.createClass({
     if(SessionStore.isUserLoggedIn()) {
       const currentUserFavs = currentUser.favorite_restaurants;
       if (currentUserFavs.indexOf(restaurantId) !== -1) {
-        likeText = "Unlike";
+        likeText = "\u2665";
       }
     }
 
