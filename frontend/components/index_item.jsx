@@ -3,6 +3,7 @@
 const React = require('react');
 const Link = require('react-router').Link;
 const hashHistory = require('react-router').hashHistory;
+const StarRatingComponent = require('react-star-rating-component');
 
 const IndexItem = React.createClass({
   _handleClick() {
@@ -34,7 +35,14 @@ const IndexItem = React.createClass({
     if (count > 0) {
       return (
         <div className="rated">
-          <span className="stars">{restaurant.average_rating}</span>
+          <span className="stars">
+            <StarRatingComponent
+                name="rating"
+                editing={false}
+                starCount={5}
+                value={Math.round(restaurant.average_rating)}
+            />
+          </span>
           <span className="count">({restaurant.count_rating})</span>
         </div>
       )

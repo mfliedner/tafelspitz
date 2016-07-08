@@ -13,6 +13,7 @@ const RestaurantActions = require('../actions/restaurant_actions');
 const ReservationBar = require('./reservation_bar');
 const FavoriteActions = require('../actions/favorite_actions');
 const SessionStore = require('../stores/session_store');
+const StarRatingComponent = require('react-star-rating-component');
 
 const RestaurantShow = React.createClass({
   getInitialState() {
@@ -93,7 +94,14 @@ const RestaurantShow = React.createClass({
     if (count > 0) {
       return (
         <div className="rateValue">
-          <span className="stars">{restaurant.average_rating}</span>
+          <span className="stars">
+            <StarRatingComponent
+                name="rating"
+                editing={false}
+                starCount={5}
+                value={Math.round(restaurant.average_rating)}
+            />
+          </span>
           <span className="rateCount">
             {restaurant.count_rating}
             {" reviews"}
