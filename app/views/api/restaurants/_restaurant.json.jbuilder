@@ -3,3 +3,4 @@ json.extract! restaurant, :id, :name, :description, :lat, :lng,
   :count_rating
 
 json.fans restaurant.fans.map(&:id)
+json.reviews restaurant.reviews.map { |review| review }
