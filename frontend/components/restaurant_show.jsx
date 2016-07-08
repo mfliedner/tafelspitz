@@ -102,7 +102,7 @@ const RestaurantShow = React.createClass({
                 value={Math.round(restaurant.average_rating)}
             />
           </span>
-          <span className="rateCount">
+          <span className="count">
             {restaurant.count_rating}
             {" reviews"}
           </span>
