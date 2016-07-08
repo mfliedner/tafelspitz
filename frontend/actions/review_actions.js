@@ -4,15 +4,15 @@ const ReviewConstants = require('../constants/review_constants');
 const SessionStore = require('../stores/session_store');
 
 module.exports = {
-  fetchReviews () {
+  fetchReviews (restaurant_id) {
     ApiUtil.fetchReviews(restaurant_id, this.receiveAll);
   },
 
-  getReview (id) {
+  getReview (restaurant_id, id) {
     ApiUtil.getReview(restaurant_id, id, this.receiveReview);
   },
 
-  createReview (data) {
+  createReview (restaurant_id, data) {
     ApiUtil.createReview(restaurant_id, data, this.receiveReview);
   },
 

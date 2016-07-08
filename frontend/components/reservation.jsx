@@ -3,11 +3,36 @@
 const React = require('react');
 const Link = require('react-router').Link;
 const hashHistory = require('react-router').hashHistory;
+const ReactRouter = require('react-router');
+const Modal = require('react-modal');
+const ModalStyle = require('../util/modal_style');
+const ReviewForm = require('./review_form');
 
 const Reservation = React.createClass({
+  getInitialState: function() {
+    return({
+      modalOpen: false
+    });
+  },
+
+  closeModal: function() {
+    this.setState({ modalOpen: false });
+    ModalStyle.content.opacity = 0;
+  },
+
+  openModal: function() {
+    ModalStyle.content.opacity = 100;
+  },
+
+  _handleForm: function() {
+    this.setState({
+      modalOpen: true
+    });
+  },
+
   _handleClick() {
-    const reservationID = this.props.reservation.id;
-    hashHistory.push("reservations/" + reservationID );
+    const restaurantID = this.props.restaurant.id;
+    hashHistory.push("restaurant/" + restaurantID );
   },
 
   seating(n) {
@@ -45,7 +70,10 @@ const Reservation = React.createClass({
                   {reservation.name}
                 </Link>
                 <div className="index-item-rating">
-                  Write Review
+                  <button id="review-button" className="review-button"
+                          onClick={this._handleForm}>
+                    Write Review
+                  </button>
                 </div>
                 <div className="index-item-count">
                   {this.seating(reservation.guest_count)}
@@ -63,6 +91,15 @@ const Reservation = React.createClass({
             <div className="index-item-review">
             </div>
           </div>
+
+          <Modal
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.closeModal}
+            onAfterOpen={this.openModal}
+            style={ModalStyle}>
+            <ReviewForm reservation={reservation} closeModal={this.closeModal}/>
+            <button onClick={this.closeModal}>Cancel</button>
+          </Modal>
         </div>
     );
   }
