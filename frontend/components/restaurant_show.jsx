@@ -114,6 +114,63 @@ const RestaurantShow = React.createClass({
     }
   },
 
+  display_reviews() {
+    const restaurant = this.state.restaurant;
+    const reviews = restaurant.reviews;
+    if (!!reviews && reviews.length > 0) {
+      return (
+        <div className="review-list">
+          <ul>
+            <li className="review-top">
+              {parseFloat(restaurant.average_rating).toFixed(1)}{" Overall Rating"}
+            </li>
+            {
+              reviews.map( (review) => {
+                return ( <li key={review.id}>{this.display_single_review(review)}</li> );
+              })
+            }
+          </ul>
+        </div>
+      );
+    } else {
+      return ( <div className="no-list">Reviews coming soon</div>)
+    }
+  },
+
+  sectorRatings(review) {
+    const rateF = (review.rate_food > 0) ? review.rate_food : "not rated";
+    const rateA = (review.rate_ambience > 0) ? review.rate_ambience : "not rated";
+    const rateS = (review.rate_service > 0) ? review.rate_service : "not rated";
+    const rateV = (review.rate_value > 0) ? review.rate_value : "not rated";
+    return (
+      <li>
+        <span>{"FOOD "}{rateF}</span>
+        <span>{"AMBIENCE "}{rateA}</span>
+        <span>{"SERVICE "}{rateS}</span>
+        <span>{"VALUE "}{rateV}</span>
+      </li>
+    );
+  },
+
+  display_single_review(review) {
+    return (
+      <ul className="single-review">
+        <li>
+          <StarRatingComponent
+              name="rating"
+              editing={false}
+              starCount={5}
+              value={Math.round(review.rating)}
+          />
+        </li>
+        {this.sectorRatings(review)}
+        <li>
+          <Review review={review}/>
+        </li>
+      </ul>
+    );
+  },
+
   render() {
     const restaurant = this.state.restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
@@ -212,8 +269,7 @@ const RestaurantShow = React.createClass({
                     {restaurant.name} Ratings and Reviews
                   </div>
                   <div className="block-reviews">
-                    Ratings coming soon
-                    <Review review={restaurant.reviews}/>
+                    {this.display_reviews()}
                   </div>
                 </section>
                 <div className="section-content">
