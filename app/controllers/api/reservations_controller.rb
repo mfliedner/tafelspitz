@@ -36,7 +36,6 @@ class Api::ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.guest_id = current_user.id
-    p @reservation
     @reservation.save!
     @reservation
     render :show
