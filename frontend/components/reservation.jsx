@@ -47,14 +47,27 @@ const Reservation = React.createClass({
     )
   },
 
+  calendarDate(date) {
+    const idx = date.indexOf('T');
+    return date.substring(0, idx);
+  },
+
   timing(time) {
-    let meridiem = "AM";
+    let meridiem = " AM";
     if (time > 43199) {
-      meridiem = "PM";
+      meridiem = " PM";
       time -= 43200;
     }
-    let h = floor(time / 3600);
-
+    let h = Math.floor(time / 3600);
+    if (h === 0) {
+      h = 12;
+    }
+    const min = Math.round((time % 3600) / 60);
+    let pad = ":";
+    if (min < 10) {
+      pad = ":0"
+    }
+    return ( h + pad + min + meridiem )
   },
 
   render() {
@@ -91,10 +104,11 @@ const Reservation = React.createClass({
               </div>
               <div className="info-right group">
                 <div className="index-item-category">
-                  {reservation.date}
+                  {this.calendarDate(reservation.date)}
                 </div>
+                <br/>
                 <div className="index-item-category">
-                  {reservation.time}
+                  {this.timing(reservation.time)}
                 </div>
               </div>
             </div>
