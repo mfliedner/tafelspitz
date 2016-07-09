@@ -37,8 +37,7 @@
 }
 
 .index-item-category {
-  position: absolute;
-  right: 36px;
+  float: left;
 }
 
 .pricing {
@@ -51,7 +50,10 @@
 }
 
 .index-item-review {
-  float: left;
-  padding-left: 100px;
-  margin: -28px;
+  overflow: hidden;
+  max-width: 50%;
+  max-height: 108px;
+  position: absolute;
+  right: 40px;
+  margin-top: -28px;
 }
