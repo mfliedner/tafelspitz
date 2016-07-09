@@ -54,10 +54,10 @@ const MapContainer = React.createClass({
   },
 
   _handleClick(coords) {
-    hashHistory.push({
-      pathname: "restaurants/new",
-      query: coords
-    });
+    // hashHistory.push({
+    //   pathname: "restaurants/new",
+    //   query: coords
+    // });
   },
 
   registerListeners() {

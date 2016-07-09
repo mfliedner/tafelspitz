@@ -1,5 +1,5 @@
 .restaurant-index-item {
-  border-bottom: 1px solid rgba(0,0,0,.08);  
+  border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
 .index-item-restaurant {
@@ -48,4 +48,10 @@
 
 .pricing > i {
   color: #333;
+}
+
+.index-item-review {
+  float: left;
+  padding-left: 100px;
+  margin: -28px;
 }

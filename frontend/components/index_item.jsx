@@ -96,10 +96,10 @@ const IndexItem = React.createClass({
                 <div className="index-item-category">
                   {this.pricing(restaurant.price_range)}
                 </div>
-              </div>
+                <div className="index-item-review">
+                  {this.display_review()}
+                </div>
             </div>
-            <div className="index-item-review">
-              {this.display_review()}
             </div>
           </div>
         </div>
