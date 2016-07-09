@@ -22,10 +22,10 @@ const Review = React.createClass({
       return ( <div className="no-review"></div> );
     } else {
       return (
-        <div className="single-review">
-          <ul>
-            <li>{this.props.review.body}</li>
-            <li>
+        <div>
+          <ul className="single-review">
+            <li className="review-body">{this.props.review.body}</li>
+            <li className="review-byline">
               {this.displayUser(this.props.review.user_id)}
               {this.calendarDate(this.props.review.date)}
             </li>

@@ -1,0 +1,36 @@
+.review-top {
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ccc;
+}
+
+.review-top > span {
+  padding-right: 20px;
+}
+.single-review {
+  padding-top: 12px;
+}
+
+.sector-rating {
+  padding-top: 8px;
+  color: #999;
+}
+
+.sector-rating > span {
+  font-weight: bold;
+  color: #333;
+  padding-left: 12px;
+  padding-right: 24px;
+}
+
+.review-body {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.review-byline {
+  color: #999;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+}

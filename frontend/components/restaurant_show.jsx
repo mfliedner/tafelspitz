@@ -122,7 +122,7 @@ const RestaurantShow = React.createClass({
         <div className="review-list">
           <ul>
             <li className="review-top">
-              {parseFloat(restaurant.average_rating).toFixed(1)}{" Overall Rating"}
+              <span>{"Overall Rating:"}</span>{parseFloat(restaurant.average_rating).toFixed(1)}
             </li>
             {
               reviews.map( (review) => {
@@ -143,11 +143,11 @@ const RestaurantShow = React.createClass({
     const rateS = (review.rate_service > 0) ? review.rate_service : "not rated";
     const rateV = (review.rate_value > 0) ? review.rate_value : "not rated";
     return (
-      <li>
-        <span>{"FOOD "}{rateF}</span>
-        <span>{"AMBIENCE "}{rateA}</span>
-        <span>{"SERVICE "}{rateS}</span>
-        <span>{"VALUE "}{rateV}</span>
+      <li className="sector-rating">
+        {"FOOD"}<span>{rateF}</span>
+        {"AMBIENCE"}<span>{rateA}</span>
+        {"SERVICE"}<span>{rateS}</span>
+        {"VALUE"}<span>{rateV}</span>
       </li>
     );
   },
