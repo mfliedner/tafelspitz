@@ -2,9 +2,22 @@
 
 const React = require('react');
 
-var Review = React.createClass({
+const Review = React.createClass({
+  displayUser(id) {
+    if (id === 1) {
+      return "Guest - ";
+    } else {
+      const byline = "Member " + id + " - ";
+      return byline;
+    }
+  },
+
+  calendarDate(date) {
+    const idx = date.indexOf('T');
+    return date.substring(0, idx);
+  },
+
   render() {
-    // debugger
     if (!this.props.review) {
       return ( <div className="no-review"></div> );
     } else {
@@ -12,7 +25,10 @@ var Review = React.createClass({
         <div className="single-review">
           <ul>
             <li>{this.props.review.body}</li>
-            <li>Member{this.props.review.user_id} - {this.props.review.date}</li>
+            <li>
+              {this.displayUser(this.props.review.user_id)}
+              {this.calendarDate(this.props.review.date)}
+            </li>
           </ul>
         </div>
       );
