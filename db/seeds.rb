@@ -816,11 +816,6 @@ Grilled 12 oz. Niman Ranch New York Steak
 with garlic confit, Blue Lake beans, roasted fingerling potatoes and Zweigelt wine sauce"
   )
 
-User.create!(
-  email: "guest",
-  password: "password"
-)
-
 Restaurant.create!(
   name: "Simply Fondue Livermore",
   owner_id: 2,
@@ -1606,6 +1601,11 @@ Warm Berries
 
 sautéed in port wine with vanilla ice cream"
   )
+
+User.create!(
+  email: "guest",
+  password: "password"
+)
 
 User.create!(
   first_name: "Moritz",
