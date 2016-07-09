@@ -68,10 +68,18 @@
 .content-sidebar {
   float: left;
   display: block;
-  width: 200px;
+  width: 15%;
   padding-top: 30px;
   padding-bottom: 16px;
   min-height: 160px;
+}
+
+.content-main {
+  position: relative;
+  float: left;
+  width: 85%;
+  padding-top: 32px;
+  padding-bottom: 16px;
 }
 
 .sidebar-nav {
@@ -94,15 +102,6 @@
 
 .sidebar-nav li:hover {
   color: #da3743;
-}
-
-.content-main {
-  position: relative;
-  float: left;
-  width: 80%;
-  padding-top: 32px;
-  padding-right: 20px;
-  padding-bottom: 16px;
 }
 
 .main-column {
@@ -162,9 +161,12 @@
 }
 
 .footer-top {
-  padding-left: 40px;
-  padding-bottom: 16px;
-  color: #333;
+  color: transparent;
+  width: 100%;
+}
+
+.main-bottom {
+  padding-left: 16px;
 }
 
 .full-list {

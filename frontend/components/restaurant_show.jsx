@@ -272,15 +272,16 @@ const RestaurantShow = React.createClass({
                     {this.display_reviews()}
                   </div>
                 </section>
-                <div className="section-content">
-                </div>
+              </div>
+              <div className="main-bottom">
+                <Link to="/" onClick={this._handleClick} className="full-list">
+                  {"See Full Restaurant List >"}
+                </Link>
               </div>
             </div>
           </div>
           <div className="footer-top">
-            <Link to="/" onClick={this._handleClick} className="full-list">
-              {"See Full Restaurant List >"}
-            </Link>
+              {">>"}
           </div>
           <Footer/>
       </div>
