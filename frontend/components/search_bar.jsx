@@ -14,7 +14,7 @@ const SearchBar = React.createClass({
     const restaurants = this.state.restaurants;
     const restaurantKeys = Object.keys(this.state.restaurants);
     let list = [];
-    if (restaurantKeys.length > 0) {
+    if (!!restaurants && restaurantKeys.length > 0) {
       list = restaurantKeys.map( (key) => {
         return (restaurants[key].name);
       });
@@ -58,7 +58,7 @@ const SearchBar = React.createClass({
     if (restaurantIDs.length === 1) {
       hashHistory.push("restaurants/" + restaurantIDs[0]);
     }
-},
+  },
 
   render() {
     return (

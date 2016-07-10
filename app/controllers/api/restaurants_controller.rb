@@ -4,7 +4,7 @@ class Api::RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
 
     if name_known?
-      @restaurants = [Restaurant.find_by_name(name)]
+      @restaurants = Restaurant.where("name = ?", name)
     else
       if(bounds)
         @restaurants = Restaurant.in_bounds(bounds)

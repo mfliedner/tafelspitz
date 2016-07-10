@@ -61,8 +61,12 @@ const Footer = React.createClass({
         </small>
 
         <ul className="footer-links group">
-          <li><a href="#">DISCOVER</a></li>
-          <li><a href="#">ABOUT TAFELSPITZ</a></li>
+          <li><a href="http://www.opentable.com/san-francisco-restaurants">DISCOVER</a></li>
+          <li>
+            <a href="https://github.com/mfliedner/tafelspitz/blob/master/README.md">
+              ABOUT TAFELSPITZ
+            </a>
+          </li>
           <li>
             <button id="restaurateur-button" className="restaurateur-button"
                     onClick={this._handleClick}>

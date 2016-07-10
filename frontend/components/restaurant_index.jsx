@@ -13,6 +13,14 @@ const RestaurantIndex = React.createClass({
     const restaurants = this.props.restaurants;
     const restaurantKeys = Object.keys(restaurants);
     let ent = "tables";
+    if(!restaurants || restaurantKeys.length < 1) {
+      return (
+        <div>
+          <div className="section-header">No Availability</div>
+          <div className="section"></div>
+        </div>
+      );
+    }
     if (restaurantKeys.length === 1) {
       ent = "table";
     }
