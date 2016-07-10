@@ -63,7 +63,7 @@ class Restaurant < ActiveRecord::Base
 
   def self.available(list, params)
     unfiltered = params[:filter].start_with?("f") ? true : false
-    name_known = !!params[:name] && name.length > 0
+    name_known = !!params[:name] && params[:name].length > 0
 
     return list if list.empty? || unfiltered
     time = Reservation.time_slot_to_time(params[:time_slot].to_i)
