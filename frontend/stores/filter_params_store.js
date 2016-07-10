@@ -17,22 +17,27 @@ FilterParamsStore.params = function() {
 
 function setBounds(bounds) {
   _params.bounds = bounds;
+  FilterParamsStore.__emitChange();
 };
 
 function setName(name) {
   _params.name = name;
+  FilterParamsStore.__emitChange();
 };
 
 function setTimeSlot(time_slot) {
   _params.time_slot = time_slot;
+  FilterParamsStore.__emitChange();
 };
 
 function setDate(date) {
   _params.date = date;
+  FilterParamsStore.__emitChange();
 };
 
 function setGuestCount(guest_count) {
   _params.guest_count = guest_count;
+  FilterParamsStore.__emitChange();
 };
 
 function clearFilters(){
@@ -40,6 +45,7 @@ function clearFilters(){
                   date: moment().format('ll'),
                   guest_count: FilterConstants.DEFAULT_GUEST_COUNT,
                   name: "", favorites: false, filter: false };
+  FilterParamsStore.__emitChange();
 };
 
 function filterFavorites(){
@@ -47,14 +53,17 @@ function filterFavorites(){
                   date: moment().format('ll'),
                   guest_count: FilterConstants.DEFAULT_GUEST_COUNT,
                   name: "", favorites: true, filter: false };
+  FilterParamsStore.__emitChange();
 };
 
 function setFilter(){
   _params.filter = true;
+  FilterParamsStore.__emitChange();
 };
 
 function unsetFilter(){
   _params.filter = false;
+  FilterParamsStore.__emitChange();
 };
 
 FilterParamsStore.__onDispatch = function(payload) {
@@ -87,7 +96,6 @@ FilterParamsStore.__onDispatch = function(payload) {
       unsetFilter();
       break;
   }
-  FilterParamsStore.__emitChange();
 };
 
 module.exports = FilterParamsStore;
