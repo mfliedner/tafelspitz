@@ -11,7 +11,7 @@ label {
   display: none;
 }
 
-.signup-input {
+.signup-input, .login-input {
   padding: 16px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -24,11 +24,27 @@ label {
   float: left;
 }
 
+.login-form > input {
+  border-radius: 3px;
+  float: left;
+}
+
 .signup-mode {
   height: 386px;
 }
 
+.login-mode {
+  height: 212px;
+}
+
 .signup-mode > button {
+  background: #60B2D0;
+  border-radius: 3px;
+  color: #000;
+  float: right;
+}
+
+.login-mode > button {
   background: #60B2D0;
   border-radius: 3px;
   color: #000;

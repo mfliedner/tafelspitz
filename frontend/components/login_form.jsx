@@ -72,27 +72,22 @@ const LoginForm = React.createClass({
 
 	        { this.fieldErrors("base") }
 					<div className="login-form">
-		        <br />
-						<label> Email:
+						<label>Email</label>
 		          { this.fieldErrors("email") }
 							<input type="text"
 		            value={this.state.email}
 		            onChange={this.update("email")}
 								placeholder="Email"
 								className="login-input" />
-						</label>
 
-		        <br />
-						<label> Password:
+						<label>Password</label>
 		          { this.fieldErrors("password") }
 		          <input type="password"
 		            value={this.state.password}
 		            onChange={this.update("password")}
 								placeholder="Password"
 								className="login-input" />
-						</label>
 
-		        <br />
 						<input type="submit" value="Sign In" />
 					</div>
 				</form>
