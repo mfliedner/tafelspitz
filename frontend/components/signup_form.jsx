@@ -78,57 +78,46 @@ const SignupForm = React.createClass({
 
 	        { this.fieldErrors("base") }
 					<div className="signup-form">
-						<br/>
-						<label> First Name:
-		          { this.fieldErrors("first_name") }
-							<input type="text"
-		            value={this.state.first_name}
-		            onChange={this.update("first_name")}
-								className="signup-input"
-								placeholder="First Name"/>
-						</label>
+						<label>First Name</label>
+	          { this.fieldErrors("first_name") }
+						<input type="text"
+	            value={this.state.first_name}
+	            onChange={this.update("first_name")}
+							className="signup-input"
+							placeholder="First Name"/>
 
-						<br/>
-						<label> Last Name:
-		          { this.fieldErrors("last_name") }
-							<input type="text"
-		            value={this.state.last_name}
-		            onChange={this.update("last_name")}
-								className="signup-input"
-								placeholder="Last Name"/>
-						</label>
+						<label>Last Name</label>
+	          { this.fieldErrors("last_name") }
+						<input type="text"
+	            value={this.state.last_name}
+	            onChange={this.update("last_name")}
+							className="signup-input"
+							placeholder="Last Name"/>
 
-						<br/>
-						<label> Email:
-		          { this.fieldErrors("email") }
-							<input type="text"
-		            value={this.state.email}
-		            onChange={this.update("email")}
-								className="signup-input"
-								placeholder="Enter email"/>
-						</label>
+						<label>Email</label>
+	          { this.fieldErrors("email") }
+						<input type="text"
+	            value={this.state.email}
+	            onChange={this.update("email")}
+							className="signup-input"
+							placeholder="Enter email *"/>
 
-						<br/>
-						<label> Telephone Number:
-		          { this.fieldErrors("phone") }
-							<input type="text"
-		            value={this.state.phone}
-		            onChange={this.update("phone")}
-								className="signup-input"
-								placeholder="Enter telephone number (optional)"/>
-						</label>
+						<label>Telephone Number</label>
+	          { this.fieldErrors("phone") }
+						<input type="text"
+	            value={this.state.phone}
+	            onChange={this.update("phone")}
+							className="signup-input"
+							placeholder="Enter telephone number (optional)"/>
 
-		        <br/>
-						<label> Password:
-		          { this.fieldErrors("password") }
-		          <input type="password"
-		            value={this.state.password}
-		            onChange={this.update("password")}
-								className="signup-input"
-								placeholder="Enter password"/>
-						</label>
+						<label>Password</label>
+	          { this.fieldErrors("password") }
+	          <input type="password"
+	            value={this.state.password}
+	            onChange={this.update("password")}
+							className="signup-input"
+							placeholder="Enter password *"/>
 
-		        <br/>
 						<input type="submit" value="Create Account" />
 					</div>
 				</form>

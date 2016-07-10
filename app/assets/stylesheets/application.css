@@ -30,6 +30,7 @@
    vertical-align: inherit;
    box-sizing: inherit;
    background: transparent;
+   cursor: default;
  }
 
  html, body {
@@ -58,10 +59,20 @@
    -moz-appearance: none;
  }
 
+ input[type="text"],
+ textarea {
+   cursor: text;
+ }
+
  button,
  input[type="submit"],
  Link {
    cursor: pointer;
+ }
+
+ input[type="submit"] {
+   background-color: #b8222d;
+   color: #fff;
  }
 
  /* Clearfix */

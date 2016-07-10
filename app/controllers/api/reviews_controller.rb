@@ -3,6 +3,7 @@ class Api::ReviewsController < ApplicationController
 
   def index
     @reviews = Review.where("restaurant_id = ?", params[:restaurant_id])
+                     .order(date: :desc)
   end
 
   def show

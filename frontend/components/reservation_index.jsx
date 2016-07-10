@@ -9,12 +9,12 @@ const ReservationIndex = React.createClass({
     if (Object.keys(reservations).length > 0) {
       reservations = reservations.reservation_items
     } else {
-      return (<div className="section-header">No Reservations</div>);
+      return (<div className="reservations-header">No Reservations</div>);
     }
 
     return (
       <div>
-        <div className="section-header">Reservations</div>
+        <div className="reservations-header">Reservations</div>
         <div className="section">
           {
             reservations.map( reservation => {

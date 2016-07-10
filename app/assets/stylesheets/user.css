@@ -1,0 +1,31 @@
+.user-section {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.reservations-header {
+  padding-top: 24px;
+  padding-left: 36px;
+  font-size: 24px;
+}
+
+.guest-greeting {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 36px;
+  font-size: 24px;
+}
+
+.guest-message {
+  padding-left: 36px;
+  padding-bottom: 24px;
+  font-size: 20px;
+}
+
+.user-name {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 36px;
+  color: #333;
+  font-size: 32px;
+}

@@ -119,6 +119,7 @@ const Header = React.createClass({
     const component = (this.state.signIn) ?
       <LoginForm closeModal={this.closeModal}/> :
       <SignupForm closeModal={this.closeModal}/>;
+    const componentClass = (this.state.signIn) ? "login-mode" : "signup-mode";
 
     return (
       <div className="header">
@@ -131,12 +132,15 @@ const Header = React.createClass({
         {this.navbar()}
 
         <Modal
+          className={componentClass}
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           onAfterOpen={this.openModal}
           style={ModalStyle}>
           {component}
-          <button onClick={this.closeModal}>Cancel</button>
+          <button className="cancel" onClick={this.closeModal}>
+            Cancel
+          </button>
         </Modal>
       </div>
     );

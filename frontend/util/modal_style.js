@@ -16,7 +16,6 @@ module.exports = {
     padding         : '16px',
     border          : 0,
     background      : '#fff',
-    height          : '367px',
     width           : '460px',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',

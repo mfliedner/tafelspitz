@@ -3,6 +3,7 @@ class Api::ReservationsController < ApplicationController
 
   def index
     @reservations = Reservation.where("guest_id = ?", current_user.id)
+                               .order(date: :asc)
                                .includes(:restaurant)
     @reservation_items = {}
     @reservations.each do |item|
