@@ -1602,6 +1602,38 @@ Warm Berries
 sautéed in port wine with vanilla ice cream"
   )
 
+Restaurant.create!(
+  name: "Suppenküche",
+  owner_id: 2,
+  description: "Authentic German fare like pretzels & schnitzels plus imported beers served in a glass boot.",
+  price_range: 2,
+  address: "525 Laguna St, San Francisco, CA 94102",
+  phone: "(415) 252-9289",
+  lat: 37.7763007,
+  lng: -122.4264457,
+  img_url: "",
+  opening: 61200,
+  closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Walzwerk",
+  owner_id: 2,
+  description: "East German eatery serving classic dishes like sausages & schnitzel as well as imported beers.",
+  price_range: 2,
+  address: "381 S Van Ness Ave, San Francisco, CA 94103",
+  phone: "(415) 551-7181",
+  lat: 37.7672714,
+  lng: -122.4174476,
+  img_url: "",
+  opening: 63000,
+  closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
@@ -1613,4 +1645,515 @@ User.create!(
   phone: "1234567890",
   email: "moritz@fliedner.com",
   password: "password"
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 1,
+  date: "June 29, 2016",
+  rating: 1,
+  rate_food: 3,
+  rate_ambience: 3,
+  rate_service: 5,
+  rate_value: 3,
+  body: "Nuremberg brat delicious. Wiener schnitzel not so good. Worst potato salad ever."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 1,
+  date: "June 19, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 5,
+  body: "Outstanding food, service, beer selection, ambiance! We dive an hour+ and it's been great both times."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 2,
+  date: "July 1, 2016",
+  rating: 2,
+  rate_food: 2,
+  rate_ambience: 1,
+  rate_service: 3,
+  rate_value: 2,
+  body: 'This is our second visit, and the first time was much, much better. I will come back and try it again, and hopefully, I will find this time was an off night for the kitchen. Because it was a second visit, I guess I paid more attention to the "decor". The cafe is downright dingy, with . peeling wallpaper, and very much in need of repainting. The service was good, but this time the timing was way off. I still had a good third of my soup to go, when out came the main plates. I saw the same rushing of courses at the next table as well, so assume it was by design. Last time, I had the veal schnitzel and it was good. This time, I had the pork schnitzel, touted as the "Best in Town". It was a large portion and well breaded, but it was also dry, the meat chewy, and the taste bland. The accompanying sauerkraut was cooked to where it had lost all interest in life. A side of "homemade potatoes" were diced new potatoes so long cooked they had become an oil soaked memory. My dinner companion had the goulash. The meat was tasty, plentiful, and tender. Alas, the potato dumplings that came with them, were like scoops of gluey starch. For dessert my companion had strudel: two large pieces with equally large dollops of whipped cream. It looked very good and I understand it was excellent. In fairness, the server, on his own, brought two settings and an extra plate and two glasses of complimentary dessert wine - and even made two tries to get me to share the dessert. I know I was a total curmudgeon, but my dinner was sitting like a lump and good as the dessert looked, the better part of valor was to skip it. Again, we will come back to see if we can "recreate" our first experience.'
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 2,
+  date: "June 10, 2016",
+  rating: 4,
+  rate_food: 4,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 4,
+  body: "Café Europa is a nice place to visit for a special occasion. The schnitzels were excellent, and the service excellent. I was disappointed in the tiny pirogis, even though there were six of them for an appetizer. The mixed vegetables that accompanied my schnitzel were bland and slightly overcooked. I was shocked that the restaurant could not provide coffee or tea. Since I always do coffee with dessert, I declined the apple strudel, which sounded excellent. The prices, especially for the appetizers are very high. For our 7pm reservation on a Friday night, parking was very easy in the neighborhood. Our waiter, Daniel, was outstanding, explaining all the different dishes and attentive to all our needs for the evening."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 3,
+  date: "June 26, 2016",
+  rating: 4,
+  rate_food: 3,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 5,
+  body: "Service never been better, greatly improved over the last few years. Only fresh bread served (big deal for me). They reduced their menu in the last 2 years and have kept their best dishes. My only complaint is the stock brown sauce, appearing with several dishes is extremely salty. This would be an easy thing to fix, yet diners unlikely to mention. The patio was full, yet not too loud, plenty of servers, and an uplifting, relaxing, hearty meal. You get a generous entrè, salad, soup, bread and dessert. The soup, I've forgotten the variety, was significantly better than the offering in years past."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 3,
+  date: "June 19, 2016",
+  rating: 1,
+  rate_food: 3,
+  rate_ambience: 3,
+  rate_service: 1,
+  rate_value: 1,
+  body: "The past two times we've been to this restaurant we've had unacceptable service. Waited too long for a server to come to our table, took half our drink orders and then was pulled away to another table by the manager. I had to go and get another server or the hostess (not sure which) and complain - she did a reasonably good job and getting things on track but the initial experience was inexcusable. My wife saw something on their on-line menu and when she ordered it was told they didn't have it and that was just for Octoberfest - it's June for crying out loud - why does your website have menu items that aren't available for another four months!!! We ended up sharing some appetizers and the only good thing about the experience was the beer. We'll never return to this restaurant. Germans are known for efficiency which makes me question the authenticity of this restaurant."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 4,
+  date: "July 3, 2016",
+  rating: 3,
+  rate_food: 3,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 5,
+  body: "We love Speisekammer and tell all of our friends about it. We love the bar, the food, the menu, the servers, the atmosphere and the wonderful beers and cocktails. This visit was very sub-par food-wise however. Our pretzel was good, though we realized later we did not get the cheese sauce that always comes with it. I ordered the roasted pork with mashed potatoes and sauerkraut. The sides were great but the pork had an odd, gamey taste and very gray. I don\'t know whether it was overcooked or just a poor preparation, but I did not eat it. My bf had the jagerschnitzel so we shared his piece of meat. The apple strudel with vanilla ice cream was divine. We will return, but never order the roasted pork dish again. (It\'s the first listing under specialties)."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 4,
+  date: "May 1, 2016",
+  rating: 4,
+  rate_food: 4,
+  rate_ambience: 4,
+  rate_service: 4,
+  rate_value: 4,
+  body: "Hands down, this is the best restaurant I have eaten in through both my visits to Alameda. It was our last night in town and I remembered seeing something about this restaurant, so we made a reservation (highly recommended - it was packed on a Saturday evening). We were sat immediately. Within a few minutes, we were greeted by our server, Sterling. Very nice and very familiar with not only the food menu, but also the drinks. We started with a cup of their roasted cauliflower soup and a cup of the potato soup. Both were very good. For our entrees, I ordered the Jagerschnitzel, which is pork cutlets topped with a mushroom cream sauce. My wife ordered the sauerbraten, which is sliced beef topped with a wine-based gravy. Each of our dinners came with a salad. Needless to say, we cleaned our plates. The flavor was excellent. You could tell our food was served immediately after being placed on the plates. It was steaming hot. Speisekammer has a very large German beer selection, on draft and in bottles. The also have a large German wine selection as well as quite a list of specialty cocktails. There is parking on the street and they some parking on the side of the building. Be careful, though as the parking lot only has one entrance and then you have to back out. Maybe not a good idea if you been sampling their bar selections. There is also seating outside and on this occasion, it appeared a band was beginning to set up. Highly recommend,making a reservation. This is a very popular restaurant. I knew there had to be at least one good restaurant in Alameda. I just wish I would I found it earlier."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 6,
+  date: "June 23, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 4,
+  body: "We had a great time at Nascmarkt. We were not experienced with Austrian food, so we were looking forward to something new. For the appetizer, we had the Quark Spätzle. It was excellent, the spätzle was cooked just right, with a creamy sauce. We had three different entrees - pork belly, halibut, and goulash. I highly recommend the pork belly. And for dessert, apple strudel and the soufflé. What a wonderful ending to the meal. Our waiter was top-notch, friendly and attentive. Nascmarkt is on the pricier side but well worth it."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 6,
+  date: "June 23, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 4,
+  rate_service: 4,
+  rate_value: 4,
+  body: "John, our server paid attention bo my needs. as a visually challenged person, i liked John extra attention of telling me where he was placing items and when he was reaching over my shoulders. Very good ..."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 7,
+  date: "July 3, 2016",
+  rating: 4,
+  rate_food: 4,
+  rate_ambience: 4,
+  rate_service: 5,
+  rate_value: 4,
+  body: "A good place to come for brunch. But dress warmly ladies. Because all the tables have hot plates the AC is set on very cool. I love the quality of the service above all. Meat is exquisite and the veggies are fresh but the bread for the fondue is sweet. It's a big no no for me."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 7,
+  date: "June 26, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 4,
+  rate_service: 5,
+  rate_value: 5,
+  body: "Our waiter, Zack, was kind, polite, and funny. He was helpful when we were choosing our entrees and gave us food tips to help us enjoy our meal.
+"
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 8,
+  date: "June 25, 2016",
+  rating: 2,
+  rate_food: 3,
+  rate_ambience: 3,
+  rate_service: 2,
+  rate_value: 2,
+  body: "This was our first time to a fondue restaurant and the waiter spoke too quickly, threw too options at us and it gave us the perception that he was trying to add as many things onto our order as possible to increase the bill. Although it was slow the evening we were there, the drinks were delivered to our table mid-way through dinner. My husband ordered an IPA which was brought to him, not very cold and in a can. He did not pour even pour it into his glass. For the price of the meal, we expected the beers to at least be on tap, or they could have even poured it in his glass and delivered the glass to him. Just not as classy as we expected. This was a celebration for our daughter's 18th birthday. Her special treat was dropped off at her table. However, another customer with a birthday was given the whole production (birthday song, etc). We liked the food overall but won't go back."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 8,
+  date: "April 24, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 4,
+  body: "A friend and I decided to have a girls night here last weekend, and we loved it. I had an 8:30pm reservation for two, we got there closer to 8pm so we sat in the bar and had a drink while we waited for our table. The staff was very friendly and courteous. They got us to our table at about 8:50 (it was a Saturday night and crazy busy so we understood). The food was amazing, everything was delicious. Personally I feel it's a little pricey but worth it. Next time though I think I'll just do cheese and dessert fondues because the entrees while very good weren't my thing. The decor and ambiance is very calm and rustic- a very comfortable place to relax and have a glass of wine. The whole dining experience took an ample amount of time but that's expected anywhere worth going on a weekend night."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 9,
+  date: "July 3, 2016",
+  rating: 2,
+  rate_food: 3,
+  rate_ambience: 2,
+  rate_service: 1,
+  rate_value: 1,
+  body: "The service was horrible and slow and they couldn't even get the order(s) correct. They didn't even know how to make an after dinner drink which was a cup of coffee with a Grand Mariner in a snifter. I got Frangelico in my coffee."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 9,
+  date: "July 2, 2016",
+  rating: 5,
+  rate_food: 4,
+  rate_ambience: 5,
+  rate_service: 3,
+  rate_value: 3,
+  body: "I recommend going for the delicious cheese fondue,and the chocolate fondue only. The food portions are small considering the Cost,& i don't want to cook my own. Lobster salad contains imitation lobster,& wasn't a good salad."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 10,
+  date: "June 28, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 4,
+  rate_service: 5,
+  rate_value: 4,
+  body: "Wanted a special restaurant for our 35th anniversary date, and this definitely fit the bill! We had the 4-course dinner, and everything from salad to dessert was exceptional. Making all your decisions is definitely the hardest part, as there are many varieties of cheese and chocolate fondues to choose from, and the meat choices are staggering. We went pretty conventionally, with beef, chicken, shrimp, and scallops, but you can get a nice selection of game, as well. Cooking the food yourself is part of the fun. The only complaint I had was the low lighting-the shrimp was supposed to be done when it was pink, but it was impossible to see what color it was. Turned out delicious, at any rate! Both the cheese and chocolate fondues came with lots of items to dip, and the meats were accompanied by 6 dipping sauces. Yes, it's expensive, but you'll spend just as much at a fancy steakhouse, without the variety and novelty. And you are definitely full by the end of the meal! Out waiter was very attentive and explained all of the nuances of the menu and cooking styles very well. He gave us champagne on the house for our celebration, which added a lovely end to the meal. I'm already looking forward to going again!"
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 10,
+  date: "June 13, 2016",
+  rating: 3,
+  rate_food: 3,
+  rate_ambience: 3,
+  rate_service: 2,
+  rate_value: 3,
+  body: "After being seated in a dark room with no windows, we waited about 30 minutes before any food was brought to our table. There was also a very long wait between the cheese and protein service. Servers were nice but busy, the station had a number of large parties that were already in the midst of service when we were seated. Most tables had children, so it was fairly noisy. The food options offered a variety of choices. While expensive, the price seemed fair. I was disappointed after leaving the restaurant to find that my clothes had picked up the scent of cooking oil. I appreciate the novelty aspect of the restaurant, however, this visit was enough for us."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 11,
+  date: "April 15, 2016",
+  rating: 2,
+  rate_food: 3,
+  rate_ambience: 2,
+  rate_service: 1,
+  rate_value: 1,
+  body: 'Poor service ruined this meal. We asked for the cheese fondue first and then the salad. But the salads came first and we were told "that\'s how the kitchen fixed it" when the salad arrived it had bell peppers on it, something not mentioned on the menu. My friend is allergic to bell peppers. Rather then offering to redo the salad, the waitress said "guess you don\'t want it" and took it away. Was very surprised when the plate of meat came surrounded by bell peppers. Sullen service throughout. No offer of dessert or coffee. Will not visit here again'
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 11,
+  date: "May 30, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 5,
+  body: "We drive in from the east bay to get our fondue fix here. We order 'the original' fondue. Very authentic. Chocolate fondue is amazing with all the goodies that come with it. Great service and ambiance."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 12,
+  date: "June 12, 2016",
+  rating: 4,
+  rate_food: 5,
+  rate_ambience: 4,
+  rate_service: 4,
+  rate_value: 3,
+  body: "This is an eccentric little restaurant with great food. You order food and drinks at the bar, take your drink with you, and your food is delivered to your table. While you wait, you gaze around at all the bric-a-brac and tchotchkes. The player pianos and juke boxes take turns playing tunes, but the music isn't constant. When the piano or box nearby is playing, it can be a little loud, but the songs are short and fun. Our food was perfectly prepared -- salad with prosciutto, shrimp scampi, and salmon over mashed potatoes and fennel. Crispy prosciutto. Tender shrimp. Tender, moist salmon. Overall, we were delighted with our meal. We'll be back."
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 12,
+  date: "June 12, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 5,
+  body: "Oh what a treat! Imagine you've collected too many things to reasonably call it a hobby anymore. If it turns out those items are self-playing instruments, then open a restaurant and let everyone else share your joy. Add to that the food is fantastic. My rib-eye was actually medium rare and perfectly seasoned. The beans were fresh and crisp. The mashed potatoes were full of flavor. But make sure you save room for dessert! Whether it's a banana split brulee (yes, with carmelized sugar across the banana) or an old fashioned phosphate from the soda fountain, you won't be disappointed. My husband's Fester's phosphate was a joy with fresh blackberries. Better yet, they easily accommodated our large post-ballet recital group and the children were charmed with the player pianos and the adults were fascinated with the player violin."
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 13,
+  date: "July 5, 2016",
+  rating: 1,
+  rate_food: 5,
+  rate_ambience: 5,
+  rate_service: 5,
+  rate_value: 4,
+  body: "Warm inviting neighborhood restaurant with a good variety of different dishes representing Swiss, German and Italian cuisine. It is a small restaurant so if it was busy it would feel crowded. I went during the week and it was fairly empty. The pork tenderloin was moist and tender. The house salad was interesting. The spumoni was excellent. The beer menu was small but the beers were not your run of the mill German imports. We had a delightful evening and will definitely return.
+"
+)
+
+Review.create!(
+  user_id: 2,
+  restaurant_id: 13,
+  date: "June 12, 2016",
+  rating: 1,
+  rate_food: 5,
+  rate_ambience: 5,
+  rate_service: 4,
+  rate_value: 0,
+  body: "Fantastic food and friendly service. Great standards for a local Swiss restaurant. Keep it secret!"
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 1,
+  date: "June 29, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 1,
+  date: "June 19, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 2,
+  date: "July 1, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 2,
+  date: "June 10, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 3,
+  date: "June 26, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 3,
+  date: "June 19, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 4,
+  date: "July 3, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 4,
+  date: "May 1, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 6,
+  date: "June 23, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 6,
+  date: "June 23, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 7,
+  date: "July 3, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 7,
+  date: "June 26, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 8,
+  date: "June 25, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 8,
+  date: "April 24, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 9,
+  date: "July 3, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 9,
+  date: "July 2, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 10,
+  date: "June 28, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 10,
+  date: "June 13, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 11,
+  date: "April 15, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 11,
+  date: "May 30, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 12,
+  date: "June 12, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 12,
+  date: "June 12, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 13,
+  date: "July 5, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 2,
+  restaurant_id: 13,
+  date: "June 12, 2016",
+  guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Favorite.create!(
+  user_id: 1,
+  restaurant_id: 1
 )
