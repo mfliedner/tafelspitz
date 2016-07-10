@@ -30,6 +30,13 @@
   color: #333;
 }
 
+.index-item-review .review-body {  
+  overflow-y: auto;
+  max-width: 90%;
+  width: 600px;
+  max-height: 80px;
+}
+
 .review-byline {
   color: #999;
   padding-bottom: 16px;

@@ -47,7 +47,8 @@ const RestaurantForm = React.createClass({
               <label className="restaurant-field-label">Description</label>
               <textarea value={this.state.description}
                 onChange={this.update("description")} className="restaurant-field"
-                placeholder="Write a short description *">
+                maxlength="2000"
+                placeholder="Write a short description * (up to 2000 characters)">
               </textarea>
 
               <label className="restaurant-field-label">Address</label>
@@ -63,6 +64,7 @@ const RestaurantForm = React.createClass({
               <label className="restaurant-field-label">Menu</label>
               <textarea value={this.state.menu}
                 onChange={this.update("menu")} className="restaurant-field"
+                maxlength="2000"
                 placeholder="Menu">
               </textarea>
 

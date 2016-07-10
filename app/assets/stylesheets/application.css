@@ -66,7 +66,7 @@
 
  button,
  input[type="submit"],
- Link {
+ a {
    cursor: pointer;
  }
 
