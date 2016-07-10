@@ -111,7 +111,7 @@ const ReviewForm = React.createClass({
             <label className="review-body-label">Write a review</label>
             <textarea value={this.state.body}
               placeholder="Write a review ..."
-              className="review-body"
+              className="review-body-form"
               onChange={this.update("body")}></textarea>
             <br/>
             <input type="submit" value="Submit your review"

@@ -73,13 +73,13 @@
   padding-left: 285px;
 }
 
-.review-body {
+.review-body-form {
   padding: 24px;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 16px;
   margin-top: 16px;
-  width: 410px;
+  width: 395px;
 }
 
 .price-range {
@@ -128,7 +128,7 @@
 }
 
 .review-mode {
-  height: 435px;
+  min-height: 400px;
 }
 
 .restaurant-mode {
