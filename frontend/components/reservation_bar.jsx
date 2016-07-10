@@ -77,7 +77,7 @@ const ReservationBar = React.createClass({
         <form onSubmit={this.handleSubmit} className="reservation-fields">
           <ReservationForm reservationParms={this.state}/>
           <div className="search-button">
-            <input type="submit" value="Find a Table" className="find-button"/>
+            <input type="submit" value="Make Reservation" className="find-button"/>
           </div>
         </form>
 
