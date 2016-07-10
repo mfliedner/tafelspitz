@@ -45,6 +45,12 @@ const FilterActions = {
     });
   },
 
+  filterFavorites() {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.FILTER_FAVORITES
+    });
+  },
+
   setFilter() {
     AppDispatcher.dispatch({
       actionType: FilterConstants.SET_FILTER

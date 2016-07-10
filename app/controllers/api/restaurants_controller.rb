@@ -12,7 +12,13 @@ class Api::RestaurantsController < ApplicationController
     end
 
     @restaurants = @restaurants.includes(:reviews, :fans)
-    @restaurants = Restaurant.available(@restaurants, params) if filter
+    if favorites
+      @restaurants = @restaurants.select do |restaurant|
+        restaurant.fans.include?(current_user)
+      end
+    elsif filter
+      @restaurants = Restaurant.available(@restaurants, params)
+    end
 
     render :index
   end
@@ -67,5 +73,10 @@ class Api::RestaurantsController < ApplicationController
   def filter
     return false if params[:filter].nil?
     params[:filter].start_with?("f") ? false : true
+  end
+
+  def favorites
+    return false if params[:favorites].nil?
+    params[:favorites].start_with?("f") ? false : true
   end
 end

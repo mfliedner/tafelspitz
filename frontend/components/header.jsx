@@ -6,6 +6,7 @@ const ModalStyle = require('../util/modal_style');
 const Link = require('react-router').Link;
 const SessionStore = require('../stores/session_store');
 const SessionActions = require('../actions/session_actions');
+const FilterActions = require('../actions/filter_actions');
 const LoginForm = require('./login_form');
 const SignupForm = require('./signup_form');
 const hashHistory = require('react-router').hashHistory;
@@ -32,6 +33,10 @@ const Header = React.createClass({
       modalOpen: true,
       signIn: bool
     });
+  },
+
+  _handleFavored() {
+    FilterActions.filterFavorites();
   },
 
   _handleGuest(event) {
@@ -72,8 +77,12 @@ const Header = React.createClass({
               <a href="#">{greeting} <i className="chevron">&or;</i></a>
               <ul className="user-menu">
                 <li><Link to={profile}>My Profile</Link></li>
-                <li><a href="#">Favorites</a></li>
-                <li><a href="#">Restaurants to review</a></li>
+                <li><Link to="/" className="favored-index-link"
+                          onClick={this._handleFavored}>
+                          Favorites
+                    </Link>
+                </li>
+                <li><Link to={profile}>Restaurants to review</Link></li>
                 <li>
                   <button id="logout-button" className="logout-button"
                           onClick={this._handleLogOut}>
