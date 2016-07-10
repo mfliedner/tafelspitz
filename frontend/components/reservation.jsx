@@ -117,6 +117,7 @@ const Reservation = React.createClass({
           </div>
 
           <Modal
+            className="review-mode"
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}
             onAfterOpen={this.openModal}

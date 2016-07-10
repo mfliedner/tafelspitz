@@ -40,12 +40,18 @@ const Footer = React.createClass({
   },
 
   render() {
-    const component = (SessionStore.isUserLoggedIn()) ?
-      <RestaurantForm closeModal={this.closeModal}/> :
-      <AlertForm closeModal={this.closeModal}
-                 greeting="Get started with Tafelspitz for Restaurants"
-                 message="To add your restaurant to our database, please sign in at the top of the page."
-      />;
+    let component;
+    let componentClass;
+    if (SessionStore.isUserLoggedIn()) {
+      component = <RestaurantForm closeModal={this.closeModal}/>;
+      componentClass = "restaurant-mode";
+    } else {
+      component = <AlertForm closeModal={this.closeModal}
+                    greeting="Get started with Tafelspitz for Restaurants"
+                    message="To add your restaurant to our database, please sign in at the top of the page."
+                  />;
+      componentClass = "alert-mode";
+    }
 
     return (
       <footer className="footer group">
@@ -68,6 +74,7 @@ const Footer = React.createClass({
         <div className="footer-base"></div>
 
         <Modal
+          className={componentClass}
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           onAfterOpen={this.openModal}

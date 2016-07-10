@@ -1,4 +1,4 @@
-.login-title {
+.login-title, .new-restaurant-title, .review-title {
   font-size: 24px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 16px;
@@ -15,12 +15,88 @@
   display: none;
 }
 
+.restaurant-field-label {
+  display: none;
+}
+
+.review-body-label {
+  display: none;
+}
+
 .signup-input, .login-input {
   padding: 16px;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 16px;
   width: 418px;
+}
+
+.restaurant-field {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  width: 410px;
+}
+
+.rating-field {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.review-field {
+  padding-top: 16px;
+  padding-left: 16px;
+  display: flex;
+}
+
+.star-rating {
+  padding-left: 165px;
+}
+
+.star-rating-food {
+  padding-left: 288px;
+}
+
+.star-rating-ambience {
+  padding-left: 255px;
+}
+
+.star-rating-service {
+  padding-left: 273px;
+}
+
+.star-rating-value {
+  padding-left: 285px;
+}
+
+.review-body {
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  width: 410px;
+}
+
+.price-range {
+  display: flex;
+}
+
+.price-range > label {
+  padding-top: 10px;
+}
+
+.price-selector {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  display: block;
 }
 
 .signup-form > input {
@@ -33,12 +109,35 @@
   float: left;
 }
 
+.new-review-button {
+  border-radius: 3px;
+  float: left;
+}
+
+.new-restaurant-button {
+  border-radius: 3px;
+  float: left;
+}
+
 .signup-mode {
   height: 386px;
 }
 
 .login-mode {
   height: 212px;
+}
+
+.review-mode {
+  height: 435px;
+}
+
+.restaurant-mode {
+  min-height: 400px;
+}
+
+.alert-mode {
+  height: 240px;
+  text-align: center;
 }
 
 .signup-mode > button {
@@ -53,4 +152,41 @@
   border-radius: 3px;
   color: #000;
   float: right;
+}
+
+.review-mode > button {
+  background: #60B2D0;
+  border-radius: 3px;
+  color: #000;
+  float: right;
+}
+
+.restaurant-mode > button {
+  background: #60B2D0;
+  border-radius: 3px;
+  color: #000;
+  float: right;
+}
+
+.alert-mode > button {
+  background: #60B2D0;
+  border-radius: 3px;
+  color: #000;
+  margin-left: 20px;
+  width: 380px;
+}
+
+.alert-greeting {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 24px;
+}
+
+.alert-message {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  font-size: 20px;
 }
