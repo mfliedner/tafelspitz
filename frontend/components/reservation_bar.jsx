@@ -6,6 +6,7 @@ const Modal = require('react-modal');
 const ModalStyle = require('../util/modal_style');
 const SessionStore = require('../stores/session_store');
 const SessionActions = require('../actions/session_actions');
+const ErrorStore = require('../stores/error_store');
 const AlertForm = require('./alert_form');
 const ReservationForm = require('./reservation_form');
 const FilterParamsStore = require('../stores/filter_params_store');
@@ -36,10 +37,12 @@ const ReservationBar = React.createClass({
   },
 
   componentDidMount() {
+    this.errorListener = ErrorStore.addListener(this.forceUpdate.bind(this));
     this.listener = SessionStore.addListener(this.forceUpdate.bind(this));
   },
 
   componentWillUnmount() {
+    this.errorListener.remove();
     this.listener.remove();
   },
 
@@ -69,6 +72,18 @@ const ReservationBar = React.createClass({
     } else {
       this.setState( {modalOpen: true} );
     }
+  },
+
+  fieldErrors(field) {
+    const errors = ErrorStore.formErrors("reservation");
+
+    if (!errors[field]) { return; }
+
+    const messages = errors[field].map( (errorMsg, i) => {
+      return <li key={ i }>{ errorMsg }</li>;
+    });
+
+    return <ul>{ messages }</ul>;
   },
 
   render() {
