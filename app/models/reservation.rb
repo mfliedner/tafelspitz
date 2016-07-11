@@ -26,4 +26,10 @@ class Reservation < ActiveRecord::Base
     time_slot * 30 * 60
   end
 
+  def available?
+    return false if self.restaurant.opening > self.time
+    return false if self.restaurant.closing < self.time
+    return false if self.restaurant.seats < self.guest_count
+    true
+  end
 end

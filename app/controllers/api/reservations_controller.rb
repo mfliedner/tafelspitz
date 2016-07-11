@@ -37,9 +37,12 @@ class Api::ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.guest_id = current_user.id
-    @reservation.save!
-    @reservation
-    render :show
+    if @reservation.available?
+      @reservation.save!
+      render :show
+    else
+      render json: @reservation, status: :unprocessable_entity
+    end
   end
 
   def update
