@@ -171,6 +171,18 @@ const RestaurantShow = React.createClass({
     );
   },
 
+  display_like_button() {
+    if(SessionStore.isUserLoggedIn()) {
+      return (
+        <button onClick={this.toggleFavorite} className="like-button">
+          {this._isLiked()}
+        </button>
+      );
+    } else {
+      return (<div></div>);
+    }
+  },
+
   render() {
     const restaurant = this.state.restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
@@ -197,9 +209,7 @@ const RestaurantShow = React.createClass({
                   {DisplayConstants.PRICE_RANGE[restaurant.price_range]}
                 </li>
                 <li>
-                  <button onClick={this.toggleFavorite} className="like-button">
-                    {this._isLiked()}
-                  </button>
+                  {this.display_like_button()}
                 </li>
               </ul>
             </div>
