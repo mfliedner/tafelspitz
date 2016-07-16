@@ -70,6 +70,10 @@
    cursor: pointer;
  }
 
+ a img {
+   cursor: pointer;
+ }
+
  input[type="submit"] {
    background-color: #b8222d;
    color: #fff;
