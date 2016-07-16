@@ -10,6 +10,9 @@ const RestaurantIndex = React.createClass({
   },
 
   render() {
+    // if (this.props.filter === "favorites") {
+    //
+    // }
     const restaurants = this.props.restaurants;
     const restaurantKeys = Object.keys(restaurants);
     let ent = "tables";

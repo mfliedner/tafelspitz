@@ -1,11 +1,8 @@
 "use strict";
 
 const React = require('react');
-import 'react-select/dist/react-select.css';
 const FilterActions = require('../actions/filter_actions');
-const Select = require('react-select');
 import 'react-date-picker/index.css';
-import 'react-select/dist/react-select.css';
 import { DateField } from 'react-date-picker';
 const moment = require('moment');
 

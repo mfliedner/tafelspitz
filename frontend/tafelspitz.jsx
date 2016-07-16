@@ -15,6 +15,7 @@ const Modal = require('react-modal');
 const App = require('./components/app');
 const Search = require('./components/search');
 const Profile = require('./components/profile');
+const Favorites = require('./components/favorites');
 const Reservation = require('./components/reservation');
 const RestaurantForm = require('./components/restaurant_form');
 const RestaurantShow = require('./components/restaurant_show');
@@ -49,6 +50,7 @@ const routes = (
     </Route>
     <Route path="/reservations/:reservationId" component={ Reservation }/>
     <Route path="/users/:userId/reservations" component={ Profile }/>
+    <Route path="/users/:userId/favorites" component={ Favorites }/>
   </Router>
 );
 

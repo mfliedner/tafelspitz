@@ -65,6 +65,7 @@ const Header = React.createClass({
   navbar() {
     if (SessionStore.isUserLoggedIn()) {
       const profile = "users/" + SessionStore.currentUser().id + "/reservations/"
+      const favorites = "users/" + SessionStore.currentUser().id + "/favorites/"
       let greeting = "Hello!";
       if (SessionStore.currentUser().first_name) {
         greeting = "Hi, " + SessionStore.currentUser().first_name;
@@ -77,13 +78,20 @@ const Header = React.createClass({
             <li className="user">
               <a href="#">{greeting} <i className="chevron">&or;</i></a>
               <ul className="user-menu">
-                <li><Link to={profile}>My Profile</Link></li>
-                <li><Link to="/" className="favored-index-link"
-                          onClick={this._handleFavored}>
-                          Favorites
-                    </Link>
+                <li>
+                  <Link category="all" to={profile}>My Profile</Link>
                 </li>
-                <li><Link to={profile}>Restaurants to review</Link></li>
+                <li>
+                  <Link category="favored" to={favorites}
+                        className="favored-index-link"
+                        onClick={this._handleFavored}>
+                    Favorites
+                  </Link>
+                </li>
+                <li>
+                  <Link category="review"
+                        to={profile}>Restaurants to review</Link>
+                </li>
                 <li>
                   <button id="logout-button" className="logout-button"
                           onClick={this._handleLogOut}>
