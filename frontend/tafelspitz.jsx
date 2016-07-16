@@ -41,7 +41,12 @@ const routes = (
     <Route path="/" component={ App }>
       <Route path="/restaurants/new" component={ RestaurantForm } onEnter={ _ensureLoggedIn }/>
     </Route>
-    <Route path="/restaurants/:restaurantId" component={ RestaurantShow }/>
+    <Route path="/restaurants/:restaurantId" component={ RestaurantShow }>
+      <Route path="/reservation" component={ RestaurantShow }/>
+      <Route path="/info" component={ RestaurantShow }/>
+      <Route path="/menu" component={ RestaurantShow }/>
+      <Route path="/reviews" component={ RestaurantShow }/>
+    </Route>
     <Route path="/reservations/:reservationId" component={ Reservation }/>
     <Route path="/users/:userId/reservations" component={ Profile }/>
   </Router>
