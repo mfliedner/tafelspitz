@@ -50,6 +50,7 @@ const SignupForm = React.createClass({
 
 		SessionActions.signUp(formData);
 		this.props.closeModal();
+		this.context.router.push("/");
 	},
 
   fieldErrors(field) {

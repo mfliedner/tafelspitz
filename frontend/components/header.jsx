@@ -45,6 +45,7 @@ const Header = React.createClass({
       password: "password"
     };
     SessionActions.logIn(formData);
+    hashHistory.push("/");
   },
 
   componentDidMount() {

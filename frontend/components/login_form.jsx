@@ -44,6 +44,7 @@ const LoginForm = React.createClass({
 
     SessionActions.logIn(formData);
 		this.props.closeModal();
+		this.context.router.push("/");
 	},
 
   fieldErrors(field) {
