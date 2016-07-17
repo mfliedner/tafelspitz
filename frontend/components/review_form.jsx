@@ -112,7 +112,7 @@ const ReviewForm = React.createClass({
             <textarea value={this.state.body}
               placeholder="Write a review ... (up to 2000 characters)"
               className="review-body-form"
-              maxlength="2000"
+              maxLength="2000"
               onChange={this.update("body")}></textarea>
             <br/>
             <input type="submit" value="Submit your review"
