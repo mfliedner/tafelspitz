@@ -35,6 +35,10 @@ const Header = React.createClass({
     });
   },
 
+  _handleDefault() {
+    FilterActions.unsetFilter();
+  },
+
   _handleFavored() {
     FilterActions.filterFavorites();
   },
@@ -142,7 +146,7 @@ const Header = React.createClass({
     return (
       <div className="header">
         <div className="header-logo group">
-          <Link to="/" >
+          <Link to="/" onClick={this._handleDefault}>
             <img src="/tafelspitz-logo.png" alt="Tafelspitz-Logo"/>
           </Link>
         </div>

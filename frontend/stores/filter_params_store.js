@@ -63,6 +63,7 @@ function setFilter(){
 
 function unsetFilter(){
   _params.filter = false;
+  _params.favorites = false;
   FilterParamsStore.__emitChange();
 };
 

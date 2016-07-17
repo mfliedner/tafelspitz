@@ -10,26 +10,29 @@ const RestaurantIndex = React.createClass({
   },
 
   render() {
-    // if (this.props.filter === "favorites") {
-    //
-    // }
+    let heading = "No Availability";
     const restaurants = this.props.restaurants;
     const restaurantKeys = Object.keys(restaurants);
-    let ent = "tables";
+    let ent = " tables";
     if(!restaurants || restaurantKeys.length < 1) {
       return (
         <div>
-          <div className="section-header">No Availability</div>
+          <div className="section-header">{heading}</div>
           <div className="section"></div>
         </div>
       );
     }
     if (restaurantKeys.length === 1) {
-      ent = "table";
+      ent = " table";
+    }
+    if (this.props.filter === "favorites") {
+      heading = "Favorites"
+    } else {
+      heading = restaurantKeys.length + ent + " available";
     }
     return (
       <div>
-        <div className="section-header">{restaurantKeys.length} {ent} available</div>
+        <div className="section-header">{heading}</div>
         <div className="section">
           {
             restaurantKeys.map( key => {
