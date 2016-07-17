@@ -73,7 +73,7 @@ const RestaurantShow = React.createClass({
   },
 
   _isLiked() {
-    let likeText = "\u2661";
+    let likeText = DisplayConstants.NOT_LIKED;
     const currentUser = this.state.currentUser;
     let restaurantId = this.state.restaurant.id;
     if (!restaurantId && !!this.props) {
@@ -83,7 +83,7 @@ const RestaurantShow = React.createClass({
     if(SessionStore.isUserLoggedIn()) {
       const currentUserFavs = currentUser.favorite_restaurants;
       if (!!currentUserFavs && currentUserFavs.indexOf(restaurantId) !== -1) {
-        likeText = "\u2665";
+        likeText = DisplayConstants.LIKED;
       }
     }
 

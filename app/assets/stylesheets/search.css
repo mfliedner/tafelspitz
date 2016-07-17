@@ -71,6 +71,10 @@
   border: 1px solid #b8222d;
 }
 
+.item-button {
+  padding-top: 52px;
+}
+
 .Select-control {
   border-radius: 0;
   border: 1px solid #999;

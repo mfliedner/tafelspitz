@@ -37,6 +37,7 @@ const RestaurantIndex = React.createClass({
           {
             restaurantKeys.map( key => {
               return (<IndexItem
+                filter={this.props.filter}
                 restaurant={restaurants[key]}
                 key={key} />);
             })

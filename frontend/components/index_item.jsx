@@ -4,10 +4,17 @@ const React = require('react');
 const Link = require('react-router').Link;
 const hashHistory = require('react-router').hashHistory;
 const StarRatingComponent = require('react-star-rating-component');
+const DisplayConstants = require('../constants/display_constants');
 const Review = require('./review');
 
 const IndexItem = React.createClass({
   _handleClick() {
+    const restaurantID = this.props.restaurant.id;
+    hashHistory.push("restaurants/" + restaurantID );
+  },
+
+  _handleSubmit(event) {
+    event.preventDefault();
     const restaurantID = this.props.restaurant.id;
     hashHistory.push("restaurants/" + restaurantID );
   },
@@ -54,11 +61,32 @@ const IndexItem = React.createClass({
 
   display_review() {
     const restaurant = this.props.restaurant;
+    if (this.props.filter === "favorites") {
+      return ( <form onSubmit={this._handleSubmit}
+                     className="restaurant-index-item item-button">
+                <div className="search-button">
+                  <input type="submit" value="Make Reservation"
+                         className="find-button"/>
+                </div>
+               </form> )
+    }
     if (!!restaurant.reviews && restaurant.reviews.length > 0) {
       const last = restaurant.reviews.length - 1;
       return ( <Review review={restaurant.reviews[last]}/> )
     } else {
-      return ( <div className="no-review"></div>)
+      return ( <div className="no-review"></div> )
+    }
+  },
+
+  display_name() {
+    const restaurant = this.props.restaurant;
+    if (this.props.filter === "favorites") {
+      return ( <div>
+                <span>{restaurant.name}</span>
+                <span className="red">&nbsp;{DisplayConstants.LIKED}</span>
+               </div> )
+    } else {
+      return ( <span>{restaurant.name}</span> )
     }
   },
 
@@ -82,7 +110,7 @@ const IndexItem = React.createClass({
             <div className="index-item-info">
               <div className="info-left group">
                 <Link to={route} className="index-item-name">
-                  {restaurant.name}
+                  {this.display_name()}
                 </Link>
                 <div className="index-item-rating">
                   {this.display_ratings(restaurant.average_rating,
