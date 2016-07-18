@@ -1,6 +1,6 @@
 # Tafelspitz
 
-[Heroku link][heroku]
+[Live link][heroku]
 
 [heroku]: https://tafelspitz.herokuapp.com
 
@@ -213,6 +213,8 @@ logic of sign up, login, user page navigation, and logout;
 a **content section** with the main search bar, restaurant listing, and
 map control component;
 
+![listing]
+
 a **footer** with links to the original website, the README, and the
 restaurant entry form for restaurateur users.
 
@@ -224,6 +226,9 @@ and review form links reached from the profile and review menu items, and
 favorites, which modify the root restaurant items listing by filtering out
 the user's favorites and replacing the review display with a reservation
 link.
+
+![reservation]
+![favorite]
 
 ```javascript
 const RestaurantIndex = React.createClass({
@@ -272,6 +277,10 @@ of sections: Make reservation, About the restaurant with a static location
 map, menu, and reviews listing.  A sidebar with fixed positioning provides
 links to each section.
 
+![restaurant]
+![about]
+![rating]
+
 #### Flux cycles
 
 Frontend dataflow is organized into the following React flux pattern cycles
@@ -295,6 +304,8 @@ from the database.  Restaurant markers are dynamically generated and
 removed.  Clicking on a marker brings up the associated restaurant show
 page.  The Google Map API also provides the static map display on the
 show pages.
+
+![listing]
 
 #### Forms
 
@@ -356,3 +367,9 @@ replacing react-select and react-date-picker with jquery ui components
 
 [root]: ./docs/open.png
 [logo]: ./public/tafelspitz-logo.png
+[listing]: ./docs/listing.png
+[restaurant]: ./docs/restaurant_reserve.png
+[about]: ./docs/about.png
+[rating]: ./docs/rating.png
+[reservation]: ./docs/reservations.png
+[favorite]: ./docs/favorites.png
