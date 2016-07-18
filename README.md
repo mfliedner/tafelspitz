@@ -305,8 +305,6 @@ removed.  Clicking on a marker brings up the associated restaurant show
 page.  The Google Map API also provides the static map display on the
 show pages.
 
-![listing]
-
 #### Forms
 
 User entry forms and alert messages are realized as react-modal components
