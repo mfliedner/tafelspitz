@@ -65,7 +65,7 @@ const RestaurantShow = React.createClass({
     }
     const data = { restaurant_id: restaurantId };
 
-    if(this._isLiked() === "\u2661") {
+    if(this._isLiked() === DisplayConstants.NOT_LIKED) {
       FavoriteActions.createFavorite(data);
     } else {
       FavoriteActions.deleteFavorite(data);
