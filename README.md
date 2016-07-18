@@ -62,6 +62,8 @@ Austria and is equally popular in the neighboring German state of Bavaria
 This application is inspired by Opentable (check it out through the
 DISCOVER link).
 
+![root]
+
 ## Implementation
 
 The Tafelspitz application is built on a Ruby on Rails backend and a React.js
@@ -204,7 +206,7 @@ json.reviews restaurant.reviews.map { |review| review }
 The root page is divided into three main components:
 
 a **header** containing
-the logo ![logo] (./public/tafelspitz-logo.png), which serves as a link
+the logo ![logo], which serves as a link
 back to the root page and resets user filters, and the user handling
 logic of sign up, login, user page navigation, and logout;
 
@@ -351,3 +353,6 @@ restaurant show page
 #### possible implementation changes
 
 replacing react-select and react-date-picker with jquery ui components
+
+[root]: ./docs/open.png
+[logo]: ./public/tafelspitz-logo.png
