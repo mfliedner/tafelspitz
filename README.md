@@ -204,11 +204,9 @@ json.reviews restaurant.reviews.map { |review| review }
 The root page is divided into three main components:
 
 a **header** containing
-the logo, which serves as a link back to the root page that resets user
-filters and the user handling logic of sign up, login, user page navigation,
-and logout;
-
-![logo] (./public/tafelspitz-logo.png)
+the logo ![logo] (./public/tafelspitz-logo.png), which serves as a link
+back to the root page and resets user filters, and the user handling
+logic of sign up, login, user page navigation, and logout;
 
 a **content section** with the main search bar, restaurant listing, and
 map control component;
