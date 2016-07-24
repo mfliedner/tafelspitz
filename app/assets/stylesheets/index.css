@@ -30,6 +30,7 @@
 
 .info-left {
   float: left;
+  width: 300px;
 }
 
 .info-right {
