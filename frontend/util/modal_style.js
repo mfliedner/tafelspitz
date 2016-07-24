@@ -14,7 +14,7 @@ module.exports = {
     right           : 0,
     bottom          : 0,
     padding         : '16px',
-    border          : 0,
+    border          : '1px solid #000',
     background      : '#fff',
     width           : '460px',
     overflow                   : 'auto',
