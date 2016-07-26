@@ -13,6 +13,9 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
+    unless @review.nick_name && @review.nick_name.length > 0
+      @review.nick_name = "anonymous"
+    end
 
     if @review.save
       render :show
@@ -26,6 +29,6 @@ class Api::ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(
       :rating, :rate_food, :rate_ambience, :rate_service, :rate_value,
-      :body, :date, :restaurant_id)
+      :body, :date, :restaurant_id, :nick_name)
   end
 end

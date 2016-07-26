@@ -7,7 +7,10 @@ const Review = React.createClass({
     if (id === 1) {
       return "Guest - ";
     } else {
-      const byline = "Member " + id + " - ";
+      let byline = "anonymous - "
+      if (this.props.review.nick_name) {
+        byline = this.props.review.nick_name + " - ";
+      }
       return byline;
     }
   },

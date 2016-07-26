@@ -14,6 +14,7 @@
 #  body          :text
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  nick_name     :string
 #
 
 class Review < ActiveRecord::Base
