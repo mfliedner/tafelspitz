@@ -82,6 +82,24 @@
   width: 395px;
 }
 
+.review-name-label {
+  padding-left: 16px;
+}
+
+.review-name-form {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 403px;
+}
+
+.privavcy-warning {
+  color: #999;
+  font-size: 14px;
+  padding-left: 16px;
+}
+
 .price-range {
   display: flex;
 }

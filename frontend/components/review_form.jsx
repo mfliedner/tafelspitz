@@ -14,6 +14,7 @@ const ReviewForm = React.createClass({
       rate_service: 0,
       rate_value: 0,
       body: "",
+      nick_name: "",
       date: this.props.reservation.date,
       restaurant_id: this.props.reservation.restaurant_id
     };
@@ -114,6 +115,13 @@ const ReviewForm = React.createClass({
               className="review-body-form"
               maxLength="2000"
               onChange={this.update("body")}></textarea>
+            <br/>
+            <label className="review-name-label">Your reviews nickname</label>
+            <input type="text" className="review-name-form"
+                   onChange={this.update("nick_name")} maxlength="20"/>
+                 <div className="privavcy-warning">Your nickname will be shown
+                 on Tafelspitz alongside your reviews.  For privacy reasons, do
+                 not use your name or email address.</div>
             <br/>
             <input type="submit" value="Submit your review"
                    className="new-review-button"/>
