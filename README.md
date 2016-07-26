@@ -344,7 +344,7 @@ menu selection for price range and ratings
 
 containing a unique list of visited restaurants to be reviewed rather than
 individual reservations.  Users could be restricted to one review per
-restaurant.
+restaurant.  Nickname should be consistent between reviews by the same user.
 
 #### full availability implementation
 
