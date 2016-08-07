@@ -83,18 +83,17 @@ const Header = React.createClass({
               <a href="#">{greeting} <i className="chevron">&or;</i></a>
               <ul className="user-menu">
                 <li>
-                  <Link category="all" to={profile}>My Profile</Link>
+                  <Link to={profile}>My Profile</Link>
                 </li>
                 <li>
-                  <Link category="favored" to={favorites}
+                  <Link to={favorites}
                         className="favored-index-link"
                         onClick={this._handleFavored}>
                     Favorites
                   </Link>
                 </li>
                 <li>
-                  <Link category="review"
-                        to={profile}>Restaurants to review</Link>
+                  <Link to={profile}>Restaurants to review</Link>
                 </li>
                 <li>
                   <button id="logout-button" className="logout-button"

@@ -5,7 +5,6 @@ const ReactRouter = require('react-router');
 const Modal = require('react-modal');
 const ModalStyle = require('../util/modal_style');
 const SessionStore = require('../stores/session_store');
-const SessionActions = require('../actions/session_actions');
 const ErrorStore = require('../stores/error_store');
 const AlertForm = require('./alert_form');
 const ReservationForm = require('./reservation_form');
