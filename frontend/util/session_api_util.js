@@ -11,7 +11,9 @@ const SessionApiUtil = {
 				const errors = xhr.responseJSON;
 				error("login", errors);
 			}
-		});
+		}).fail(function() {
+			alert( "Invalid email address or password" );
+		})
 	},
 
 	logOut(success) {
