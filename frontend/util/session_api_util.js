@@ -1,7 +1,7 @@
 "use strict";
 
 const SessionApiUtil = {
-	logIn(user, success, error) {
+	logIn(user, success, error, cb) {
 		$.ajax({
 			url: '/api/session',
 			method: 'POST',
@@ -13,6 +13,7 @@ const SessionApiUtil = {
 			}
 		}).fail(function() {
 			alert( "Invalid email address or password" );
+			cb();
 		})
 	},
 

@@ -138,7 +138,7 @@ const Header = React.createClass({
 
   render() {
     const component = (this.state.signIn) ?
-      <LoginForm closeModal={this.closeModal}/> :
+      <LoginForm closeModal={this.closeModal} reopenModal={this._handleClick.bind(this, true)}/> :
       <SignupForm closeModal={this.closeModal}/>;
     const componentClass = (this.state.signIn) ? "login-mode" : "signup-mode";
 

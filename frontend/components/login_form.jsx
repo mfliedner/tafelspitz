@@ -42,9 +42,13 @@ const LoginForm = React.createClass({
 			password: this.state.password
 		};
 
-    SessionActions.logIn(formData);
+    SessionActions.logIn(formData, this.reopen);
 		this.props.closeModal();
 		this.context.router.push("/");
+	},
+
+	reopen() {
+		this.props.reopenModal();
 	},
 
   fieldErrors(field) {
