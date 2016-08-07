@@ -2,6 +2,7 @@
 
 const React = require('react');
 const SessionActions = require('../actions/session_actions');
+const ErrorActions = require('../actions/error_actions');
 const SessionStore = require('../stores/session_store');
 const ErrorStore = require('../stores/error_store');
 
@@ -36,6 +37,7 @@ const LoginForm = React.createClass({
 
 	handleSubmit(event) {
 		event.preventDefault();
+		ErrorActions.clearErrors();
 
 		const formData = {
 			email: this.state.email,
