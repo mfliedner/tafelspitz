@@ -8,10 +8,10 @@ const hashHistory = require('react-router').hashHistory;
 
 const SessionActions = {
 
-  signUp(formData){
+  signUp(formData, callback){
     SessionApiUtil.signUp(formData,
       this.receiveCurrentUser,
-      ErrorActions.setErrors);
+      ErrorActions.setErrors, callback);
   },
 
   logIn(formData, callback){

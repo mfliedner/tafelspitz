@@ -2,6 +2,7 @@
 
 const React = require('react');
 const SessionActions = require('../actions/session_actions');
+const ErrorActions = require('../actions/error_actions');
 const SessionStore = require('../stores/session_store');
 const ErrorStore = require('../stores/error_store');
 
@@ -39,6 +40,7 @@ const SignupForm = React.createClass({
 
 	handleSubmit(event) {
 		event.preventDefault();
+		ErrorActions.clearErrors();
 
 		const formData = {
 			email: this.state.email,
@@ -48,18 +50,22 @@ const SignupForm = React.createClass({
 			phone: this.state.phone
 		};
 
-		SessionActions.signUp(formData);
+		SessionActions.signUp(formData, this.reopen);
 		this.props.closeModal();
 		this.context.router.push("/");
 	},
 
+	reopen() {
+		this.props.reopenModal();
+	},
+
   fieldErrors(field) {
-    const errors = ErrorStore.formErrors(this.signup);
+    const errors = ErrorStore.formErrors("signup");
 
     if (!errors[field]) { return; }
 
     const messages = errors[field].map( (errorMsg, i) => {
-      return <li key={ i }>{ errorMsg }</li>;
+      return <li key={ i }>{ field + " " + errorMsg }</li>;
     });
 
     return <ul>{ messages }</ul>;
