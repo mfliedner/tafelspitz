@@ -25,7 +25,10 @@ module.exports = {
       success (reservation) {
         cb(reservation);
       }
-    });
+    }).fail(function(xhr, status, error) {
+			// const message = xhr.responseJSON;
+      alert("No reservation available!");
+		});
   },
 
   updateReservation (user_id, data, cb) {

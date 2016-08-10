@@ -41,7 +41,7 @@ class Api::ReservationsController < ApplicationController
       @reservation.save!
       render :show
     else
-      render json: @reservation, status: :unprocessable_entity
+      render json: @reservation.errors.full_messages, status: :unprocessable_entity
     end
   end
 
