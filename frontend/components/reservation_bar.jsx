@@ -45,6 +45,10 @@ const ReservationBar = React.createClass({
     this.listener.remove();
   },
 
+  handleFailure() {
+    hashHistory.push("/");
+  },
+
   handleSubmit(event) {
     event.preventDefault();
     if (SessionStore.isUserLoggedIn()) {
@@ -64,7 +68,7 @@ const ReservationBar = React.createClass({
                             requests: ""
                           };
       this.setState(newState);
-      ReservationActions.createReservation(reservation);
+      ReservationActions.createReservation(reservation, this.handleFailure);
 
       const id = SessionStore.currentUser().id;
       hashHistory.push("users/" + id + "/reservations/");

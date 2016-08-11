@@ -12,8 +12,8 @@ module.exports = {
     ApiUtil.getReservation(SessionStore.currentUser().id, id, this.receiveReservation);
   },
 
-  createReservation (data) {
-    ApiUtil.createReservation(SessionStore.currentUser().id, data, this.receiveReservation);
+  createReservation (data, cb) {
+    ApiUtil.createReservation(SessionStore.currentUser().id, data, this.receiveReservation, cb);
   },
 
   editReservation (data) {

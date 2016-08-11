@@ -17,17 +17,17 @@ module.exports = {
     });
   },
 
-  createReservation (user_id, data, cb) {
+  createReservation (user_id, data, cb_success, cb_fail) {
     $.ajax({
       url: `api/users/${user_id}/reservations`,
       type: "POST",
       data: { reservation: data },
       success (reservation) {
-        cb(reservation);
+        cb_success(reservation);
       }
     }).fail(function(xhr, status, error) {
-			// const message = xhr.responseJSON;
       alert("No reservation available!");
+      cb_fail();
 		});
   },
 
