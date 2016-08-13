@@ -7,6 +7,7 @@ const ReactRouter = require('react-router');
 const Modal = require('react-modal');
 const ModalStyle = require('../util/modal_style');
 const ReviewForm = require('./review_form');
+const moment = require('moment');
 
 const Reservation = React.createClass({
   getInitialState: function() {
@@ -70,6 +71,22 @@ const Reservation = React.createClass({
     return ( h + pad + min + meridiem )
   },
 
+  reviewing() {
+    if (moment() > moment(this.props.reservation.date)) {
+      // past reservation, can be reviewed
+      return(
+        <button id="review-button" className="review-button"
+                onClick={this._handleForm}>
+          Write Review
+        </button>
+      )
+    } else {
+      return(
+        <div className="review-upcoming">Upcoming Reservation</div>
+      )
+    }
+  },
+
   render() {
     const reservation = this.props.reservation;
     const route = "/restaurants/" + reservation.restaurant_id;
@@ -93,10 +110,7 @@ const Reservation = React.createClass({
                   {reservation.name}
                 </Link>
                 <div className="index-item-rating">
-                  <button id="review-button" className="review-button"
-                          onClick={this._handleForm}>
-                    Write Review
-                  </button>
+                  {this.reviewing()}
                 </div>
                 <div className="index-item-count">
                   {this.seating(reservation.guest_count)}

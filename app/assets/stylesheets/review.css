@@ -24,13 +24,17 @@
   padding-right: 24px;
 }
 
+.review-upcoming {
+  padding: 10px 20px;
+}
+
 .review-body {
   padding-top: 16px;
   padding-bottom: 16px;
   color: #333;
 }
 
-.index-item-review .review-body {  
+.index-item-review .review-body {
   overflow-y: auto;
   max-width: 90%;
   width: 600px;
