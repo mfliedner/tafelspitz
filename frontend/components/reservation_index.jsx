@@ -5,31 +5,23 @@ const Reservation = require('./reservation');
 const moment = require('moment');
 
 const ReservationIndex = React.createClass({
-  render() {
-    let reservations = this.props.reservations;
-    let header = "No Reservations";
-
-    if (!!reservations && Object.keys(reservations).length > 0) {
-      reservations = reservations.reservation_items;
-      const now = moment();
-      let now_idx = -1;
-      for(let i = 0; i < reservations.length; i++) {
-        if (moment(reservations[i].date) < now) {
-          now_idx = i;
-        }
-      }
-
-      header = "Reservations";
-      if (now_idx === reservations.length - 1) {
-        header = "Past Reservations";
-      }
-      if (now_idx < 0) {
-        header = "Upcoming Reservations"
-      }
+  sections(idx, header, reservations) {
+    if (idx < 0) {
+      return (this.section(header, reservations));
+    } else if (idx+1 >= reservations.length) {
+      return (this.section(header, reservations.reverse()));
     } else {
-      return (<div className="reservations-header">{header}</div>);
+      debugger
+      return (
+        <div>
+          {this.section(header, reservations.slice(0, idx).reverse())}
+          {this.section("Past Reservations", reservations.slice(idx+1))}
+        </div>
+      );
     }
+  },
 
+  section(header, reservations) {
     return (
       <div>
         <div className="reservations-header">{header}</div>
@@ -43,6 +35,34 @@ const ReservationIndex = React.createClass({
           }
         </div>
       </div>
+    );
+  },
+
+  render() {
+    let reservations = this.props.reservations;
+    let header = "No Reservations";
+    let now_idx = -1;
+
+    if (!!reservations && Object.keys(reservations).length > 0) {
+      reservations = reservations.reservation_items;
+      const now = moment();
+      for(let i = 0; i < reservations.length; i++) {
+        if (moment(reservations[i].date) > now) {
+          now_idx = i;
+        }
+      }
+
+      if (now_idx < 0) {
+        header = "Past Reservations"
+      } else {
+        header = "Upcoming Reservations";
+      }
+    } else {
+      return (<div className="reservations-header">{header}</div>);
+    }
+
+    return (
+      <div>{this.sections(now_idx, header, reservations)}</div>
     );
   }
 });
