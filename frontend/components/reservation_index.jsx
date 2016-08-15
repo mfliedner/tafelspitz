@@ -11,7 +11,6 @@ const ReservationIndex = React.createClass({
     } else if (idx+1 >= reservations.length) {
       return (this.section(header, reservations.reverse()));
     } else {
-      debugger
       return (
         <div>
           {this.section(header, reservations.slice(0, idx).reverse())}
