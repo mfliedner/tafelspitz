@@ -3,11 +3,11 @@ class Api::ReservationsController < ApplicationController
 
   def index
     @reservations = Reservation.where("guest_id = ?", current_user.id)
-                               .order(date: :desc)
+                               .order(date: :desc).order(time: :desc)
                                .includes(:restaurant)
-    @reservation_items = {}
+    @reservation_items = []
     @reservations.each do |item|
-      @reservation_items[item.id] = {
+      @reservation_items << {
         :id => item.id,
         :guest_count => item.guest_count,
         :date => item.date,
