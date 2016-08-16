@@ -6,6 +6,8 @@ const moment = require('moment');
 
 const ReservationIndex = React.createClass({
   sections(idx, header, reservations) {
+    // incoming sort: descending
+    // sort upcoming reservations in ascending order
     if (idx < 0) {
       return (this.section(header, reservations));
     } else if (idx+1 >= reservations.length) {

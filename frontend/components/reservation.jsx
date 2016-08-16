@@ -7,6 +7,7 @@ const ReactRouter = require('react-router');
 const Modal = require('react-modal');
 const ModalStyle = require('../util/modal_style');
 const ReviewForm = require('./review_form');
+const ReservationActions = require('../actions/reservation_actions');
 const moment = require('moment');
 
 const Reservation = React.createClass({
@@ -34,6 +35,18 @@ const Reservation = React.createClass({
   _handleClick() {
     // const restaurantID = this.props.reservation.restaurant_id;
     // hashHistory.push("restaurants/" + restaurantID );
+  },
+
+  _handleModify() {
+    const restaurantID = this.props.reservation.restaurant_id;
+    hashHistory.push("restaurants/" + restaurantID );
+  },
+
+  _handleCancel() {
+    const reservationID = this.props.reservation.id;
+    const restaurantID = this.props.reservation.restaurant_id;
+    ReservationActions.deleteReservation(reservationID);
+    hashHistory.push("restaurants/" + restaurantID );
   },
 
   seating(n) {
@@ -81,8 +94,22 @@ const Reservation = React.createClass({
         </button>
       )
     } else {
+      // upcoming reservations can be modified
       return(
-        <div className="review-upcoming">Upcoming Reservation</div>
+        <ul className="reservation-update">
+          <li className="reservation-modify">
+            <button id="modify-button" className="modify-button"
+                    onClick={this._handleModify}>
+              Modify
+            </button>
+          </li>
+          <li className="reservation-cancel">
+            <button id="cancel-button" className="cancel-button"
+                    onClick={this._handleCancel}>
+              Cancel
+            </button>
+          </li>
+        </ul>
       )
     }
   },
