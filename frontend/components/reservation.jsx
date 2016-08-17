@@ -98,13 +98,13 @@ const Reservation = React.createClass({
       return(
         <ul className="reservation-update">
           <li className="reservation-modify">
-            <button id="modify-button" className="modify-button"
+            <button id="modify-button" className="update-button"
                     onClick={this._handleModify}>
               Modify
             </button>
           </li>
           <li className="reservation-cancel">
-            <button id="cancel-button" className="cancel-button"
+            <button id="cancel-button" className="update-button"
                     onClick={this._handleCancel}>
               Cancel
             </button>
@@ -139,9 +139,6 @@ const Reservation = React.createClass({
                 <div className="index-item-rating">
                   {this.reviewing()}
                 </div>
-                <div className="index-item-count">
-                  {this.seating(reservation.guest_count)}
-                </div>
               </div>
               <div className="info-right group">
                 <div className="index-item-category">
@@ -150,6 +147,10 @@ const Reservation = React.createClass({
                 <br/>
                 <div className="index-item-category">
                   {this.timing(reservation.time)}
+                </div>
+                <br/>
+                <div className="index-item-category">
+                  {this.seating(reservation.guest_count)}
                 </div>
               </div>
             </div>

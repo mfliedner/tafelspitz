@@ -1,0 +1,14 @@
+.reservation-update > li {
+  position: relative;
+  float: left;
+  margin-right: 16px;
+  padding-top: 5px;
+}
+
+.update-button {
+  color: #60B2D0;
+}
+
+.update-button:hover {
+  color: #3798bc;
+}
