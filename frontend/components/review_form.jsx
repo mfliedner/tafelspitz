@@ -118,7 +118,7 @@ const ReviewForm = React.createClass({
             <br/>
             <label className="review-name-label">Your reviews nickname</label>
             <input type="text" className="review-name-form"
-                   onChange={this.update("nick_name")} maxlength="20"/>
+                   onChange={this.update("nick_name")} maxLength="20"/>
                  <div className="privavcy-warning">Your nickname will be shown
                  on Tafelspitz alongside your reviews.  For privacy reasons, do
                  not use your name or email address.</div>
