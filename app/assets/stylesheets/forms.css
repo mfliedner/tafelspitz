@@ -194,6 +194,15 @@
   width: 380px;
 }
 
+.input-button {
+  background: #60B2D0;
+  border-radius: 3px;
+  color: #000;
+  margin-left: 20px;
+  width: 380px;
+  margin-bottom: 24px; 
+}
+
 .alert-greeting {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -206,5 +215,13 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 24px;
+  font-size: 20px;
+}
+
+.confirmation-message {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-top: 24px;
   font-size: 20px;
 }

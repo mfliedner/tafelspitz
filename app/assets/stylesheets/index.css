@@ -41,6 +41,10 @@
   color: #333;
 }
 
+.index-item-name span {
+  cursor: pointer;
+}
+
 .index-item-category {
   position: absolute;
   right: 36px;
