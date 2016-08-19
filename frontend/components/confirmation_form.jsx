@@ -24,7 +24,7 @@ const ConfirmationForm = React.createClass({
 		        {this.props.message}
 					</div>
 
-					<input type="submit" value="Confirm"/>
+					<input className="input-button" type="submit" value="Confirm"/>
 				</form>
 			</div>
 		);
