@@ -48,7 +48,8 @@ const ReservationIndex = React.createClass({
       reservations = reservations.reservation_items;
       const now = moment();
       for(let i = 0; i < reservations.length; i++) {
-        if (moment(reservations[i].date) > now) {
+        const date = moment(reservations[i].date);
+        if (date >= now) {
           now_idx = i;
         }
       }

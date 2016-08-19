@@ -1940,7 +1940,7 @@ Review.create!(
 Reservation.create!(
   guest_id: 1,
   restaurant_id: 1,
-  date: "June 29, 2016",
+  date: "June 29, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -1967,7 +1967,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 2,
   restaurant_id: 2,
-  date: "June 10, 2016",
+  date: "June 10, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -1976,7 +1976,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 1,
   restaurant_id: 3,
-  date: "June 26, 2016",
+  date: "June 26, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2003,7 +2003,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 2,
   restaurant_id: 4,
-  date: "May 1, 2016",
+  date: "May 1, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2012,7 +2012,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 1,
   restaurant_id: 6,
-  date: "June 23, 2016",
+  date: "June 23, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2039,7 +2039,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 2,
   restaurant_id: 7,
-  date: "June 26, 2016",
+  date: "June 26, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2048,7 +2048,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 1,
   restaurant_id: 8,
-  date: "June 25, 2016",
+  date: "June 25, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2075,7 +2075,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 2,
   restaurant_id: 9,
-  date: "July 2, 2016",
+  date: "July 2, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2084,7 +2084,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 1,
   restaurant_id: 10,
-  date: "June 28, 2016",
+  date: "June 28, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2111,7 +2111,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 2,
   restaurant_id: 11,
-  date: "May 30, 2016",
+  date: "May 30, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2120,7 +2120,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 1,
   restaurant_id: 12,
-  date: "June 12, 2016",
+  date: "June 12, 2017",
   guest_count: 2,
   requests: "",
   time: 68400
@@ -2147,7 +2147,7 @@ Reservation.create!(
 Reservation.create!(
   guest_id: 2,
   restaurant_id: 13,
-  date: "June 12, 2016",
+  date: "June 12, 2017",
   guest_count: 2,
   requests: "",
   time: 68400

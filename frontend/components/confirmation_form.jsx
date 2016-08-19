@@ -6,7 +6,6 @@ const ConfirmationForm = React.createClass({
 
 	handleSubmit(event) {
 		event.preventDefault();
-
     this.props.action();
 		this.props.closeModal();
 	},

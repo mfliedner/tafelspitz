@@ -7,13 +7,15 @@ const ReactRouter = require('react-router');
 const Modal = require('react-modal');
 const ModalStyle = require('../util/modal_style');
 const ReviewForm = require('./review_form');
+const ConfirmationForm = require('./confirmation_form');
 const ReservationActions = require('../actions/reservation_actions');
 const moment = require('moment');
 
 const Reservation = React.createClass({
   getInitialState: function() {
     return({
-      modalOpen: false
+      modalOpen: false,
+      alertOpen: false
     });
   },
 
@@ -23,6 +25,15 @@ const Reservation = React.createClass({
   },
 
   openModal: function() {
+    ModalStyle.content.opacity = 100;
+  },
+
+  closeAlert: function() {
+    this.setState({ alertOpen: false });
+    ModalStyle.content.opacity = 0;
+  },
+
+  openAlert: function() {
     ModalStyle.content.opacity = 100;
   },
 
@@ -43,10 +54,18 @@ const Reservation = React.createClass({
   },
 
   _handleCancel() {
-    const reservationID = this.props.reservation.id;
+    this.setState({
+      alertOpen: true
+    });
+    // const restaurantID = this.props.reservation.restaurant_id;
+    // ReservationActions.deleteReservation(this.props.reservation);
+    // hashHistory.push("restaurants/" + restaurantID );
+  },
+
+  redirect() {
     const restaurantID = this.props.reservation.restaurant_id;
-    ReservationActions.deleteReservation(reservationID);
-    hashHistory.push("restaurants/" + restaurantID );
+    hashHistory.push("restaurants/" + restaurantID);
+    // hashHistory.push(route);
   },
 
   seating(n) {
@@ -166,6 +185,20 @@ const Reservation = React.createClass({
             style={ModalStyle}>
             <ReviewForm reservation={reservation} closeModal={this.closeModal}/>
             <button onClick={this.closeModal}>Cancel</button>
+          </Modal>
+
+          <Modal
+            className="alert-mode"
+            isOpen={this.state.alertOpen}
+            onRequestClose={this.closeAlert}
+            onAfterOpen={this.openAlert}
+            style={ModalStyle}>
+            <ConfirmationForm closeModal={this.closeAlert}
+              action={ReservationActions.deleteReservation
+                      .bind(this, reservation, this.redirect)}
+              message="Do you want to cancel this reservation?"
+            />
+          <button onClick={this.closeAlert}>Cancel</button>
           </Modal>
         </div>
     );

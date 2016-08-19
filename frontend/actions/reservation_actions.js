@@ -20,8 +20,8 @@ module.exports = {
     ApiUtil.updateReservation(SessionStore.currentUser().id, data, this.receiveReservation);
   },
 
-  deleteReservation (id) {
-    ApiUtil.deleteReservation(SessionStore.currentUser().id, id, this.removeReservation);
+  deleteReservation (data, cb) {
+    ApiUtil.deleteReservation(SessionStore.currentUser().id, data, this.removeReservation, cb);
   },
 
   receiveAll (reservations) {

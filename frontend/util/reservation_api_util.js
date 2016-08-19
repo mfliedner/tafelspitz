@@ -46,13 +46,14 @@ module.exports = {
     });
   },
 
-  deleteReservation (user_id, id, cb) {
+  deleteReservation (user_id, data, success, cb_done) {
     $.ajax({
-      url: `api/users/${user_id}/reservations/${id}`,
+      url: `api/users/${user_id}/reservations/${data.id}`,
       type: "DELETE",
-      success (reservation) {
-        cb(reservation);
-      }
-    });
+      data: { reservation: data },
+      success
+    }).done(function() {
+      cb_done();
+		});
   }
 };
