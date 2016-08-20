@@ -71,6 +71,7 @@ const ReservationBar = React.createClass({
       ReservationActions.createReservation(reservation, this.handleFailure);
 
       const id = SessionStore.currentUser().id;
+      hashHistory.push("/"); // empty flex cycle to update the reservation list
       hashHistory.push("users/" + id + "/reservations/");
     } else {
       this.setState( {modalOpen: true} );

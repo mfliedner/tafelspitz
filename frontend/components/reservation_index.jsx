@@ -23,6 +23,10 @@ const ReservationIndex = React.createClass({
   },
 
   section(header, reservations) {
+    let past = false;
+    if (header[0] === 'P') {
+      past = true;
+    }
     return (
       <div>
         <div className="reservations-header">{header}</div>
@@ -31,6 +35,7 @@ const ReservationIndex = React.createClass({
             reservations.map( reservation => {
               return (<Reservation
                 reservation={reservation}
+                past={past}
                 key={reservation.id} />);
             } )
           }
@@ -46,9 +51,10 @@ const ReservationIndex = React.createClass({
 
     if (!!reservations && Object.keys(reservations).length > 0) {
       reservations = reservations.reservation_items;
-      const now = moment();
+      const now = moment().format('YYYY MM DD');
       for(let i = 0; i < reservations.length; i++) {
-        const date = moment(reservations[i].date);
+        // temporary UTC setting until time zones are handled
+        const date = moment(reservations[i].date).utc().format('YYYY MM DD');
         if (date >= now) {
           now_idx = i;
         }

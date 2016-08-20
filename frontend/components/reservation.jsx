@@ -57,15 +57,12 @@ const Reservation = React.createClass({
     this.setState({
       alertOpen: true
     });
-    // const restaurantID = this.props.reservation.restaurant_id;
-    // ReservationActions.deleteReservation(this.props.reservation);
-    // hashHistory.push("restaurants/" + restaurantID );
   },
 
-  redirect() {
-    const restaurantID = this.props.reservation.restaurant_id;
-    hashHistory.push("restaurants/" + restaurantID);
-    // hashHistory.push(route);
+  redirect(route) {
+    // a flux cycle is needed to update the reservation list
+    hashHistory.push(route);
+    // hashHistory.push("users/" + this.props.reservation.guest_id + "/reservations");
   },
 
   seating(n) {
@@ -81,8 +78,11 @@ const Reservation = React.createClass({
   },
 
   calendarDate(date) {
-    const idx = date.indexOf('T');
-    return date.substring(0, idx);
+    // const idx = date.indexOf('T');
+    // return date.substring(0, idx);
+
+    // temporary setting UTC until time zones are handled
+    return moment(date).utc().format('ddd MMM DD YYYY');
   },
 
   timing(time) {
@@ -104,7 +104,7 @@ const Reservation = React.createClass({
   },
 
   reviewing() {
-    if (moment() > moment(this.props.reservation.date)) {
+    if (this.props.past) {
       // past reservation, can be reviewed
       return(
         <button id="review-button" className="review-button"
@@ -195,7 +195,7 @@ const Reservation = React.createClass({
             style={ModalStyle}>
             <ConfirmationForm closeModal={this.closeAlert}
               action={ReservationActions.deleteReservation
-                      .bind(this, reservation, this.redirect)}
+                      .bind(this, reservation, this.redirect.bind(this, route))}
               message="Do you want to cancel this reservation?"
             />
           <button onClick={this.closeAlert}>Cancel</button>
