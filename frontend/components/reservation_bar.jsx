@@ -65,13 +65,18 @@ const ReservationBar = React.createClass({
                             time: time,
                             guest_count: newState.guest_count,
                             restaurant_id: newState.restaurant_id,
-                            requests: ""
+                            requests: "",
+                            id: this.props.reservation
                           };
       this.setState(newState);
-      ReservationActions.createReservation(reservation, this.handleFailure);
+      if(this.props.reservation > 0) {
+        ReservationActions.editReservation(reservation);
+      } else {
+        ReservationActions.createReservation(reservation, this.handleFailure);
+      }
 
       const id = SessionStore.currentUser().id;
-      hashHistory.push("/"); // empty flex cycle to update the reservation list
+      hashHistory.push("/"); // empty flux cycle to update the reservation list
       hashHistory.push("users/" + id + "/reservations/");
     } else {
       this.setState( {modalOpen: true} );

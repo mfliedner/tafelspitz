@@ -184,6 +184,10 @@ const RestaurantShow = React.createClass({
   },
 
   render() {
+    let reservationID = 0;
+    if (this.props.params.reservationId) {
+      reservationID = this.props.params.reservationId;
+    }
     const restaurant = this.state.restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
     const mapParams = "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
@@ -241,7 +245,8 @@ const RestaurantShow = React.createClass({
                   </div>
                   <div className="section-content">
                     <div className="reservation-bar">
-                      <ReservationBar restaurant={restaurant}/>
+                      <ReservationBar reservation={reservationID}
+                                      restaurant={restaurant}/>
                     </div>
                   </div>
                 </section>

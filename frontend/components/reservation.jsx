@@ -50,7 +50,9 @@ const Reservation = React.createClass({
 
   _handleModify() {
     const restaurantID = this.props.reservation.restaurant_id;
-    hashHistory.push("restaurants/" + restaurantID );
+    const reservationID = this.props.reservation.id;
+    hashHistory.push("/"); // empty flux cycle to update the reservation list
+    hashHistory.push("restaurants/" + restaurantID + "/" + reservationID);
   },
 
   _handleCancel() {
