@@ -329,12 +329,6 @@ as react-star-rating-components.
 I am planning to improve and expand this project in the future.  Here are
 some of the next steps
 
-#### Separation of reservations in past and upcoming
-
-only past reservations will allow reviews
-
-upcoming reservations can be changed and cancelled
-
 #### Search based on location and additional criteria
 
 auto-complete search extended to cities (culled from address); drop-down
