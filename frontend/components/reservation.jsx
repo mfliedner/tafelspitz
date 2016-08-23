@@ -9,6 +9,7 @@ const ModalStyle = require('../util/modal_style');
 const ReviewForm = require('./review_form');
 const ConfirmationForm = require('./confirmation_form');
 const ReservationActions = require('../actions/reservation_actions');
+const Util = require('../util/reservation_util');
 const moment = require('moment');
 
 const Reservation = React.createClass({
@@ -87,24 +88,6 @@ const Reservation = React.createClass({
     return moment(date).utc().format('ddd MMM DD YYYY');
   },
 
-  timing(time) {
-    let meridiem = " AM";
-    if (time > 43199) {
-      meridiem = " PM";
-      time -= 43200;
-    }
-    let h = Math.floor(time / 3600);
-    if (h === 0) {
-      h = 12;
-    }
-    const min = Math.round((time % 3600) / 60);
-    let pad = ":";
-    if (min < 10) {
-      pad = ":0"
-    }
-    return ( h + pad + min + meridiem )
-  },
-
   reviewing() {
     if (this.props.past) {
       // past reservation, can be reviewed
@@ -167,7 +150,7 @@ const Reservation = React.createClass({
                 </div>
                 <br/>
                 <div className="index-item-category">
-                  {this.timing(reservation.time)}
+                  {Util.timing(reservation.time)}
                 </div>
                 <br/>
                 <div className="index-item-category">

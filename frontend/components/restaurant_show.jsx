@@ -12,6 +12,7 @@ const Review = require('./review');
 const RestaurantMap = require('./restaurant_map');
 const RestaurantActions = require('../actions/restaurant_actions');
 const ReservationBar = require('./reservation_bar');
+const Util = require('../util/reservation_util');
 const FavoriteActions = require('../actions/favorite_actions');
 const SessionStore = require('../stores/session_store');
 const StarRatingComponent = require('react-star-rating-component');
@@ -265,6 +266,14 @@ const RestaurantShow = React.createClass({
                       <p>
                         <span className="item-head">Phone number: </span>
                         {restaurant.phone}
+                      </p>
+                      <p>
+                        <span className="item-head">Opening Time: </span>
+                        {Util.timing(restaurant.opening)}
+                      </p>
+                      <p>
+                        <span className="item-head">Closing Time: </span>
+                        {Util.timing(restaurant.closing)}
                       </p>
                     </div>
                   </div>
