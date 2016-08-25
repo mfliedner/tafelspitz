@@ -23,7 +23,7 @@ const TimeSlotForm = React.createClass({
 	getInitialState () {
 		return {
 			options: this.getOptions(),
-			value: FilterConstants.DEFAULT_TIME_SLOT
+			value: this.props.slot
 		};
 	},
 

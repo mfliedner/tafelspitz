@@ -6,8 +6,10 @@ const ReservationForm = require('./reservation_form');
 const RestaurantStore = require('../stores/restaurant_store');
 const RestaurantActions = require('../actions/restaurant_actions');
 const FilterParamsStore = require('../stores/filter_params_store');
+const FilterConstants = require('../constants/filter_constants');
 const AutoCompleteForm = require('./auto');
 const hashHistory = require('react-router').hashHistory;
+const moment = require('moment');
 
 const SearchBar = React.createClass({
   parseRestaurants() {
@@ -61,10 +63,15 @@ const SearchBar = React.createClass({
   },
 
   render() {
+    const reservationParms = {
+      date: moment().format('ll'),
+      time_slot: FilterConstants.DEFAULT_TIME_SLOT,
+      guest_count: FilterConstants.DEFAULT_GUEST_COUNT
+    }
     return (
       <div className="search-bar">
         <form onSubmit={this.handleSubmit} className="search-bar-fields">
-          <ReservationForm/>
+          <ReservationForm reservationParms={reservationParms}/>
           <AutoCompleteForm list={this.state.list}/>
           <div className="search-button">
             <input type="submit" value="Find a Table" className="find-button"/>

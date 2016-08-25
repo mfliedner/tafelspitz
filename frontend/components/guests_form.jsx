@@ -25,7 +25,7 @@ const GuestsForm = React.createClass({
 	getInitialState () {
 		return {
 			options: this.getOptions(),
-			value: FilterConstants.DEFAULT_GUEST_COUNT
+			value: this.props.count
 		};
 	},
 

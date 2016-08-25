@@ -4,7 +4,6 @@ const React = require('react');
 const FilterActions = require('../actions/filter_actions');
 import 'react-date-picker/index.css';
 import { DateField } from 'react-date-picker';
-const moment = require('moment');
 
 const DateForm = React.createClass({
   propTypes: {
@@ -13,7 +12,7 @@ const DateForm = React.createClass({
 
 	getInitialState () {
 		return {
-			date: moment().format('ll')
+			date: this.props.day
 		};
 	},
 
