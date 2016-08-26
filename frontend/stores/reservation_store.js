@@ -19,7 +19,7 @@ const removeReservation = function (reservation) {
 };
 
 ReservationStore.all = function () {
-  return Object.assign({}, _reservations);
+  return _reservations.reservation_items;
 };
 
 ReservationStore.find = function (id) {

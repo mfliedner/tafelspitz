@@ -49,8 +49,7 @@ const ReservationIndex = React.createClass({
     let header = "No Reservations";
     let now_idx = -1;
 
-    if (!!reservations && Object.keys(reservations).length > 0) {
-      reservations = reservations.reservation_items;
+    if (!!reservations && reservations.length > 0) {
       const now = moment().format('YYYY MM DD');
       for(let i = 0; i < reservations.length; i++) {
         // temporary UTC setting until time zones are handled
