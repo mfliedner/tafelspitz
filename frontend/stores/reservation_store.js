@@ -22,11 +22,6 @@ ReservationStore.all = function () {
   return _reservations.reservation_items;
 };
 
-ReservationStore.find = function (id) {
-  return Object.assign({}, _reservations[id]);
-};
-
-
 ReservationStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
     case ReservationConstants.RESERVATIONS_RECEIVED:
