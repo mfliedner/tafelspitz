@@ -19,7 +19,7 @@ const ReservationBar = React.createClass({
   getInitialState: function() {
     let date = moment().format('ll');
     let time_slot = FilterConstants.DEFAULT_TIME_SLOT;
-    let guest_count: FilterConstants.DEFAULT_GUEST_COUNT;
+    let guest_count = FilterConstants.DEFAULT_GUEST_COUNT;
     const id = parseInt(this.props.reservation);
     if (id > 0) {
       let reservation;
@@ -114,6 +114,7 @@ const ReservationBar = React.createClass({
   },
 
   render() {
+    // debugger
     return (
       <div className="reservation-bar">
         <form onSubmit={this.handleSubmit} className="reservation-fields">
