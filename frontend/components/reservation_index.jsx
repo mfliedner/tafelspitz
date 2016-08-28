@@ -15,7 +15,7 @@ const ReservationIndex = React.createClass({
     } else {
       return (
         <div>
-          {this.section(header, reservations.slice(0, idx).reverse())}
+          {this.section(header, reservations.slice(0, idx+1).reverse())}
           {this.section("Past Reservations", reservations.slice(idx+1))}
         </div>
       );
