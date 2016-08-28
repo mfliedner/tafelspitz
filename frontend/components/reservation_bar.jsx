@@ -8,18 +8,36 @@ const SessionStore = require('../stores/session_store');
 const ErrorStore = require('../stores/error_store');
 const AlertForm = require('./alert_form');
 const ReservationForm = require('./reservation_form');
+const ReservationStore = require('../stores/reservation_store');
+const ReservationActions = require('../actions/reservation_actions');
 const FilterParamsStore = require('../stores/filter_params_store');
 const FilterConstants = require('../constants/filter_constants');
-const ReservationActions = require('../actions/reservation_actions');
 const hashHistory = require('react-router').hashHistory;
 const moment = require('moment');
 
 const ReservationBar = React.createClass({
   getInitialState: function() {
+    let date = moment().format('ll');
+    let time_slot = FilterConstants.DEFAULT_TIME_SLOT;
+    let guest_count: FilterConstants.DEFAULT_GUEST_COUNT;
+    const id = parseInt(this.props.reservation);
+    if (id > 0) {
+      let reservation;
+      ReservationStore.all().forEach( function(item) {
+        if (item.id == id) {
+          reservation = item;
+        };
+      });
+      if (reservation) {
+        date = reservation.date;
+        time_slot = Math.floor(reservation.time / 30 / 60);
+        guest_count = reservation.guest_count;
+      }
+    }
     return({
-      date: moment().format('ll'),
-      time_slot: FilterConstants.DEFAULT_TIME_SLOT,
-      guest_count: FilterConstants.DEFAULT_GUEST_COUNT,
+      date: moment(date).utc(),
+      time_slot: time_slot,
+      guest_count: guest_count,
       restaurant_id: this.props.restaurant.id,
       requests: "",
       modalOpen: false
