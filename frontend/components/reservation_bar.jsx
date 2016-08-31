@@ -114,7 +114,6 @@ const ReservationBar = React.createClass({
   },
 
   render() {
-    // debugger
     return (
       <div className="reservation-bar">
         <form onSubmit={this.handleSubmit} className="reservation-fields">

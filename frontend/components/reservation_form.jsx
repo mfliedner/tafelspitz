@@ -4,7 +4,6 @@ const React = require('react');
 const TimeSlotForm = require('./time_slot_form');
 const GuestsForm = require('./guests_form');
 const DateForm = require('./date_form');
-const FilterActions = require('../actions/filter_actions');
 
 const ReservationForm = React.createClass({
   render() {
