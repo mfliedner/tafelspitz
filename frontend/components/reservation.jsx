@@ -9,6 +9,7 @@ const ModalStyle = require('../util/modal_style');
 const ReviewForm = require('./review_form');
 const ConfirmationForm = require('./confirmation_form');
 const ReservationActions = require('../actions/reservation_actions');
+const FilterActions = require('../actions/filter_actions');
 const Util = require('../util/reservation_util');
 const moment = require('moment');
 
@@ -50,9 +51,13 @@ const Reservation = React.createClass({
   },
 
   _handleModify() {
-    const restaurantID = this.props.reservation.restaurant_id;
-    const reservationID = this.props.reservation.id;
-    hashHistory.push("/"); // empty flux cycle to update the reservation list
+    const reservation = this.props.reservation;
+    const restaurantID = reservation.restaurant_id;
+    const reservationID = reservation.id;
+    const time_slot = Math.floor(reservation.time / 30 / 60);
+    FilterActions.updateGuestCount(reservation.guest_count);
+    FilterActions.updateDate(reservation.date);
+    FilterActions.updateTimeSlot(time_slot);
     hashHistory.push("restaurants/" + restaurantID + "/" + reservationID);
   },
 
@@ -63,9 +68,8 @@ const Reservation = React.createClass({
   },
 
   redirect(route) {
-    // a flux cycle is needed to update the reservation list
+    FilterActions.clearFilters();
     hashHistory.push(route);
-    // hashHistory.push("users/" + this.props.reservation.guest_id + "/reservations");
   },
 
   seating(n) {
