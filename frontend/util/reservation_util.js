@@ -15,5 +15,13 @@ module.exports = {
       pad = ":0"
     }
     return ( h + pad + min + meridiem )
+  },
+
+  time_slot(time) {
+    return ( Math.floor(time / 30 / 60) )
+  },
+
+  time(time_slot) {
+    return ( time_slot * 30 * 60 )
   }
 };

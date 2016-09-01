@@ -10,6 +10,7 @@ const AlertForm = require('./alert_form');
 const ReservationForm = require('./reservation_form');
 const ReservationStore = require('../stores/reservation_store');
 const ReservationActions = require('../actions/reservation_actions');
+const Util = require('../util/reservation_util');
 const FilterParamsStore = require('../stores/filter_params_store');
 const FilterConstants = require('../constants/filter_constants');
 const hashHistory = require('react-router').hashHistory;
@@ -30,7 +31,7 @@ const ReservationBar = React.createClass({
       });
       if (reservation) {
         date = reservation.date;
-        time_slot = Math.floor(reservation.time / 30 / 60);
+        time_slot = Util.time_slot(reservation.time);
         guest_count = reservation.guest_count;
       }
     }
@@ -77,7 +78,7 @@ const ReservationBar = React.createClass({
                          restaurant_id: this.props.restaurant.id,
                          requests: ""
                        };
-      const time = newFilters.time_slot * 60 * 30;
+      const time = Util.time(newFilters.time_slot);
 
       const reservation = { date: newState.date,
                             time: time,

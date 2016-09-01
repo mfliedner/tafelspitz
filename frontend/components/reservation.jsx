@@ -54,7 +54,7 @@ const Reservation = React.createClass({
     const reservation = this.props.reservation;
     const restaurantID = reservation.restaurant_id;
     const reservationID = reservation.id;
-    const time_slot = Math.floor(reservation.time / 30 / 60);
+    const time_slot = Util.time_slot(reservation.time);
     FilterActions.updateGuestCount(reservation.guest_count);
     FilterActions.updateDate(reservation.date);
     FilterActions.updateTimeSlot(time_slot);
