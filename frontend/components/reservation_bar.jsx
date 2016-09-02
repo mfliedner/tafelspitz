@@ -95,7 +95,6 @@ const ReservationBar = React.createClass({
       }
 
       const id = SessionStore.currentUser().id;
-      hashHistory.push("/"); // empty flux cycle to update the reservation list
       hashHistory.push("users/" + id + "/reservations/");
     } else {
       this.setState( {modalOpen: true} );

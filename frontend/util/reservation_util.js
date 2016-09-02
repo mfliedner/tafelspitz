@@ -23,5 +23,10 @@ module.exports = {
 
   time(time_slot) {
     return ( time_slot * 30 * 60 )
+  },
+
+  strip_date(date) {
+    const idx = date.indexOf('T');
+    return date.substring(0, idx);
   }
 };

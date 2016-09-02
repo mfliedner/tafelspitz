@@ -46,8 +46,7 @@ const Reservation = React.createClass({
   },
 
   _handleClick() {
-    // const restaurantID = this.props.reservation.restaurant_id;
-    // hashHistory.push("restaurants/" + restaurantID );
+    // hold for future use
   },
 
   _handleModify() {
@@ -85,9 +84,6 @@ const Reservation = React.createClass({
   },
 
   calendarDate(date) {
-    // const idx = date.indexOf('T');
-    // return date.substring(0, idx);
-
     // temporary setting UTC until time zones are handled
     return moment(date).utc().format('ddd MMM DD YYYY');
   },
