@@ -353,10 +353,6 @@ suggesting alternative availability within a given time window
 using structured entry form for menu to allow customized rendering on the
 restaurant show page
 
-#### possible implementation changes
-
-replacing react-select and react-date-picker with jquery ui components
-
 [root]: ./docs/open.png
 [logo]: ./public/tafelspitz-logo.png
 [listing]: ./docs/listing.png
