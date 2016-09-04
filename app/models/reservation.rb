@@ -1,3 +1,4 @@
+require 'byebug'
 # == Schema Information
 #
 # Table name: reservations
@@ -29,7 +30,11 @@ class Reservation < ActiveRecord::Base
   def available?
     return false if self.restaurant.opening > self.time
     return false if self.restaurant.closing < self.time
-    return false if self.restaurant.seats < self.guest_count
+    others = Reservation.all.where("restaurant_id = ?", self.restaurant_id)
+                            .where("date = ?", self.date)
+                            .where("time = ?", self.time)
+    count = others.sum("guest_count") + self.guest_count
+    return false if self.restaurant.seats < count
     true
   end
 end
