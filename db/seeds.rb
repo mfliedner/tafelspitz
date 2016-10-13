@@ -1634,6 +1634,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Gaumenkitzel",
+  owner_id: 2,
+  description: "Tickle your taste buds at Gaumenkitzel, the Bay Area’s go-to place for fresh organic German home-style comfort food and German sweet treats. Guten Appetit und Prost!",
+  price_range: 2,
+  address: "2121 San Pablo Ave, Berkeley, CA 94702",
+  phone: "(510) 647-5016",
+  lat: 37.8676434,
+  lng: -122.2913952,
+  img_url: "",
+  opening: 61200,
+  closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
