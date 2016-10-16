@@ -1650,6 +1650,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Gasthaus Leopold's",
+  owner_id: 2,
+  description: "Leopold’s is a bar/restaurant completely in Bavarian style. Expect all the German and Austrian foods you can think of, and they deliver in taste and portions. They even confirm the stereotype in their waiters and waitresses who wear typical Oktoberfest outfits, and you can order a two-liter ‘boot’ draught beer. On those warm spring and summer evenings, you can also sit outside. It might not be the coziest place in Russian Hill, but it’s fun. The atmosphere and the extensive beer menu will make you say ‘prost’!",
+  price_range: 1,
+  address: "2400 Polk St, San Francisco, CA, USA",
+  phone: "(415) 474-2000",
+  lat: 37.7989321,
+  lng: -122.4242637,
+  img_url: "",
+  opening: 63000,
+  closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
