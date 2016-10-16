@@ -1655,13 +1655,29 @@ Restaurant.create!(
   owner_id: 2,
   description: "Leopold’s is a bar/restaurant completely in Bavarian style. Expect all the German and Austrian foods you can think of, and they deliver in taste and portions. They even confirm the stereotype in their waiters and waitresses who wear typical Oktoberfest outfits, and you can order a two-liter ‘boot’ draught beer. On those warm spring and summer evenings, you can also sit outside. It might not be the coziest place in Russian Hill, but it’s fun. The atmosphere and the extensive beer menu will make you say ‘prost’!",
   price_range: 1,
-  address: "2400 Polk St, San Francisco, CA, USA",
+  address: "2400 Polk St, San Francisco, CA, 94109",
   phone: "(415) 474-2000",
   lat: 37.798936,
   lng: -122.422151,
   img_url: "",
   opening: 63000,
   closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Biergarten",
+  owner_id: 2,
+  description: "Biergarten is a small (Bavarian style) neighborhood beer garden in the heart of Hayes Valley",
+  price_range: 1,
+  address: "424 Octavia St, San Francisco, CA, 94102",
+  phone: "(415) 252-9289",
+  lat: 37.776105,
+  lng: -122.424127,
+  img_url: "https://media-cdn.tripadvisor.com/media/photo-s/02/fb/ba/3a/biergarten.jpg",
+  opening: 54000,
+  closing: 75600,
   seats: 0,
   menu: ""
 )
