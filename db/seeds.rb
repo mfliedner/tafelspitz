@@ -1657,7 +1657,7 @@ Restaurant.create!(
   price_range: 1,
   address: "2400 Polk St, San Francisco, CA, USA",
   phone: "(415) 474-2000",
-  lat: 37.7989321,
+  lat: 37.7989279,
   lng: -122.4242637,
   img_url: "",
   opening: 63000,
