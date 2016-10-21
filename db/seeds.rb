@@ -1682,6 +1682,90 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Rosamunde Sausage Grill",
+  owner_id: 2,
+  description: "An internationally known, legendary destination in San Francisco, the Haight is the birthplace of Rosamunde Sausage Grill in 1998. Our Haight Street location sits next door to Toronado beer bar, the single most important Bar for the craft beer movement, propelling SF to the forefront in the early days of the '80s. Our sausages are made to feed the craft beer drinker. Locals and tourists alike order their sausage and enjoy them next door at the bar! And have you tried Burger Tuesday?",
+  price_range: 1,
+  address: "545 Haight St, San Francisco, CA, 94117",
+  phone: "(415) 437-6851",
+  lat: 37.771837,
+  lng: -122.431125,
+  img_url: "http://www.rosamundesausagegrill.com/uploads/3/0/9/4/30949701/1624965.jpg?980",
+  opening: 41400,
+  closing: 79200,
+  seats: 0,
+  menu: "grilled sausage on a french roll
+
+step 1 - choose a sausage from list:
+beer sausage
+smoked, spicy pork & beef, Lagunitas IPA
+cheddar brat
+smoked pork & Wisconsin sharp cheddar
+knockwurst
+grass-fed beef
+nuernberger bratwurst
+savory pork
+weisswurst
+traditional style
+hungarian
+smoked pork w/ garlic
+chicken cherry
+smoked, w/ black cherries
+chicken habanero
+spicy & smoked w/ Sauza Tequila Gold
+hot italian
+spicy pork
+mission street
+knockwurst wrapped w/ bacon
+merguez
+lamb w/ moroccan spices
+duck
+figs & brandy
+wild boar
+apples, cranberries & spice
+vegan apple sage
+smoked, w/ potato & ginger
+vegan italian
+red wine, garlic & fennel
+vegan kielbasa
+polish-style sausage
+daily specials
+varies
+
+step 2 - choose two toppings:
+grilled onions
+sauerkraut
+sweet peppers
+hot peppers
+spicy beef chili
+(additional toppings available)
+(gluten-free roll available)
+
+
+sausage plate
+w/ green salad, baked beans (v), sauerkraut
+choose one or two sausages
+
+currywurst
+sliced knockwurst in curry ketchup w/ fries
+
+sides
+german baked beans (vegan)
+german potato salad w/ bacon
+green salad w/ walnuts & blue cheese
+bag of chips
+pickle
+
+condiments
+ketchup
+curry ketchup
+dijon mustard
+honey-wasabi dijon
+spicy brown mustard
+garlic-pepper mayonnaise"
+)
+
 User.create!(
   email: "guest",
   password: "password"
