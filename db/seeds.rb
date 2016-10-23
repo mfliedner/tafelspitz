@@ -1766,6 +1766,24 @@ spicy brown mustard
 garlic-pepper mayonnaise"
 )
 
+Restaurant.create!(
+  name: "Paprika",
+  owner_id: 2,
+  description: "Global gastropub eats & a broad list of brews in a modern beer hall setting with big windows.",
+  price_range: 2,
+  address: "3324 24th St, San Francisco, CA 94110",
+  phone: "(415) 375-1477",
+  lat: 37.752379,
+  lng: -122.419108,
+  img_url: "https://s3-media1.fl.yelpcdn.com/bphoto/p1mo4pKxoqRFxZ74JsnHXQ/ls.jpg",
+  opening: 41400,
+  closing: 84600,
+  seats: 0,
+  menu: "Lunch -- Goulash, Sausages, Salads, Vegan, Soups.
+  Dinner -- Goulash, Sausages, Salads, Vegan.
+  Drinks -- Czech and German draft beers, Wine"
+)
+
 User.create!(
   email: "guest",
   password: "password"
