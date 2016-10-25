@@ -1784,6 +1784,22 @@ Restaurant.create!(
   Drinks -- Czech and German draft beers, Wine"
 )
 
+Restaurant.create!(
+  name: "Schmidt's",
+  owner_id: 2,
+  description: "Communal tables, an extensive beer selection & hearty German grub highlight this casual venue.",
+  price_range: 2,
+  address: "2400 Folsom St, San Francisco, CA 94110",
+  phone: "(415) 401-0200",
+  lat: 37.758778,
+  lng: -122.414971,
+  img_url: "",
+  opening: 61200,
+  closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
