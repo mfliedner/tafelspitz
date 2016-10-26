@@ -1800,6 +1800,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Bistro Gambrinus",
+  owner_id: 2,
+  description: "Gambrinus is a legendary king of Flanders, known as patron of beer. As a tribute to king Gambrinus we bring you finest selection of beers from all over the world accompanied by our great food menu featuring American classics as well as tradition Easter Europen Eats. We offer casual atmosphere where you can relax, eat and meet your friends. Bistro Gambrinus is not an ordinary restaurant: it is more like a traditional Europen Bistro",
+  price_range: 2,
+  address: "1813 Fulton St, San Francisco, CA 94117",
+  phone: "(415) 221-7777",
+  lat: 37.775569,
+  lng: -122.446989,
+  img_url: "http://www.dziuggy.com/gbr/gfx/bgoutside.jpg",
+  opening: 43200,
+  closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
