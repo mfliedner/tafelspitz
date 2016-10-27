@@ -1816,6 +1816,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Steins",
+  owner_id: 2,
+  description: "Restaurant & bar offering steins of beer, including many European varieties, plus German fare & TVs.",
+  price_range: 2,
+  address: "731 Clement St, San Francisco, CA 94118",
+  phone: "(415) 221-3888",
+  lat: 37.782635,
+  lng: -122.467187,
+  img_url: "",
+  opening: 57600,
+  closing: 82800,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
