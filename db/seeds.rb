@@ -1767,6 +1767,22 @@ garlic-pepper mayonnaise"
 )
 
 Restaurant.create!(
+  name: "Rosamunde Sausage Grill - Mission",
+  owner_id: 2,
+  description: "Rosamunde on Mission in San Francisco features 27 beers on tap, wine on tap and 40+ bottle selection all to go perfectly with your choice of grilled sausages and all the sides. Missionites can enjoy the beer garden style seating on our patio or inside on our community tables while feeding on their favorite sausage. With BART at 24th & Mission we're just steps away from happy hour fun ($1 off all taps M-F 4-7pm). Come see us on a sunny weekend for sausage brunch served Sat & Sun 10 am to 3 pm",
+  price_range: 2,
+  address: "2832 Mission Street, San Francisco, CA 94110",
+  phone: "(415) 970-9015",
+  lat: 37.751571,
+  lng: -122.418655,
+  img_url: "",
+  opening: 41400,
+  closing: 86400,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
   name: "Paprika",
   owner_id: 2,
   description: "Global gastropub eats & a broad list of brews in a modern beer hall setting with big windows.",

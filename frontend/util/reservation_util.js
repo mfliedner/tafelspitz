@@ -1,6 +1,7 @@
 module.exports = {
   timing(time) {
     let meridiem = " AM";
+    time = time % 86400;
     if (time > 43199) {
       meridiem = " PM";
       time -= 43200;
