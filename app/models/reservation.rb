@@ -27,13 +27,30 @@ class Reservation < ActiveRecord::Base
   end
 
   def available?
-    return false if self.restaurant.opening > self.time
-    return false if self.restaurant.closing < self.time
+    unless after_midnight?
+      return false if self.restaurant.opening > self.time
+      return false if self.restaurant.closing <= self.time
+    end
     others = Reservation.all.where("restaurant_id = ?", self.restaurant_id)
                             .where("date = ?", self.date)
                             .where("time = ?", self.time)
     count = others.sum("guest_count") + self.guest_count
     return false if self.restaurant.seats < count
     true
+  end
+
+  private
+
+  def after_midnight?
+    # roll after-midnight reservation times over to the next day if possible
+    return false if self.restaurant.closing < 86400
+    if self.time < self.restaurant.opening
+      next_day = self.time + 86400
+      if next_day < self.restaurant.closing
+        self.time = next_day
+        return true
+      end
+    end
+    false
   end
 end
