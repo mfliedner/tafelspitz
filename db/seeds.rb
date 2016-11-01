@@ -1775,7 +1775,7 @@ Restaurant.create!(
   phone: "(415) 970-9015",
   lat: 37.751571,
   lng: -122.418655,
-  img_url: "",
+  img_url: "http://www.rosamundesausagegrill.com/uploads/7/9/4/8/79487746/4847412.jpg",
   opening: 41400,
   closing: 86400,
   seats: 0,
@@ -1793,6 +1793,22 @@ Restaurant.create!(
   lng: -122.274506,
   img_url: "http://www.rosamundesausagegrill.com/uploads/3/0/9/4/30949701/9228040.jpg",
   opening: 39600,
+  closing: 82800,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Rosamunde Sausage Grill - Temescal",
+  owner_id: 2,
+  description: "Hip hole-in-the-wall spot for a variety of housemade grilled sausages on buns, plus craft beer.",
+  price_range: 2,
+  address: "4659 Telegraph Ave, Oakland, CA 94609",
+  phone: "(510) 338-3536",
+  lat: 37.834053,
+  lng: -122.263434,
+  img_url: "http://www.rosamundesausagegrill.com/uploads/7/9/4/8/79487746/7239648.jpg",
+  opening: 41400,
   closing: 82800,
   seats: 0,
   menu: ""
