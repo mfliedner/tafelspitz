@@ -1783,6 +1783,22 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
+  name: "Rosamunde Sausage Grill - Downtown Oakland",
+  owner_id: 2,
+  description: "Grilled sausages and craft beer for all eaters served in a friendly, casual environment.",
+  price_range: 2,
+  address: "911 Washington St, Oakland, CA 94607",
+  phone: "(510) 338-3108",
+  lat: 37.801716,
+  lng: -122.274506,
+  img_url: "http://www.rosamundesausagegrill.com/uploads/3/0/9/4/30949701/9228040.jpg",
+  opening: 39600,
+  closing: 82800,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
   name: "Paprika",
   owner_id: 2,
   description: "Global gastropub eats & a broad list of brews in a modern beer hall setting with big windows.",
