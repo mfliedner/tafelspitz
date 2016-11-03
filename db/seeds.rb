@@ -1880,6 +1880,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Brotzeit Lokal",
+  owner_id: 2,
+  description: "Casual German-American eatery & bar with communal tables, counter seats & waterfront beer garden.",
+  price_range: 2,
+  address: "1000 Embarcadero Oakland, CA 94606",
+  phone: "(510) 645-1905",
+  lat: 37.787698,
+  lng: -122.253963,
+  img_url: "http://n5mdesign.com/brotzeit/wp-content/uploads/2013/07/home-img.jpg",
+  opening: 41400,
+  closing: 75600,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
