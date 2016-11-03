@@ -1885,13 +1885,29 @@ Restaurant.create!(
   owner_id: 2,
   description: "Casual German-American eatery & bar with communal tables, counter seats & waterfront beer garden.",
   price_range: 2,
-  address: "1000 Embarcadero Oakland, CA 94606",
+  address: "1000 Embarcadero, Oakland, CA 94606",
   phone: "(510) 645-1905",
   lat: 37.787698,
   lng: -122.253963,
-  img_url: "http://n5mdesign.com/brotzeit/wp-content/uploads/2013/07/home-img.jpg",
+  img_url: "http://brotzeitbiergarten.com/wp-content/uploads/2016/09/brot-bg.jp",
   opening: 41400,
   closing: 75600,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Harry's Hofbrau",
+  owner_id: 2,
+  description: "Known for its roast turkey, this spot also features sandwiches & salads along with a huge beer list.",
+  price_range: 2,
+  address: "390 Saratoga Ave, San Jose, CA 95129",
+  phone: "(408) 243-0434",
+  lat: 37.320962,
+  lng: -121.970824,
+  img_url: "",
+  opening: 39600,
+  closing: 82800,
   seats: 0,
   menu: ""
 )
