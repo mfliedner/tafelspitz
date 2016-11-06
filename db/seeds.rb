@@ -1912,6 +1912,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Original Gravity",
+  owner_id: 2,
+  description: "Mellow beer bar with unique craft brews, sausage sandwiches & other pub fare, plus an outdoor patio.",
+  price_range: 2,
+  address: "66 S 1st St, San Jose, CA 95113",
+  phone: "(408) 915-2337",
+  lat: 37.335124,
+  lng: -121.889528,
+  img_url: "",
+  opening: 41400,
+  closing: 81000,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
