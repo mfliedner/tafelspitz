@@ -1928,6 +1928,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Gunther's Restaurant",
+  owner_id: 2,
+  description: "Hearty breakfasts & German-inspired lunch & dinner fare, with cafeteria-style service.",
+  price_range: 2,
+  address: "1601 Meridian Ave, San Jose, CA 95125",
+  phone: "(408) 266-9022",
+  lat: 37.294264,
+  lng: -121.914178,
+  img_url: "https://media-cdn.tripadvisor.com/media/photo-s/07/bc/90/58/here-it-is.jpg",
+  opening: 25200,
+  closing: 72000,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
