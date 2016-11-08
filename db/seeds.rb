@@ -1944,6 +1944,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Ludwig's German Table",
+  owner_id: 2,
+  description: "A fresh new German dining experience set within a wonderful historic building in downtown San Jose.",
+  price_range: 2,
+  address: "261 N 2nd St, San Jose, CA 95112",
+  phone: "(650) 766-9158",
+  lat: 37.340382,
+  lng: -121.892775,
+  img_url: "https://media-cdn.tripadvisor.com/media/photo-s/0c/84/d4/fa/ludwig-s-german-table.jpg",
+  opening: 57600,
+  closing: 82800,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
