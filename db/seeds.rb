@@ -1960,6 +1960,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Gestalt",
+  owner_id: 2,
+  description: "Bar & grill known for its specialty sandwiches, beer menu & collection of pinball machines.",
+  price_range: 2,
+  address: "3159 16th St, San Francisco, CA 94103",
+  phone: "(415) 655-9935",
+  lat: 37.764614,
+  lng: -122.423300,
+  img_url: "",
+  opening: 43200,
+  closing: 90000,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
