@@ -1976,6 +1976,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Tap Haus",
+  owner_id: 2,
+  description: "German-inspired beer hall for tap brews at a lively bar, plus sausages, pretzels & other snacks.",
+  price_range: 2,
+  address: "2516 Durant Ave, Berkeley, CA 94704",
+  phone: "(510) 280-5000",
+  lat: 37.867672,
+  lng: -122.258142,
+  img_url: "https://b.zmtcdn.com/data/pictures/9/17848799/e0ad2f998a74dfe6a89e4cf4d8b6d3c3.jpg",
+  opening: 50400,
+  closing: 93600,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
