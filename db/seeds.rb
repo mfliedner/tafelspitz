@@ -1992,6 +1992,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "The Junket",
+  owner_id: 2,
+  description: "European-styled German cafe with sandwiches, bratwurst & beers galore in a relaxed environment.",
+  price_range: 2,
+  address: "235 El Cerrito Plaza, El Cerrito, CA 94530",
+  phone: "(510) 524-4622",
+  lat: 37.899001,
+  lng: -122.299001,
+  img_url: "http://www.thejunket.com/wp-content/uploads/2011/04/IMG_9848.jpg",
+  opening: 30600,
+  closing: 64800,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
