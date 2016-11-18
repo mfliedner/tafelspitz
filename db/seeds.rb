@@ -1889,7 +1889,7 @@ Restaurant.create!(
   phone: "(510) 645-1905",
   lat: 37.787698,
   lng: -122.253963,
-  img_url: "http://brotzeitbiergarten.com/wp-content/uploads/2016/09/brot-bg.jp",
+  img_url: "",
   opening: 41400,
   closing: 75600,
   seats: 0,
@@ -2004,6 +2004,22 @@ Restaurant.create!(
   img_url: "http://www.thejunket.com/wp-content/uploads/2011/04/IMG_9848.jpg",
   opening: 30600,
   closing: 64800,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Gourmet Haus Staudt",
+  owner_id: 2,
+  description: "Rustic but festive hangout with garden seating pairs hearty German grub with beers on tap.",
+  price_range: 2,
+  address: "2615 Broadway, Redwood City, CA 94063",
+  phone: "(650) 364-9232",
+  lat: 37.486112,
+  lng: -122.233532,
+  img_url: "",
+  opening: 36000,
+  closing: 72000,
   seats: 0,
   menu: ""
 )
