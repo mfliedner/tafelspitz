@@ -2024,6 +2024,293 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Baltica",
+  owner_id: 2,
+  description: "Baltica is the Peninsula's first restaurant offering a menu of Eastern European & Taxes Style BBQ, smoked outdoors on a charcoal grill. Entrees range from a classic Chicken Kiev to Barbecued meat. You can also enjoy European style dumplings called Pelmeni and Vareniki filled with Chicken, Beef & Lamb, Potato & House Made Farmers Cheese. Exclusively Hand made on our premises. Baltica is the place to satisfy a variety of cravings and all dishes are prepared fresh, with quality ingredients. We also provide takeout, delivery and off-site catering for special events.
+We have a full liquor bar with 26 Choices of European Beer . Please enjoy our delicious food with drinks!! ",
+  price_range: 2,
+  address: "33 W 25th Ave., San Mateo, CA 94403",
+  phone: "(650) 525-1488",
+  lat: 37.543759,
+  lng: -122.306584,
+  img_url: "https://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/24063448.jpg",
+  opening: 39600,
+  closing: 75600,
+  seats: 20,
+  menu: "Cold Appetizer
+$7.95
+Baltic Kilka
+
+Kilka (5 Sprats) served with sliced Egg, Rye Bread and Country Style Potato
+$7.95
+Baltic Herring
+
+Marinated Herring served with marinated onion & country style potato
+$9.95
+Oladi with Cream Cheese & Salmon
+
+Euro style pancakes topped with the pickled salmon & cream cheese
+$8.95
+Assorted Marinated Veggie Plate
+
+Assorted Marinated Veggie Plate (Zakuska)
+$12.95
+Blini (6) served with Red Caviar
+Hot Appetizer
+$7.95
+Mushroom Julienne
+
+Rich savory mushroom, three cheese blend, onion & sour cream soufflé
+$8.95
+Parmesan Eggplant
+
+Eggplant topped with parmesan cheese & house made marinara
+$8.95
+Stuffed Blintzes with Beef
+
+Stuffed crepes with Beef served with Mushroom Sause
+$7.95
+Chebureky
+
+Stuffed Fried Turnovers with Beef & Lamb Fillings
+$8.95
+Assorted Piroshky (4)
+
+Potato (Vegetarian); Beef; Spinach & Salmon (Vegetarian); Mushroom & Leek (Vegetarian)
+$12.95
+Lumpiang Shanghai
+
+Fried pork egg rolls (10 pic)
+Euro Salads
+$8.95
+Olivier Salad
+
+European style potato salad
+$6.95
+German Cucumber Salad
+
+Sliced Cucumbers with Dill in Sour Cream Sause
+$6.95
+Marinated Cabbage
+Green Salads
+
+Choice of: Shrimp, Grilled Pork or Chicken, add - $3
+$9.95
+Roasted Grape Salad
+
+Arugula mix, pear, walnuts, and caramelized roasted grapes
+$11.95
+Grilled Peach and Arugula Salad
+
+Arugula mix, pancetta, pecan, raisins & goat cheese, house dressing & peach
+$8.95
+Cranberry Spinach
+
+Spinach, cranberries, roasted almond & house vinegar dressing
+Soups
+$7.95
+Borstch
+
+Beets & vegetables cook on beef stock, 12 oz
+$7.95
+Mushroom Soup
+
+A blend of porcini, & champignon mushrooms with barley, 12oz
+$7.95
+Solyanka
+
+Thick, rich soup with variety of meats, 12oz
+$7.95
+Okroshka
+
+Cold vegetable soup on drinkable Yogurt or Kvass (may be served with meat)
+European Style Dumplings
+Beef & Lamb Mix or Chicken
+
+Choice of:
+$14.95
+Pelmeny
+
+Exclusively Hand Made on Premises from All Natural Ingredients May be served with bullion as a Pelmeny Soup
+Potato with Fried Onion or House Made Farmers Cheese
+
+Choice of:
+$14.95
+Vareniky
+
+Exclusively Hand Made on Premises from All Natural Ingredients
+Vegetarian
+$14.95
+Pan Fried Potato with Mushrooms
+$14.95
+Fettuccini with Cheese & Tomato Sause
+$14.95
+Thin Rice Noodles (Bihon)
+
+Asian Thin Rice Noodles with Veggie & Shrimps (Ask for Chicken, can be added)
+$14.95
+Vegetables (Bicol)
+
+Asian Sautéed Veggie & Shrimp in Coconut Milk (Ask for Chicken, can be added)
+Fish
+$19.95
+Pompano Fish
+
+Deep Fried or Grilled with Sweat and Sour Ginger Sauce
+$19.95
+Baked Salmon
+
+Slow baked Salmon
+$19.95
+Milkfish
+
+Deep Fried or Grilled (Gluten - free) (deboned)
+$17.95
+Gefilte Fish
+
+Dish made from a poached mixture of ground deboned fish, such as white fish
+Side Dish
+Buckwheat
+Steamed or Garlic Rice
+Sautéed Spinach
+Sautéed Green Mix
+Country Style Potato
+Mash potato
+Pasta
+Entrée
+$17.95
+Beef Stroganoff
+
+Thin cuts of Beef Strips sautéed in Sour Cream Sauce
+$17.95
+Beef Tongue in Creamy Mushroom Sauce
+
+Thin slices of Beef Tongue topped with Creamy Mushroom Sauce
+$14.95
+Beef Liver in Garlic & Herbs Sauce
+
+Thin slices of Beef Liver with Garlic & Herbs sauce
+$16.95
+Goulash
+
+Rustic Beef Stew has many variations throughout Eastern Europe
+$16.95
+Asian Beef Stew( Kaldareta)
+
+It is a Spanish-influenced dish in Asia
+$23.95
+Rack of Lamb
+
+Cooked on Open Fire
+$16.95
+A La Lulay-Kebob
+
+Grounded Lamb with Herbs, Mediterranean Originated
+$15.95
+Lamb Shank
+
+Slowly Sauté in Savor Tomato Sauce till perfection
+$17.95
+Chicken Kiev
+
+Stuffed, Breaded Chicken Breast with Butter & Herbs (Allow 20-25 min to cook)
+$16.95
+Pozharsky Cutlets
+
+Rustic Traditional Russian Style Diced Chicken Patties
+$15.95
+Chicken on Skewers
+
+Marinated Chicken in Red Asian Sauce and Grilled on Open Fire
+$16.95
+Grilled Pork
+
+Marinated Sliced Pork in Black Asian Ascent Sause and Grilled on Open Fire
+$16.95
+Schnitzel
+
+Thinly Cut Pork, Breaded & Pan Fried
+$16.95
+German Sausages
+
+Assorted German Sausages
+$16.95
+Stuffed Cabbage (Golubtsy)
+
+Cabbage Rolls Stuffed with Natural Ground Turkey & Organic Brown Rice
+Wooden Smoke BBQ (Gluten - Free)
+
+All BBQ plates comes with Baked Beans & Potato Salad. Extra Side Dish - $3
+$14.95
+Pork Ribs BBQ
+$12.95
+Chicken 1/2 BBQ
+$9.95
+Chicken 1/4 BBQ
+$16.95
+Beef Brisket
+$13.95
+Hot Links BBQ
+$13.95
+Polish Sausages
+$17.95
+Combo Chicken & Pork Ribs
+$17.95
+Combo Chicken & Beef Brisket
+$16.95
+Combo Chicken & Hot Links
+$16.95
+Combo Chicken & Polish Sausages
+$18.95
+Combo Beef Brisket & Pork Ribs
+$17.95
+Combo Beef Brisket & Hot Links
+$17.95
+Combo Beef Brisket & Polish Sausages
+$17.95
+Combo Pork Ribs & Polish Sausages
+$17.95
+Combo Pork Ribs & Hot Links
+$25.00
+Whole Slab Pork Ribs BBQ Plate
+$28.95
+Family Combo Plate
+
+Pork, Beef, Chicken, Hot Links, 2 Sides of Beans & 2 Potato Salad
+Beverages
+$2.00
+Sodas
+$6.00
+Tea Pot
+
+Brewed Loose Leaf Ceylon Black Tea (can be served with Milk)
+$6.00
+Fresh Ginger Tea Pot
+
+Fresh Sliced Ginger with Lemon and Pure Honey, served Hot (caffeine free)
+$2.75
+Tea Bags
+
+Green, Mint, Chamomile, Black
+$1.75
+Iced Tea
+$2.75
+Coffee
+$2.95
+Juice
+
+Apple, Orange, Tomato, Pineapple, Cranberry, Calamansi (lime)
+$2.95
+Milk
+$3.00
+Hot Cocoa Mix
+$2.95
+Kvass
+
+Traditional Slavic and Baltic fermented beverage made from rye bread"
+)
+
 User.create!(
   email: "guest",
   password: "password"
