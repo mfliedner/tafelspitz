@@ -2593,7 +2593,7 @@ Review.create!(
   user_id: 1,
   restaurant_id: 13,
   date: "July 5, 2016",
-  rating: 1,
+  rating: 5,
   rate_food: 5,
   rate_ambience: 5,
   rate_service: 5,
@@ -2612,6 +2612,18 @@ Review.create!(
   rate_service: 4,
   rate_value: 0,
   body: "Fantastic food and friendly service. Great standards for a local Swiss restaurant. Keep it secret!"
+)
+
+Review.create!(
+  user_id: 1,
+  restaurant_id: 36,
+  date: "November 20, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 4,
+  rate_service: 5,
+  rate_value: 5,
+  body: "Really enjoyable, great service, very tasty food w good presentation. Some reviews criticized the cucumber salad, it was great as was all the food. Out entire table would go back and have dinner again."
 )
 
 Reservation.create!(
@@ -2826,6 +2838,15 @@ Reservation.create!(
   restaurant_id: 13,
   date: "June 12, 2017",
   guest_count: 2,
+  requests: "",
+  time: 68400
+)
+
+Reservation.create!(
+  guest_id: 1,
+  restaurant_id: 36,
+  date: "November 12, 2016",
+  guest_count: 1,
   requests: "",
   time: 68400
 )
