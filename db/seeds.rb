@@ -2626,6 +2626,18 @@ Review.create!(
   body: "Really enjoyable, great service, very tasty food w good presentation. Some reviews criticized the cucumber salad, it was great as was all the food. Out entire table would go back and have dinner again."
 )
 
+Review.create!(
+  user_id: 2,
+  restaurant_id: 36,
+  date: "November 20, 2016",
+  rating: 5,
+  rate_food: 5,
+  rate_ambience: 2,
+  rate_service: 5,
+  rate_value: 5,
+  body: "Went to this place by chance. Great find! Food and drinks were great, service was great. We will definitely be back!"
+)
+
 Reservation.create!(
   guest_id: 1,
   restaurant_id: 1,
