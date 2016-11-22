@@ -2025,12 +2025,28 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
+  name: "Esther’s German Bakery",
+  owner_id: 2,
+  description: "Snug cafe serving traditional German comfort dishes, brews & baked goods in a welcoming atmosphere.",
+  price_range: 2,
+  address: "987 N San Antonio Rd, Los Altos, CA 94022",
+  phone: "(650) 941-4463",
+  lat: 37.399964,
+  lng: -122.113952,
+  img_url: "http://www.esthersbakery.com/bild1.gif",
+  opening: 27000,
+  closing: 75600,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
   name: "Baltica",
   owner_id: 2,
   description: "Baltica is the Peninsula's first restaurant offering a menu of Eastern European & Taxes Style BBQ, smoked outdoors on a charcoal grill. Entrees range from a classic Chicken Kiev to Barbecued meat. You can also enjoy European style dumplings called Pelmeni and Vareniki filled with Chicken, Beef & Lamb, Potato & House Made Farmers Cheese. Exclusively Hand made on our premises. Baltica is the place to satisfy a variety of cravings and all dishes are prepared fresh, with quality ingredients. We also provide takeout, delivery and off-site catering for special events.
 We have a full liquor bar with 26 Choices of European Beer . Please enjoy our delicious food with drinks!! ",
   price_range: 2,
-  address: "33 W 25th Ave., San Mateo, CA 94403",
+  address: "33 W 25th Ave, San Mateo, CA 94403",
   phone: "(650) 525-1488",
   lat: 37.543759,
   lng: -122.306584,
@@ -2616,7 +2632,7 @@ Review.create!(
 
 Review.create!(
   user_id: 1,
-  restaurant_id: 36,
+  restaurant_id: 37,
   date: "November 20, 2016",
   rating: 5,
   rate_food: 5,
@@ -2628,7 +2644,7 @@ Review.create!(
 
 Review.create!(
   user_id: 2,
-  restaurant_id: 36,
+  restaurant_id: 37,
   date: "November 20, 2016",
   rating: 5,
   rate_food: 5,
@@ -2856,7 +2872,7 @@ Reservation.create!(
 
 Reservation.create!(
   guest_id: 1,
-  restaurant_id: 36,
+  restaurant_id: 37,
   date: "November 12, 2016",
   guest_count: 1,
   requests: "",
