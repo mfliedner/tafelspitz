@@ -14,7 +14,7 @@ const _getCoordsObj = function(latLng) {
 
 const mapOptions = {
   center: {lat: 37.773972, lng: -122.431297}, //San Francisco
-  zoom: 13
+  zoom: 12
 };
 
 const MapContainer = React.createClass({
