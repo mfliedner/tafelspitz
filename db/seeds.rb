@@ -2327,6 +2327,25 @@ Kvass
 Traditional Slavic and Baltic fermented beverage made from rye bread"
 )
 
+Restaurant.create!(
+  name: "Samovar Grocery and Catering",
+  owner_id: 2,
+  description: "Samovar Grocery and Catering located in the heart of Silicon Valley since 1986.
+Our store front features large and diverse variety of food from around the globe, mostly from Poland, Russia, Ukraine, Germany, Hungary, Armenia, Belorussia, Lithuania, Israel, Bulgaria.
+Our kitchen offers opportunity to taste hot home-style Russian traditional food in-store and to-go, as well as variety of popular salads and entries in our refrigerated section.
+Corporate and private catering available on the first come, first serve basis due to high demand and limited capacity.",
+  price_range: 2,
+  address: "1077 Independence Ave, Mountain View, CA 94043",
+  phone: "(650) 969-5327",
+  lat: 37.419475,
+  lng: -122.096624,
+  img_url: "http://bestrussianfood.com/wp-content/uploads/2014/10/samovar_store1.jpg",
+  opening: 39600,
+  closing: 75600,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
