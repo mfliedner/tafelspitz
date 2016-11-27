@@ -2346,6 +2346,22 @@ Corporate and private catering available on the first come, first serve basis du
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Bierhaus",
+  owner_id: 2,
+  description: "A beer garden that has gluten-free options, grass-fed beef burgers & benches imported from Germany.",
+  price_range: 2,
+  address: "383 Castro St, Mountain View, CA 94041",
+  phone: "(650) 395-8209",
+  lat: 37.391423,
+  lng: -122.080159,
+  img_url: "http://res.cloudinary.com/durhwjmwi/image/upload/c_scale,w_1200/v1479964143/customers-looking-at-beer-cart-dog_h3pxp2.jpg",
+  opening: 39600,
+  closing: 75600,
+  seats: 24,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
