@@ -2355,10 +2355,26 @@ Restaurant.create!(
   phone: "(650) 395-8209",
   lat: 37.391423,
   lng: -122.080159,
-  img_url: "http://res.cloudinary.com/durhwjmwi/image/upload/c_scale,w_1200/v1479964143/customers-looking-at-beer-cart-dog_h3pxp2.jpg",
+  img_url: "",
   opening: 39600,
   closing: 75600,
   seats: 24,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Steins Beer Garden",
+  owner_id: 2,
+  description: "Welcome to Steins Beer Garden & Restaurant! Steins is a modern American take on the classic German biergarten, featuring 31 taps of craft and import beer and Modern American Gourmet Comfort Food from Executive Chef Colby M Reade.",
+  price_range: 2,
+  address: "895 Villa St, Mountain View, CA 94041",
+  phone: "(650) 963-9568",
+  lat: 37.393916,
+  lng: -122.079994,
+  img_url: "http://steinsbeergarden.com/steinsfour/wp-content/uploads/2014/10/Website-1-1170x400.jpg",
+  opening: 39600,
+  closing: 82800,
+  seats: 0,
   menu: ""
 )
 
