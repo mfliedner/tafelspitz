@@ -2394,6 +2394,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Hardy's Bavaria",
+  owner_id: 2,
+  description: "Traditional German beer served alongside sausages, sauerkraut & strudel in a relaxed atmosphere.",
+  price_range: 2,
+  address: "111 W Evelyn Ave, Sunnyvale, CA 94086",
+  phone: "(408) 720-1531",
+  lat: 37.377728,
+  lng: -122.029506,
+  img_url: "",
+  opening: 59400,
+  closing: 77400,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
