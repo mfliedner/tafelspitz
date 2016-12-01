@@ -2410,6 +2410,25 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Tyrolean Inn Restaurant",
+  owner_id: 2,
+  description: "
+Come on out and have a good time at the Tyrolean Inn! Wir wünschen Ihnen einen guten Appetit zum Essen wie aus Grossmutter's Küche.
+(We wish you a good appetite for a meal like grandma used to cook at home.)
+",
+  price_range: 2,
+  address: "9600 Highway 9, Ben Lomond CA 95005",
+  phone: "(831) 336-5188",
+  lat: 37.089621,
+  lng: -122.092318,
+  img_url: "http://www.tyroleaninn.com/tyrolean%20inn/Side%20of%20Tyro.jpg",
+  opening: 61200,
+  closing: 75600,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
