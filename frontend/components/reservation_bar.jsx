@@ -113,15 +113,25 @@ const ReservationBar = React.createClass({
     return <ul>{ messages }</ul>;
   },
 
-  render() {
-    return (
-      <div className="reservation-bar">
+  displayBar(seats) {
+    if (seats > 0) {
+      return (
         <form onSubmit={this.handleSubmit} className="reservation-fields">
           <ReservationForm reservationParms={this.state}/>
           <div className="search-button">
             <input type="submit" value="Make Reservation" className="find-button"/>
           </div>
         </form>
+      )
+    } else {
+      return <span>{this.props.restaurant.name} does not take reservations</span>
+    }
+  },
+
+  render() {
+    return (
+      <div className="reservation-bar">
+        {this.displayBar(this.props.restaurant.seats)}
 
         <Modal
           className="alert-mode"
