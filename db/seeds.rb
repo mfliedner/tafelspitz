@@ -2429,6 +2429,22 @@ Come on out and have a good time at the Tyrolean Inn! Wir wünschen Ihnen einen 
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Münchner Haus – Rita's German Deli",
+  owner_id: 2,
+  description: "For more than 30 years, Fremont’s Münchner Haus (House of Munich) has provided San Francisco East Bay residents with fine, authentic German foods.",
+  price_range: 2,
+  address: "39212 Fremont Blvd, Fremont, CA 94538",
+  phone: "(510) 793-6411",
+  lat: 37.547275,
+  lng: -121.985366,
+  img_url: "https://s3-media2.fl.yelpcdn.com/bphoto/FjUJ6ZTgU1ydqwtBDr6r4Q/o.jpg",
+  opening: 36000,
+  closing: 68400,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
