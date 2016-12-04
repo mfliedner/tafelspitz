@@ -268,6 +268,18 @@ const RestaurantShow = React.createClass({
                         {restaurant.phone}
                       </p>
                       <p>
+                        <span className="item-head">Email: </span>
+                        <a href={restaurant.mailto} className="outside-link">
+                          {restaurant.mailto}
+                        </a>
+                      </p>
+                      <p>
+                        <span className="item-head">Website: </span>
+                        <a href={restaurant.website} className="outside-link">
+                          {restaurant.website}
+                        </a>
+                      </p>
+                      <p>
                         <span className="item-head">Opening Time: </span>
                         {Util.timing(restaurant.opening)}
                       </p>

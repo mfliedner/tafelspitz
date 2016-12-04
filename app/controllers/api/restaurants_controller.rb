@@ -54,6 +54,8 @@ class Api::RestaurantsController < ApplicationController
       :closing,
       :seats,
       :phone,
+      :mailto,
+      :website,
       :menu
     )
   end

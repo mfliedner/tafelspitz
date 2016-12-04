@@ -18,6 +18,8 @@
 #  updated_at  :datetime         not null
 #  opening     :integer
 #  closing     :integer
+#  mailto      :string
+#  website     :string
 #
 
 require 'test_helper'
