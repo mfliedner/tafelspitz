@@ -185,6 +185,10 @@ const RestaurantShow = React.createClass({
   },
 
   render() {
+    let mailHead = "";
+    let mailDisplay = "";
+    let webHead = "";
+    let webDisplay = "";
     let reservationID = 0;
     if (this.props.params.reservationId) {
       reservationID = this.props.params.reservationId;
@@ -194,6 +198,16 @@ const RestaurantShow = React.createClass({
     const mapParams = "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
     let staticMap = "http://maps.google.com/maps/api/staticmap?center=";
     staticMap += coords + mapParams + coords;
+
+    if (restaurant.mailto && restaurant.mailto.length > 4) {
+      mailHead = "Email: ";
+      mailDisplay = restaurant.mailto.replace(/^.*?:\/*/,"");
+    }
+
+    if (restaurant.website && restaurant.website.length > 4) {
+      webHead = "Website: ";
+      webDisplay = restaurant.website.replace(/^.*?:\/*/,"");
+    }
 
     return (
         <div className="single-restaurant-show">
@@ -268,15 +282,15 @@ const RestaurantShow = React.createClass({
                         {restaurant.phone}
                       </p>
                       <p>
-                        <span className="item-head">Email: </span>
+                        <span className="item-head">{mailHead}</span>
                         <a href={restaurant.mailto} className="outside-link">
-                          {restaurant.mailto}
+                          {mailDisplay}
                         </a>
                       </p>
                       <p>
-                        <span className="item-head">Website: </span>
+                        <span className="item-head">{webHead}</span>
                         <a href={restaurant.website} className="outside-link">
-                          {restaurant.website}
+                          {webDisplay}
                         </a>
                       </p>
                       <p>

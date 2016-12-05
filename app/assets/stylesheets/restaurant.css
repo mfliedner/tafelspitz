@@ -160,6 +160,23 @@
   font-weight: bolder;
 }
 
+.outside-link {
+  text-decoration: underline;
+  color: blue;
+}
+
+.outside-link:visited {
+  color: purple;
+}
+
+.outside-link:hover {
+  color: hotpink;
+}
+
+.outside-link:active {
+  color: red;
+}
+
 .footer-top {
   color: transparent;
   width: 100%;
