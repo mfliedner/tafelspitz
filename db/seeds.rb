@@ -8,6 +8,8 @@ Restaurant.create!(
   price_range: 3,
   address: "240 Front Street, San Francisco, CA 94111",
   phone: "(415) 421-4778",
+  mailto: "mailto:info@schroederssf.com",
+  website: "http://www.schroederssf.com",
   lat: 37.7939747,
   lng: -122.3986977,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23672195.jpg",
