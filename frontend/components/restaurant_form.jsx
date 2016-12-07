@@ -11,6 +11,8 @@ const RestaurantForm = React.createClass({
       description: "",
       address: "",
       phone: "",
+      mailto: "",
+      website: "",
       menu: "",
       img_url: "",
       price_range: 1
@@ -60,6 +62,16 @@ const RestaurantForm = React.createClass({
               <input type="text" value={this.state.phone}
                 onChange={this.update("phone")} className="restaurant-field"
                 placeholder="Telephone Number"/>
+
+              <label className="restaurant-field-label">Email</label>
+              <input type="text" value={this.state.mailto}
+                onChange={this.update("mailto")} className="restaurant-field"
+                placeholder="Email Contact"/>
+
+              <label className="restaurant-field-label">Website</label>
+              <input type="text" value={this.state.website}
+                onChange={this.update("website")} className="restaurant-field"
+                placeholder="Website"/>
 
               <label className="restaurant-field-label">Menu</label>
               <textarea value={this.state.menu}
