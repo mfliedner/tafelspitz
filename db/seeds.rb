@@ -215,6 +215,8 @@ Restaurant.create!(
   price_range: 2,
   address: "255 N. First Street, San Jose, CA 95113",
   phone: "(408) 292-0291",
+  mailto: "mailto:gbteskes@mac.com",
+  website: "http://teskes-germania.com",
   lat: 37.3398250,
   lng: -121.8936850,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23670952.jpg",
