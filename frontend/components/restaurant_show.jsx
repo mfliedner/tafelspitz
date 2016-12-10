@@ -207,6 +207,9 @@ const RestaurantShow = React.createClass({
     if (restaurant.website && restaurant.website.length > 4) {
       webHead = "Website: ";
       webDisplay = restaurant.website.replace(/^.*?:\/*/,"");
+      if (webDisplay.charAt(webDisplay.length-1) === '/') {
+        webDisplay = webDisplay.slice(0, -1);
+      }
     }
 
     return (

@@ -551,7 +551,7 @@ Restaurant.create!(
   price_range: 2,
   address: "A-217 N Santa Cruz Ave, Los Gatos, CA 95030",
   phone: "(408) 402-5092",
-  website: "http://nasch-bistro.com",
+  website: "http://nasch-bistro.com/",
   lat: 37.2266370,
   lng: -121.9821640,
   img_url: "http://nasch-bistro.com/wp-content/uploads/nasch-bistro-kitchen@2x.jpg",
