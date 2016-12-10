@@ -360,6 +360,8 @@ Restaurant.create!(
   price_range: 2,
   address: "2424 Lincoln Ave, Alameda, CA 94501",
   phone: "(510) 522-1300",
+  mailto: "mailto:info@speisekammer.com",
+  website: "http://www.speisekammer.com",
   lat: 37.7660980,
   lng: -122.2398100,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/24009004.jpg",
