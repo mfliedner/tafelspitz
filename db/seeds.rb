@@ -729,6 +729,7 @@ Restaurant.create!(
   price_range: 2,
   address: "384 E. Campbell Ave, Campbell, CA 95008",
   phone: "(408) 378-0335",
+  website: "http://www.naschmarkt-restaurant.com/",
   lat: 37.2868000,
   lng: -121.9429740,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23690475.jpg",
