@@ -832,6 +832,7 @@ At Simply Fondue, we are committed to bringing you simply the best fondue dining
   price_range: 3,
   address: "2300 First Street, Livermore, CA 94550",
   phone: "(925) 443-6638",
+  website: "http://www.simplyfonduelivermore.com/",
   lat: 37.6824730,
   lng: -121.7679410,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23673326.jpg",
