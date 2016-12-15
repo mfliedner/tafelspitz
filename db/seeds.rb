@@ -1292,6 +1292,8 @@ Restaurant.create!(
   price_range: 3,
   address: "14550 Big Basin Way, Saratoga, CA 95070",
   phone: "(408) 867-3332",
+  mailto: "mailto:reservations@lafondue.com/?page=0",
+  website: "http://www.lafondue.com/",
   lat: 37.2563550,
   lng: -122.0345950,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23677896.jpg",
