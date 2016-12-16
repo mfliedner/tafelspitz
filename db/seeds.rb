@@ -1325,6 +1325,7 @@ Restaurant.create!(
   price_range: 3,
   address: "2323 Van Ness Ave., San Francisco, CA 94109",
   phone: "(415) 885-6116",
+  website: "http://www.thematterhornrestaurant.com/",
   lat: 37.7970910,
   lng: -122.4237880,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23895003.jpg",
