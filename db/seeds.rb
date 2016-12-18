@@ -1493,6 +1493,8 @@ Restaurant.create!(
   price_range: 2,
   address: "1058-C Shell Blvd., Foster City, CA 94404",
   phone: "(650) 571-0507",
+  mailto: "mailto:Alex@ChaletTicino.us",
+  website: "http://chaletticino.us/",
   lat: 37.5499680,
   lng: -122.2643790,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/24009474.jpg",
