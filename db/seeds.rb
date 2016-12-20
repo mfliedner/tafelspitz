@@ -1644,6 +1644,7 @@ Restaurant.create!(
   price_range: 2,
   address: "381 S Van Ness Ave, San Francisco, CA 94103",
   phone: "(415) 551-7181",
+  website: "http://www.walzwerk.com/",
   lat: 37.7672714,
   lng: -122.4174476,
   img_url: "",
