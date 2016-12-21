@@ -1661,12 +1661,13 @@ Restaurant.create!(
   price_range: 2,
   address: "2121 San Pablo Ave, Berkeley, CA 94702",
   phone: "(510) 647-5016",
+  website: "http://www.gaumenkitzel.net/",
   lat: 37.8676434,
   lng: -122.2913952,
   img_url: "",
   opening: 61200,
   closing: 79200,
-  seats: 0,
+  seats: 8,
   menu: ""
 )
 
