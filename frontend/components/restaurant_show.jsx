@@ -186,6 +186,7 @@ const RestaurantShow = React.createClass({
 
   render() {
     let mailHead = "";
+    let mailLink = "";
     let mailDisplay = "";
     let webHead = "";
     let webDisplay = "";
@@ -202,6 +203,7 @@ const RestaurantShow = React.createClass({
     if (restaurant.mailto && restaurant.mailto.length > 4) {
       mailHead = "Email: ";
       mailDisplay = restaurant.mailto.replace(/^.*?:\/*/,"");
+      mailLink = "mailto:" + mailDisplay;
     }
 
     if (restaurant.website && restaurant.website.length > 4) {
@@ -286,7 +288,7 @@ const RestaurantShow = React.createClass({
                       </p>
                       <p>
                         <span className="item-head">{mailHead}</span>
-                        <a href={restaurant.mailto} className="outside-link">
+                        <a href={mailLink} className="outside-link">
                           {mailDisplay}
                         </a>
                       </p>
