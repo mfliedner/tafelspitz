@@ -1696,6 +1696,7 @@ Restaurant.create!(
   price_range: 2,
   address: "424 Octavia St, San Francisco, CA, 94102",
   phone: "(415) 252-9289",
+  website: "http://www.biergartensf.com/",
   lat: 37.776105,
   lng: -122.424127,
   img_url: "https://media-cdn.tripadvisor.com/media/photo-s/02/fb/ba/3a/biergarten.jpg",
