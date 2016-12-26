@@ -1849,6 +1849,7 @@ Restaurant.create!(
   price_range: 2,
   address: "3324 24th St, San Francisco, CA 94110",
   phone: "(415) 375-1477",
+  website: "https://www.facebook.com/Paprika-522063811188717/",
   lat: 37.752379,
   lng: -122.419108,
   img_url: "https://s3-media1.fl.yelpcdn.com/bphoto/p1mo4pKxoqRFxZ74JsnHXQ/ls.jpg",
