@@ -2400,6 +2400,7 @@ Restaurant.create!(
   price_range: 2,
   address: "895 Villa St, Mountain View, CA 94041",
   phone: "(650) 963-9568",
+  website: "http://steinsbeergarden.com/",
   lat: 37.393916,
   lng: -122.079994,
   img_url: "http://steinsbeergarden.com/steinsfour/wp-content/uploads/2014/10/Website-1-1170x400.jpg",
