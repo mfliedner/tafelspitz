@@ -1885,6 +1885,7 @@ Restaurant.create!(
   price_range: 2,
   address: "1813 Fulton St, San Francisco, CA 94117",
   phone: "(415) 221-7777",
+  website: "http://www.beerandgrill.com/",
   lat: 37.775569,
   lng: -122.446989,
   img_url: "http://www.dziuggy.com/gbr/gfx/bgoutside.jpg",
