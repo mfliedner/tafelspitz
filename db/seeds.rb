@@ -1931,12 +1931,13 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  name: "Harry's Hofbrau",
+  name: "Harry's Hofbrau - San Jose",
   owner_id: 2,
   description: "Known for its roast turkey, this spot also features sandwiches & salads along with a huge beer list.",
   price_range: 2,
   address: "390 Saratoga Ave, San Jose, CA 95129",
   phone: "(408) 243-0434",
+  website: "http://www.harryshofbrau.com/",
   lat: 37.320962,
   lng: -121.970824,
   img_url: "",
@@ -2479,6 +2480,23 @@ Restaurant.create!(
   img_url: "https://s3-media2.fl.yelpcdn.com/bphoto/FjUJ6ZTgU1ydqwtBDr6r4Q/o.jpg",
   opening: 36000,
   closing: 68400,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Harry's Hofbrau - San Leandro",
+  owner_id: 2,
+  description: "Cafeteria-style spot focused on hand-carved meats & especially known for whole roasted turkey",
+  price_range: 2,
+  address: "14900 East 14th Street, San Leandro, CA 94578",
+  phone: "(510) 357-1707",
+  website: "http://www.harryshofbrau.com/",
+  lat: 37.706596,
+  lng: -122.129350,
+  img_url: "",
+  opening: 39600,
+  closing: 82800,
   seats: 0,
   menu: ""
 )
