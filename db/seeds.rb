@@ -2501,6 +2501,23 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Harry's Hofbrau - Redwood City",
+  owner_id: 2,
+  description: "Hearty portions of meat/comfort food served cafeteria-style since 1954 in a rustic, dark-wood space.",
+  price_range: 2,
+  address: "1909 El Camino Real, Redwood City, CA 94063",
+  phone: "(650) 366-3733",
+  website: "http://www.harryshofbrau.com/",
+  lat: 37.477824,
+  lng: -122.223157,
+  img_url: "",
+  opening: 39600,
+  closing: 82800,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
