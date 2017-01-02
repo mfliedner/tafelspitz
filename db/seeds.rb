@@ -1954,6 +1954,7 @@ Restaurant.create!(
   price_range: 2,
   address: "66 S 1st St, San Jose, CA 95113",
   phone: "(408) 915-2337",
+  website: "http://originalgravitypub.com/",
   lat: 37.335124,
   lng: -121.889528,
   img_url: "",
