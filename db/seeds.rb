@@ -2022,6 +2022,8 @@ Restaurant.create!(
   price_range: 2,
   address: "2516 Durant Ave, Berkeley, CA 94704",
   phone: "(510) 280-5000",
+  mailto: "berkeley.taphaus@gmail.com",
+  website: "http://berkeleytaphaus.wixsite.com/taphaus",
   lat: 37.867672,
   lng: -122.258142,
   img_url: "https://b.zmtcdn.com/data/pictures/9/17848799/e0ad2f998a74dfe6a89e4cf4d8b6d3c3.jpg",
