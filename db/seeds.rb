@@ -2040,6 +2040,7 @@ Restaurant.create!(
   price_range: 2,
   address: "235 El Cerrito Plaza, El Cerrito, CA 94530",
   phone: "(510) 524-4622",
+  website: "http://www.thejunket.com/",
   lat: 37.899001,
   lng: -122.299001,
   img_url: "http://www.thejunket.com/wp-content/uploads/2011/04/IMG_9848.jpg",
