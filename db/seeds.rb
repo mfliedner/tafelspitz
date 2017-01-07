@@ -2057,6 +2057,8 @@ Restaurant.create!(
   price_range: 2,
   address: "2615 Broadway, Redwood City, CA 94063",
   phone: "(650) 364-9232",
+  mailto: "info@gourmethausstaudt.com",
+  website: "http://www.gourmethausstaudt.com/",
   lat: 37.486112,
   lng: -122.233532,
   img_url: "",
