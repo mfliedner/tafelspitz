@@ -2094,6 +2094,8 @@ We have a full liquor bar with 26 Choices of European Beer . Please enjoy our de
   price_range: 2,
   address: "33 W 25th Ave, San Mateo, CA 94403",
   phone: "(650) 525-1488",
+  mailto: "mybaltica@gmail.com",
+  website: "http://mybaltica.wixsite.com/baltica",
   lat: 37.543759,
   lng: -122.306584,
   img_url: "https://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/24063448.jpg",
