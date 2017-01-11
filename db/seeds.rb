@@ -2385,6 +2385,8 @@ Corporate and private catering available on the first come, first serve basis du
   price_range: 2,
   address: "1077 Independence Ave, Mountain View, CA 94043",
   phone: "(650) 969-5327",
+  mailto: "socium@gmail.com",
+  website: "http://bestrussianfood.com/",
   lat: 37.419475,
   lng: -122.096624,
   img_url: "http://bestrussianfood.com/wp-content/uploads/2014/10/samovar_store1.jpg",
