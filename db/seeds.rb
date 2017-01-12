@@ -2403,6 +2403,8 @@ Restaurant.create!(
   price_range: 2,
   address: "383 Castro St, Mountain View, CA 94041",
   phone: "(650) 395-8209",
+  mailto: "bier@bierha.us",
+  website: "http://bierha.us/",
   lat: 37.391423,
   lng: -122.080159,
   img_url: "",
