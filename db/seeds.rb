@@ -2438,6 +2438,7 @@ Restaurant.create!(
   price_range: 2,
   address: "Village Court Shopping Center, 4540 El Camino Real, Los Altos, CA 94022",
   phone: "(650) 941-3800",
+  website: "http://www.dittmers.com/",
   lat: 37.401527,
   lng: -122.114980,
   img_url: "https://s3-media4.fl.yelpcdn.com/bphoto/nlV66sDku368nm_AY1NO9A/o.jpg",
