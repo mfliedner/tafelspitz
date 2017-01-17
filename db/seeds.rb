@@ -2536,6 +2536,23 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "DJ's Bistro",
+  owner_id: 2,
+  description: "Festive European cafe serving up Wiener schnitzels & Hungarian goulash, plus imported beer.",
+  price_range: 2,
+  address: "1825 Sutter St #C, Concord, CA 94520",
+  phone: "(925) 825-3277",
+  website: "http://www.djs-bistro.com/",
+  lat: 37.973757,
+  lng: -122.038321,
+  img_url: "http://djs-bistro.com/DJPic1.jpg",
+  opening: 39600,
+  closing: 75600,
+  seats: 100,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
