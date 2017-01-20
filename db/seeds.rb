@@ -2553,6 +2553,29 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Little Red Riding Truck",
+  owner_id: 2,
+  description: "My name is Viktoria and I am the owner of the Little Red Riding Truck. I’m from a very small village in Germany called Kesbern. It’s surrounded by forests and wide green meadows. Don’t worry if you never have heard of it it has only a population of approx. 300.
+I grew up in the restaurant and hotel business of my family. It’s in its third generation now and we serve traditional German food as you only can imagine! Schnitzel, Sauerkraut, Spätzle, Potatoes, Potatoes, Potatoes (in all variations), Sausages, Red Cabbage, Roasts, etc. and everything home made, of course, from old recipes from old grandma chefs with a lot of experiences.
+While I was traveling the globe I found San Francisco as my home away from home. I spent over a year in this city and then decided to bring my family owned recipes to the city in a cute truck with a great German theme from the Grimm Brothers.
+The authentic dishes are trained from my mother who has over 30 years kitchen experience, to guarantee the authentic delicious tastes. Of course, all home made!
+
+Follow us on Twitter and Facebook for updates on where we will be!",
+  price_range: 2,
+  address: "San Francisco, CA",
+  phone: "(415) 666-6821",
+  website: "http://www.littleredridingtrucksf.com/",
+  mailto: "littleredridingtrucksf@gmail.com",
+  lat: 37.774929,
+  lng: -122.419416,
+  img_url: "https://static.wixstatic.com/media/7df2e8_4bc71fe479bf4f3ca7abf9539827a930.jpg/v1/fill/w_455,h_135,al_c,q_80,usm_0.66_1.00_0.01/7df2e8_4bc71fe479bf4f3ca7abf9539827a930.jpg",
+  opening: 61200,
+  closing: 72000,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
