@@ -20,6 +20,7 @@
 #  closing     :integer
 #  mailto      :string
 #  website     :string
+#  contact     :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -20,6 +20,7 @@
 #  closing     :integer
 #  mailto      :string
 #  website     :string
+#  contact     :string
 #
 
 require 'test_helper'
