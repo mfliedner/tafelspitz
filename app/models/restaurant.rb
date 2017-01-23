@@ -28,8 +28,8 @@ require_relative "reservation"
 class Restaurant < ActiveRecord::Base
   validates :description, :name, :owner_id, :price_range, :address, presence: true
   validates :price_range, inclusion: { in: (1..4) }
-  validates_format_of :mailto, :with => /@/
-  validates_format_of :contact, :with => /./
+  validates_format_of :mailto, :with => /@/, :allow_blank => true
+  validates_format_of :contact, :with => /./, :allow_blank => true
 
   belongs_to :user,
     foreign_key: :owner_id,

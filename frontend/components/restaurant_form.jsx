@@ -12,6 +12,7 @@ const RestaurantForm = React.createClass({
       address: "",
       phone: "",
       mailto: "",
+      contact: "",
       website: "",
       menu: "",
       img_url: "",
@@ -67,6 +68,11 @@ const RestaurantForm = React.createClass({
               <input type="text" value={this.state.mailto}
                 onChange={this.update("mailto")} className="restaurant-field"
                 placeholder="Email Contact"/>
+
+              <label className="restaurant-field-label">Web contact</label>
+              <input type="text" value={this.state.contact}
+                onChange={this.update("contact")} className="restaurant-field"
+                placeholder="Web Contact form"/>
 
               <label className="restaurant-field-label">Website</label>
               <input type="text" value={this.state.website}
