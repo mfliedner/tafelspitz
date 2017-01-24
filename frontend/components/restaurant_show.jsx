@@ -186,6 +186,8 @@ const RestaurantShow = React.createClass({
 
   render() {
     let mailHead = "";
+    let contactHead = "";
+    let contactDisplay = "";
     let mailLink = "";
     let mailDisplay = "";
     let webHead = "";
@@ -204,6 +206,14 @@ const RestaurantShow = React.createClass({
       mailHead = "Email: ";
       mailDisplay = restaurant.mailto.replace(/^.*?:\/*/,"");
       mailLink = "mailto:" + mailDisplay;
+    }
+
+    if (restaurant.contact && restaurant.contact.length > 4) {
+      contactHead = "Contact Form: ";
+      contactDisplay = restaurant.contact.replace(/^.*?:\/*/,"");
+      if (contactDisplay.charAt(contactDisplay.length-1) === '/') {
+        contactDisplay = contactDisplay.slice(0, -1);
+      }
     }
 
     if (restaurant.website && restaurant.website.length > 4) {
@@ -290,6 +300,12 @@ const RestaurantShow = React.createClass({
                         <span className="item-head">{mailHead}</span>
                         <a href={mailLink} className="outside-link">
                           {mailDisplay}
+                        </a>
+                      </p>
+                      <p>
+                        <span className="item-head">{contactHead}</span>
+                        <a href={restaurant.contact} className="outside-link">
+                          {contactDisplay}
                         </a>
                       </p>
                       <p>
