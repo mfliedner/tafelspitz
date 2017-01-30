@@ -1427,7 +1427,6 @@ Our food is not low-fat or low-calorie, but its ingredients are healthful. The m
   address: "27 E. William St, San Jose, CA 95112",
   phone: "(408) 288-5606",
   mailto: "mailto:info@orchestriapalmcourt.com",
-  contact: "mailto:resv@orchestriapalmcourt.com?Subject=Reservation Request",
   website: "http://orchestriapalmcourt.com/",
   lat: 37.3290020,
   lng: -121.8844600,
