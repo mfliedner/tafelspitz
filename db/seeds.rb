@@ -1496,6 +1496,7 @@ Restaurant.create!(
   address: "1058-C Shell Blvd., Foster City, CA 94404",
   phone: "(650) 571-0507",
   mailto: "mailto:Alex@ChaletTicino.us",
+  contact: "http://eat24hrs.com/restaurants/order2/menu.php?id=474",
   website: "http://chaletticino.us/",
   lat: 37.5499680,
   lng: -122.2643790,
