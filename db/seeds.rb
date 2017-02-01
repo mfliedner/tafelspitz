@@ -1630,6 +1630,7 @@ Restaurant.create!(
   price_range: 2,
   address: "525 Laguna St, San Francisco, CA 94102",
   phone: "(415) 252-9289",
+  email: "suppe@suppenkuche.com",
   website: "http://www.suppenkuche.com/",
   lat: 37.7763007,
   lng: -122.4264457,
