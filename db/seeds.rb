@@ -1684,6 +1684,7 @@ Restaurant.create!(
   address: "2400 Polk St, San Francisco, CA, 94109",
   phone: "(415) 474-2000",
   mailto: "inquiries@leopoldssf.com",
+  contact: "http://www.leopoldssf.com/contact.html",
   website: "http://www.leopoldssf.com/",
   lat: 37.798936,
   lng: -122.422151,
