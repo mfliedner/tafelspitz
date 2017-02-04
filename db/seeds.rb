@@ -1719,6 +1719,7 @@ Restaurant.create!(
   price_range: 2,
   address: "545 Haight St, San Francisco, CA, 94117",
   phone: "(415) 437-6851",
+  contact: "http://www.rosamundesausagegrill.com/haight-street.html",
   website: "http://www.rosamundesausagegrill.com/",
   lat: 37.771837,
   lng: -122.431125,
