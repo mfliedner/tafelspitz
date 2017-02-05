@@ -1805,6 +1805,7 @@ Restaurant.create!(
   price_range: 2,
   address: "2832 Mission Street, San Francisco, CA 94110",
   phone: "(415) 970-9015",
+  contact: "http://www.rosamundesausagegrill.com/mission-street.html",
   website: "http://www.rosamundesausagegrill.com/",
   lat: 37.751571,
   lng: -122.418655,
