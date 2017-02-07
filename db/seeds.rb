@@ -1841,6 +1841,7 @@ Restaurant.create!(
   price_range: 2,
   address: "4659 Telegraph Ave, Oakland, CA 94609",
   phone: "(510) 338-3536",
+  contact: "http://www.rosamundesausagegrill.com/temescal-oakland.html",
   website: "http://www.rosamundesausagegrill.com/",
   lat: 37.834053,
   lng: -122.263434,
