@@ -1823,6 +1823,7 @@ Restaurant.create!(
   price_range: 2,
   address: "911 Washington St, Oakland, CA 94607",
   phone: "(510) 338-3108",
+  contact: "http://www.rosamundesausagegrill.com/downtown-oakland.html",
   website: "http://www.rosamundesausagegrill.com/",
   lat: 37.801716,
   lng: -122.274506,
