@@ -1878,6 +1878,7 @@ Restaurant.create!(
   price_range: 2,
   address: "2400 Folsom St, San Francisco, CA 94110",
   phone: "(415) 401-0200",
+  contact: "http://schmidts-restaurant.com/new-page-1/",
   website: "http://schmidts-restaurant.com/",
   lat: 37.758778,
   lng: -122.414971,
