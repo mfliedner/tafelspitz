@@ -1949,6 +1949,7 @@ Restaurant.create!(
   price_range: 2,
   address: "390 Saratoga Ave, San Jose, CA 95129",
   phone: "(408) 243-0434",
+  contact: "http://www.harryshofbrau.com/contact/",
   website: "http://www.harryshofbrau.com/",
   lat: 37.320962,
   lng: -121.970824,
