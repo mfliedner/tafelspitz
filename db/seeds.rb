@@ -1985,6 +1985,7 @@ Restaurant.create!(
   address: "1601 Meridian Ave, San Jose, CA 95125",
   phone: "(408) 266-9022",
   mailto:"info@guntherscatering.com",
+  contact: "http://www.guntherscatering.com/ContactUs.aspx",
   website: "http://www.guntherscatering.com/",
   lat: 37.294264,
   lng: -121.914178,
