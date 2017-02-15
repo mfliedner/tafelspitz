@@ -2525,6 +2525,7 @@ Restaurant.create!(
   price_range: 2,
   address: "14900 East 14th Street, San Leandro, CA 94578",
   phone: "(510) 357-1707",
+  contact: "http://www.harryshofbrau.com/contact/",
   website: "http://www.harryshofbrau.com/",
   lat: 37.706596,
   lng: -122.129350,
