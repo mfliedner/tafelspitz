@@ -2561,6 +2561,7 @@ Restaurant.create!(
   price_range: 2,
   address: "1825 Sutter St #C, Concord, CA 94520",
   phone: "(925) 825-3277",
+  contact: "http://www.djs-bistro.com/reservations.html",
   website: "http://www.djs-bistro.com/",
   lat: 37.973757,
   lng: -122.038321,
