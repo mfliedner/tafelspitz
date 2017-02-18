@@ -2543,6 +2543,7 @@ Restaurant.create!(
   price_range: 2,
   address: "1909 El Camino Real, Redwood City, CA 94063",
   phone: "(650) 366-3733",
+  contact: "http://www.harryshofbrau.com/contact/",
   website: "http://www.harryshofbrau.com/",
   lat: 37.477824,
   lng: -122.223157,
