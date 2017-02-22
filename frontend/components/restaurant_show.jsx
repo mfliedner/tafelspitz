@@ -214,6 +214,10 @@ const RestaurantShow = React.createClass({
       if (contactDisplay.charAt(contactDisplay.length-1) === '/') {
         contactDisplay = contactDisplay.slice(0, -1);
       }
+      if (contactDisplay.length > 40) {
+        contactDisplay = contactDisplay.slice(0, 34) + "..." +
+                         contactDisplay.slice(-3);
+      }
     }
 
     if (restaurant.website && restaurant.website.length > 4) {
