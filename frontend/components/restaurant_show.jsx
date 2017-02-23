@@ -226,6 +226,10 @@ const RestaurantShow = React.createClass({
       if (webDisplay.charAt(webDisplay.length-1) === '/') {
         webDisplay = webDisplay.slice(0, -1);
       }
+      if (webDisplay.length > 40) {
+        webDisplay = webDisplay.slice(0, 34) + "..." +
+                         webDisplay.slice(-3);
+      }
     }
 
     return (
