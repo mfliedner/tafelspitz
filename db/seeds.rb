@@ -149,6 +149,7 @@ Restaurant.create!(
   description: "Cafe Europa is a Central/Eastern European restaurant in San Francisco. We serve fresh homemade favorites from Poland, Germany, Russia and many more countries. We take pride in our food and prepare everything in house fresh. Our idea is to bring together Central/Eastern European cuisine and make it welcoming for everyone regardless of their background. Our menu features such fan favorites as: Pierogi, Red Borscht, Dill Cucumber Soup - another soup that’s a hit with our guests, Pork Schnitzel - tenderized loin breaded and sautéed (Some say best in San Francisco), Stuffed Cabbage Rolls, Homemade sausage - yes we do our own sausage in house from scratch, Goulash and Stroganoff stews with rich sauces full of flavor. While European cuisine is meat heavy we do offer few excellent vegetarian/vegan choices. Since we do everything in house we know all the ingredients and can accommodate people with food allergies. We also offer one of the best European beer selections in the city.",
   price_range: 2,
   address: "4318 California St, San Francisco, CA 94118",
+  website: "https://www.facebook.com/europasf/",
   lat: 37.7853473,
   lng: -122.4638523,
   img_url: "http://resizer.otstatic.com/v1/fDzI465IL8%2B687zSupRS4Q/23667277.jpg",
