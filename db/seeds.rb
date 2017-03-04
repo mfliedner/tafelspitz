@@ -2605,6 +2605,8 @@ Restaurant.create!(
   price_range: 2,
   address: "424 Merchant St, San Francisco, CA 94111",
   phone: "(415) 627-7464",
+  mailto: "cafeprague@earthlink.net",
+  contact: "http://www.cafepraguesf.com/reservations-cafe-prague",
   website: "http://www.cafepraguesf.com/",
   lat: 37.795514,
   lng: -122.400995,
