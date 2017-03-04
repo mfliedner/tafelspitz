@@ -2598,6 +2598,23 @@ Follow us on Twitter and Facebook for updates on where we will be!",
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Cafe Prague",
+  owner_id: 2,
+  description: "Cozy & colorful alley tavern featuring Eastern European standards, sandwiches & Czech beers.",
+  price_range: 2,
+  address: "424 Merchant St, San Francisco, CA 94111",
+  phone: "(415) 627-7464",
+  website: "http://www.cafepraguesf.com/",
+  lat: 37.795514,
+  lng: -122.400995,
+  img_url: "https://static.wixstatic.com/media/159ba4_cf96a17fdaf44b4e8a1e808ffda5876f.png/v1/fill/w_663,h_420,al_c,usm_0.66_1.00_0.01/159ba4_cf96a17fdaf44b4e8a1e808ffda5876f.png",
+  opening: 41400,
+  closing: 86400,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
