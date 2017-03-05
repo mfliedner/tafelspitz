@@ -2613,7 +2613,7 @@ Restaurant.create!(
   img_url: "https://static.wixstatic.com/media/159ba4_cf96a17fdaf44b4e8a1e808ffda5876f.png/v1/fill/w_663,h_420,al_c,usm_0.66_1.00_0.01/159ba4_cf96a17fdaf44b4e8a1e808ffda5876f.png",
   opening: 41400,
   closing: 86400,
-  seats: 0,
+  seats: -1,
   menu: ""
 )
 

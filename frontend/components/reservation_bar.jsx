@@ -123,6 +123,8 @@ const ReservationBar = React.createClass({
           </div>
         </form>
       )
+    } else if (seats < 0) {
+      return <span>For reservations contact {this.props.restaurant.name} directly</span>
     } else {
       return <span>{this.props.restaurant.name} does not accept reservations</span>
     }
