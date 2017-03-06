@@ -34,6 +34,9 @@ class Reservation < ActiveRecord::Base
     others = Reservation.all.where("restaurant_id = ?", self.restaurant_id)
                             .where("date = ?", self.date)
                             .where("time = ?", self.time)
+    # negative seat count in database means restaurant has direct reservations link
+    return true if self.restaurant.seats < 0
+    # determine whether seats are still available based on reservation database
     count = others.sum("guest_count") + self.guest_count
     return false if self.restaurant.seats < count
     true

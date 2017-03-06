@@ -91,9 +91,13 @@ class Restaurant < ActiveRecord::Base
     reservations = Reservation.where("date = ?", params[:date])
                               .where("time = ?", time)
     avail = []
+
+    # determine seat availability (seats < 0 means "contact restaurant directly")
     filtered.each do |restaurant|
       taken = reservations.inject(0) { |res, table| res + table.guest_count }
-      avail << restaurant if taken + guest_count <= restaurant.seats
+      if (restaurant.seats < 0) || (taken + guest_count <= restaurant.seats)
+        avail << restaurant
+      end
     end
     avail
   end
