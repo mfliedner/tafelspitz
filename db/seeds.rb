@@ -2617,6 +2617,25 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Red Tavern",
+  owner_id: 2,
+  description: "A menu of Eastern European classics like borscht and stroganoff, with some modern variations too.",
+  price_range: 2,
+  address: "2229 Clement St, San Francisco, CA 94121",
+  phone: "(415) 750-9090",
+  mailto: "redtavernsf@yahoo.com",
+  contact: "",
+  website: "http://redtavernsf.com/",
+  lat: 37.781784,
+  lng: -122.483276,
+  img_url: "https://s3-media4.fl.yelpcdn.com/bphoto/aN6KJAcNjmHUtkXuYIRpIg/o.jpg",
+  opening: 46800,
+  closing: 79200,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
