@@ -2636,6 +2636,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Sub Marin Fleischwolf",
+  owner_id: 2,
+  description: "Traditional German cuisine prepared with your tastebuds in mind. Fresh to go, events, and delivery for parties.",
+  price_range: 2,
+  address: "5641 Paradise Dr, Corte Madera, CA 94925",
+  phone: "(415) 444-6954",
+  lat: 37.919625,
+  lng: -122.508581,
+  img_url: "https://localcontent.zenfs.com/821a/821a219ae5b36bfc20e35e8bc1f5f73c.jpg",
+  opening: 37800,
+  closing: 68400,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
