@@ -2652,6 +2652,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Vladimir’s Czechoslovakian Restaurant",
+  owner_id: 2,
+  description: "Vladimir’s is a step back in time with an interior perfectly preserved, if a little shop-worn, from 1960. Founder Vladimir Nevl died in 2008 and his daughter now runs it, serving the same dishes that have been on the menu since the restaurant opened. Meals are prix-fixe and include warm home-baked bread with sweet butter, cooked red cabbage, a Czech dumpling and a scoop of potato salad. The food is heavy and European but tasty; cabbage rolls, Moravian sausage, goulash and paprikash are just some of the choices.",
+  price_range: 2,
+  address: "12785 Sir Francis Drake Blvd, Inverness, CA 94937",
+  phone: "(415) 669-1021",
+  lat: 38.096992,
+  lng: -122.852167,
+  img_url: "https://s3-media2.fl.yelpcdn.com/bphoto/RPLtGZcttTj2CP_i-C9XoA/o.jpg",
+  opening: 43200,
+  closing: 75600,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
