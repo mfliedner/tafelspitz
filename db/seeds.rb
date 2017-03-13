@@ -2675,6 +2675,7 @@ Restaurant.create!(
   price_range: 2,
   address: "11 Town Square Pl, Vacaville, CA 95688",
   phone: "(707) 447-4121",
+  mailto: "info@puregrainbakery.com",
   lat: 38.356932,
   lng: -121.987421,
   img_url: "",
