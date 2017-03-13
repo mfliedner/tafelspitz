@@ -2668,6 +2668,22 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Pure Grain Bakery & Cafe",
+  owner_id: 2,
+  description: "Spacious, informal outfit offering coffee, sandwiches & German-style pastries, breads & cakes.",
+  price_range: 2,
+  address: "11 Town Square Pl, Vacaville, CA 95688",
+  phone: "(707) 447-4121",
+  lat: 38.356932,
+  lng: -121.987421,
+  img_url: "",
+  opening: 23400,
+  closing: 61200,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
