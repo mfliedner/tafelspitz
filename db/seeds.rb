@@ -2669,7 +2669,7 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  name: "Pure Grain Bakery & Cafe",
+  name: "Pure Grain Bakery Cafe",
   owner_id: 2,
   description: "Spacious, informal outfit offering coffee, sandwiches & German-style pastries, breads & cakes.",
   price_range: 2,
@@ -2683,6 +2683,25 @@ Restaurant.create!(
   img_url: "",
   opening: 23400,
   closing: 61200,
+  seats: 0,
+  menu: ""
+)
+
+Restaurant.create!(
+  name: "Pure Grain Bakery",
+  owner_id: 2,
+  description: "Spacious, informal outfit offering coffee, sandwiches & German-style pastries, breads & cakes.",
+  price_range: 2,
+  address: "600 Eubanks Ct Ste A, Vacaville, CA 95688",
+  phone: "(707) 451-0991",
+  mailto: "info@puregrainbakery.com",
+  contact: "http://www.puregrainbakery.com/the-bakery",
+  website: "http://www.puregrainbakery.com/",
+  lat: 38.396215,
+  lng: -121.960794,
+  img_url: "",
+  opening: 19800,
+  closing: 54000,
   seats: 0,
   menu: ""
 )
