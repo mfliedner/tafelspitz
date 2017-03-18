@@ -2599,7 +2599,7 @@ Follow us on Twitter and Facebook for updates on where we will be!",
 )
 
 Restaurant.create!(
-  name: "Cafe Prague",
+  name: "Café Prague",
   owner_id: 2,
   description: "Cozy & colorful alley tavern featuring Eastern European standards, sandwiches & Czech beers.",
   price_range: 2,
