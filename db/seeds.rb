@@ -2625,7 +2625,6 @@ Restaurant.create!(
   address: "2229 Clement St, San Francisco, CA 94121",
   phone: "(415) 750-9090",
   mailto: "redtavernsf@yahoo.com",
-  contact: "",
   website: "http://redtavernsf.com/",
   lat: 37.781784,
   lng: -122.483276,
