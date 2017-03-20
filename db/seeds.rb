@@ -1888,7 +1888,7 @@ Restaurant.create!(
   img_url: "https://static1.squarespace.com/static/54654064e4b099303e2ce602/t/5854698cf7e0abf4573fdd65/1481927140195/Schmidts_3.jpg?format=750w",
   opening: 61200,
   closing: 79200,
-  seats: 0,
+  seats: -2,
   menu: ""
 )
 

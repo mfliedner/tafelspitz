@@ -123,11 +123,19 @@ const ReservationBar = React.createClass({
           </div>
         </form>
       )
-    } else if (seats < 0) {
+    } else if (seats == -1) {
       return (
         <span>
           For reservations contact <a href={this.props.restaurant.contact} className="outside-link">
-          {this.props.restaurant.name}</a> directly
+          {this.props.restaurant.name}</a> directly.
+        </span>
+      )
+    } else if (seats < -1) {
+      const call = "tel:" + this.props.restaurant.phone;
+      return (
+        <span>
+          For reservations call {this.props.restaurant.name} at <a href={call} className="outside-link">
+          {this.props.restaurant.phone}</a>.
         </span>
       )
     } else {
