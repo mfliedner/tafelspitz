@@ -2445,7 +2445,7 @@ Restaurant.create!(
   img_url: "http://steinsbeergarden.com/steinsfour/wp-content/uploads/2014/10/Website-1-1170x400.jpg",
   opening: 39600,
   closing: 82800,
-  seats: 0,
+  seats: -1,
   menu: ""
 )
 
