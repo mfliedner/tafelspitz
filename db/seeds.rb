@@ -1934,14 +1934,13 @@ Restaurant.create!(
   address: "1000 Embarcadero, Oakland, CA 94606",
   phone: "(510) 645-1905",
   mailto: "brotzeitlokal@hotmail.com",
-  contact: "http://brotzeitbiergarten.com/menu/",
   website: "http://brotzeitbiergarten.com/",
   lat: 37.787698,
   lng: -122.253963,
   img_url: "",
   opening: 41400,
   closing: 75600,
-  seats: 0,
+  seats: -2,
   menu: ""
 )
 
