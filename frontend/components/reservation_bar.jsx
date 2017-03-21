@@ -131,7 +131,7 @@ const ReservationBar = React.createClass({
         </span>
       )
     } else if (seats < -1) {
-      const call = "tel:" + this.props.restaurant.phone;
+      const call = "tel:" + this.props.restaurant.phone.match(/\d+/g).join("");
       return (
         <span>
           For reservations call {this.props.restaurant.name} at <a href={call} className="outside-link">
