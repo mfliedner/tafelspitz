@@ -185,9 +185,11 @@ const RestaurantShow = React.createClass({
   },
 
   render() {
-    let mailHead = "";
+    let phoneHead = "";
+    let phoneLink = "";
     let contactHead = "";
     let contactDisplay = "";
+    let mailHead = "";
     let mailLink = "";
     let mailDisplay = "";
     let webHead = "";
@@ -201,6 +203,11 @@ const RestaurantShow = React.createClass({
     const mapParams = "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
     let staticMap = "http://maps.google.com/maps/api/staticmap?center=";
     staticMap += coords + mapParams + coords;
+
+    if (restaurant.phone && restaurant.phone.length > 4) {
+      phoneHead = "Phone: ";
+      phoneLink = "tel:" + restaurant.phone.match(/\d+/g).join("");
+    }
 
     if (restaurant.mailto && restaurant.mailto.length > 4) {
       mailHead = "Email: ";
@@ -301,8 +308,10 @@ const RestaurantShow = React.createClass({
                     </div>
                     <div className="block-detail">
                       <p>
-                        <span className="item-head">Phone number: </span>
-                        {restaurant.phone}
+                        <span className="item-head">{phoneHead}</span>
+                        <a href={phoneLink} className="outside-link">
+                          {restaurant.phone}
+                        </a>
                       </p>
                       <p>
                         <span className="item-head">{mailHead}</span>
