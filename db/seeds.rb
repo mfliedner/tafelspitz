@@ -1905,7 +1905,7 @@ Restaurant.create!(
   img_url: "http://www.dziuggy.com/gbr/gfx/bgoutside.jpg",
   opening: 43200,
   closing: 79200,
-  seats: 0,
+  seats: -2,
   menu: ""
 )
 
