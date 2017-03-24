@@ -2021,7 +2021,6 @@ Restaurant.create!(
   price_range: 2,
   address: "3159 16th St, San Francisco, CA 94103",
   phone: "(415) 655-9935",
-  website: "http://gestalt.haus/",
   lat: 37.764614,
   lng: -122.423300,
   img_url: "",
