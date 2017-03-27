@@ -2090,6 +2090,7 @@ Restaurant.create!(
   price_range: 2,
   address: "987 N San Antonio Rd, Los Altos, CA 94022",
   phone: "(650) 941-4463",
+  contact: "https://www.esthersbakery.com/pages/contact-us",
   mailto: "customerservice@esthersbakery.com",
   website: "http://www.esthersbakery.com/",
   lat: 37.399964,
