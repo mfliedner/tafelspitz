@@ -2095,7 +2095,7 @@ Restaurant.create!(
   website: "http://www.esthersbakery.com/",
   lat: 37.399964,
   lng: -122.113952,
-  img_url: "http://www.esthersbakery.com/bild1.gif",
+  img_url: "https://cdn.shopify.com/s/files/1/1571/3173/files/Screen_Shot_2016-11-26_at_12.37.42_PM.png?v=1480192699",
   opening: 27000,
   closing: 75600,
   seats: 0,
