@@ -2499,7 +2499,7 @@ Come on out and have a good time at the Tyrolean Inn! Wir wünschen Ihnen einen 
   img_url: "http://www.tyroleaninn.com/tyrolean%20inn/Side%20of%20Tyro.jpg",
   opening: 61200,
   closing: 75600,
-  seats: 0,
+  seats: -2,
   menu: ""
 )
 
