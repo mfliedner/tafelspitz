@@ -130,12 +130,23 @@ const ReservationBar = React.createClass({
           {this.props.restaurant.name}</a> directly.
         </span>
       )
-    } else if (seats < -1) {
+    } else if (seats == -2) {
       const call = "tel:" + this.props.restaurant.phone.match(/\d+/g).join("");
       return (
         <span>
           For reservations call {this.props.restaurant.name} at <a href={call} className="outside-link">
           {this.props.restaurant.phone}</a>.
+        </span>
+      )
+    } else if (seats == -3) {
+      const call = "tel:" + this.props.restaurant.phone.match(/\d+/g).join("");
+      const mailDisplay = this.props.restaurant.mailto.replace(/^.*?:\/*/,"");
+      const mailLink = "mailto:" + mailDisplay;
+      return (
+        <span>
+          For reservations call {this.props.restaurant.name} at <a href={call} className="outside-link">
+          {this.props.restaurant.phone}</a> or email <a href={mailLink} className="outside-link">
+          {mailDisplay}</a>.
         </span>
       )
     } else {

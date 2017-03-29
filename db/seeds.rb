@@ -2630,7 +2630,7 @@ Restaurant.create!(
   img_url: "https://s3-media4.fl.yelpcdn.com/bphoto/aN6KJAcNjmHUtkXuYIRpIg/o.jpg",
   opening: 46800,
   closing: 79200,
-  seats: 0,
+  seats: -3,
   menu: ""
 )
 
