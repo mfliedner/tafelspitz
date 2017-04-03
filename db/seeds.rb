@@ -1657,7 +1657,7 @@ Restaurant.create!(
   img_url: "",
   opening: 63000,
   closing: 79200,
-  seats: 0,
+  seats: -2,
   menu: ""
 )
 
