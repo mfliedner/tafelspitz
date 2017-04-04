@@ -1868,7 +1868,7 @@ Restaurant.create!(
   img_url: "https://s3-media1.fl.yelpcdn.com/bphoto/p1mo4pKxoqRFxZ74JsnHXQ/ls.jpg",
   opening: 41400,
   closing: 84600,
-  seats: 0,
+  seats: -2,
   menu: "Lunch -- Goulash, Sausages, Salads, Vegan, Soups.
   Dinner -- Goulash, Sausages, Salads, Vegan.
   Drinks -- Czech and German draft beers, Wine"
