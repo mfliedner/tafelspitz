@@ -2005,6 +2005,7 @@ Restaurant.create!(
   price_range: 2,
   address: "261 N 2nd St, San Jose, CA 95112",
   phone: "(650) 766-9158",
+  website: "https://www.ludwigssj.com/",
   lat: 37.340382,
   lng: -121.892775,
   img_url: "https://media-cdn.tripadvisor.com/media/photo-s/0c/84/d4/fa/ludwig-s-german-table.jpg",
