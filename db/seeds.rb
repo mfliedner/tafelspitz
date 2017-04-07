@@ -2004,7 +2004,7 @@ Restaurant.create!(
   description: "A fresh new German dining experience set within a wonderful historic building in downtown San Jose.",
   price_range: 2,
   address: "261 N 2nd St, San Jose, CA 95112",
-  phone: "(650) 766-9158",
+  phone: "(408) 771-9871",
   website: "https://www.ludwigssj.com/",
   lat: 37.340382,
   lng: -121.892775,
