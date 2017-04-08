@@ -2005,13 +2005,14 @@ Restaurant.create!(
   price_range: 2,
   address: "261 N 2nd St, San Jose, CA 95112",
   phone: "(408) 771-9871",
+  contact: "https://www.yelp.com/reservations/ludwigs-german-table-san-jose?from_reserve_now=1",
   website: "https://www.ludwigssj.com/",
   lat: 37.340382,
   lng: -121.892775,
   img_url: "https://media-cdn.tripadvisor.com/media/photo-s/0c/84/d4/fa/ludwig-s-german-table.jpg",
   opening: 57600,
   closing: 82800,
-  seats: 0,
+  seats: -1,
   menu: ""
 )
 
