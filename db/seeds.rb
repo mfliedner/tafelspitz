@@ -1919,7 +1919,7 @@ Restaurant.create!(
   website: "https://www.facebook.com/Steins-227680483955482/",
   lat: 37.782635,
   lng: -122.467187,
-  img_url: "https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-1/c48.14.172.172/p200x200/318581_238417302881800_1706080519_n.jpg?oh=7df096095489a663af134af2d69c3fb9&oe=58DA58B5",
+  img_url: "",
   opening: 57600,
   closing: 82800,
   seats: 0,
