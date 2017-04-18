@@ -2480,7 +2480,7 @@ Restaurant.create!(
   phone: "(408) 720-1531",
   lat: 37.377728,
   lng: -122.029506,
-  img_url: "",
+  img_url: "http://tse1.mm.bing.net/th?id=OIP.MEl--sH3pCzIvWGBc7frgwEsDH&w=141&h=98&c=8&rs=1&qlt=90&pid=3.1&rm=2",
   opening: 59400,
   closing: 77400,
   seats: 0,
