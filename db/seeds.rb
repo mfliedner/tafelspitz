@@ -2478,6 +2478,7 @@ Restaurant.create!(
   price_range: 2,
   address: "111 W Evelyn Ave, Sunnyvale, CA 94086",
   phone: "(408) 720-1531",
+  website: "https://www.facebook.com/Hardys-Bavaria-109427556775/",
   lat: 37.377728,
   lng: -122.029506,
   img_url: "http://tse1.mm.bing.net/th?id=OIP.MEl--sH3pCzIvWGBc7frgwEsDH&w=141&h=98&c=8&rs=1&qlt=90&pid=3.1&rm=2",
