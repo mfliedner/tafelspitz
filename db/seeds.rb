@@ -2652,7 +2652,7 @@ Restaurant.create!(
   img_url: "https://localcontent.zenfs.com/821a/821a219ae5b36bfc20e35e8bc1f5f73c.jpg",
   opening: 37800,
   closing: 68400,
-  seats: 0,
+  seats: -2,
   menu: ""
 )
 
@@ -2668,7 +2668,7 @@ Restaurant.create!(
   img_url: "https://s3-media2.fl.yelpcdn.com/bphoto/RPLtGZcttTj2CP_i-C9XoA/o.jpg",
   opening: 43200,
   closing: 75600,
-  seats: 0,
+  seats: -2,
   menu: ""
 )
 
