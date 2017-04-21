@@ -1691,11 +1691,120 @@ Restaurant.create!(
   website: "http://www.leopoldssf.com/",
   lat: 37.798936,
   lng: -122.422151,
-  img_url: "",
+  img_url: "http://www.leopoldssf.com/uploads/7/1/8/4/7184089/5016131.jpg",
   opening: 63000,
   closing: 79200,
-  seats: 0,
-  menu: ""
+  seats: 20,
+  menu: '$1.50 cake fee per Person. $15 Corkage per bottle (2 maximum) ~ We are not responsible for lost or stolen items!
+SALADS AND APPETIZERS (VORSPEISEN)
+$12.75
+Vegetable Strudel
+seasonal vegetables & gruyere cheese, with herbed aïoli and spring greens salad
+$11.75
+Watercress, Fennel And Arugula Salad
+almonds, asiago cheese, apples and celery
++$6.00
+Add Chicken Breast
+$12.75
+Roasted Beet, Endive And Mâche Salad
+walnuts, radishes and horseradish crème fraîche
++$6.00
+Add Chicken Breast
+$13.75
+Crispy Pig Trotters
+frisée salad, fingerling potatoes, poached quail egg and pickled shallots
+$13.75
+Cured Salmon
+potato pancake, kohlrabi & fennel salad and horseradish crème fraiche
+$14.25
+Crisp Flatbread
+caramelized onions, speck (pork), gruyère cheese and arugula
+$14.95
+House-made Sausage
+with sauerkraut and butter-caraway potatoes
+$14.95
+Grilled Duck Crépinettes
+wrapped in green cabbage leaves, with mashed potatoes and duck prosciutto
+$23.95
+House-made Salumi Platter
+(for 3 or more). selected hams, cured meats, house-made paté with mixed pickled vegetables, dijon mustard and peasant bread
+$11.95
+Mini (For2)
+SOUPS (SUPPEN)
+$7.95
+Chicken Soup
+with semolina herb dumpling
+$7.95
+Soup Of The Day
+SIDES (BEILAGEN)
+$5.75
+
+Spätzle
+Mashed Potatoes
+Gruyere Mashed Potatoes
+Potato Pancake
+Butter Caraway Potatoes
+Potato-cucumber salad
+Herb Bread Dumpling
+Fingerling Potatoes
+Sauerkraut
+Red Cabbage
+Green Salad
+Cucumber Salad
+Seasonal Vegetables
+Jäger Sauce
+ENTRÉES (HAUPTGERICHTE)
+$18.95
+Tagliatelle
+butternut squash, forest mushrooms, wild arugula, green peas, radiccio, asiago cheese
++$3.00
+Add Bacon
++$5.00
+Add Chicken Breast
+$19.25
+Käsespätzle
+Austrian "Mac&Cheese" with crisp onions & green salad
++$3.00
+Add Bacon
+$21.95
+Roasted Chicken Breast "jäger Art"
+pearl onions, mushrooms, pancetta (pork), with herb dumpling and red cabbage
+$21.75
+Wiener Schnitzel
+breaded & fried pork loin with potato-cucumber salad and lingonberry sauce
+$24.95
+Jägerschnitzel
+breaded & fried pork loin with sauce"Jäger Art" and butter spätzle
+$23.95
+Pan-Fried Trout
+wrapped in pancetta (pork) with wilted braising greens, oven-roasted tomatoes, sherry vinaigrette and fingerling potatoes
+$21.95
+Paprika Beef Goulash
+hearty beef stew with butter spätzle and green salad
+$23.95
+Braised Beef Short Rib
+Gruyère cheese mashed potatoes, red cabbage, horseradish, crisp onions
+$23.95
+Fennel-Roasted Pork Tenderloin
+with porcini pork sausage, green & white beans, herbed dumpling, sherry jus
+$25.00
+Choucroute Garni Platter
+pork ribs, smoked pork loin &bratwurst, sauerkraut & butter caraway potatoes
+DESSERTS (NACHTISCHE)
+Apfelstrudel
+$7.95
+With Vanilla Sauce & Whipped Cream
+$9.50
+With Vanilla Ice Cream
+$7.95
+Schokoladenmousse
+white & dark mousse au chocolat with fresh berry coulis
+$7.95
+Linzer Torte
+shortbread with raspberry marmelade, whipped cream and fresh berry coulis
+$9.50
+Flourless Chocolate Cake
+with vanilla ice cream & fresh berry coulis'
 )
 
 Restaurant.create!(
