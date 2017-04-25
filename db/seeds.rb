@@ -2028,7 +2028,7 @@ Restaurant.create!(
   website: "https://www.facebook.com/Steins-227680483955482/",
   lat: 37.782635,
   lng: -122.467187,
-  img_url: "",
+  img_url: "https://s3-media1.fl.yelpcdn.com/bphoto/kR7i2WZaB0v2hrwPDJyevg/o.jpg",
   opening: 57600,
   closing: 82800,
   seats: 0,
