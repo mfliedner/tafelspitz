@@ -2046,7 +2046,7 @@ Restaurant.create!(
   website: "http://brotzeitbiergarten.com/",
   lat: 37.787698,
   lng: -122.253963,
-  img_url: "",
+  img_url: "http://brotzeitbiergarten.com/wp-content/uploads/2013/07/P7076596-150x150.jpg",
   opening: 41400,
   closing: 75600,
   seats: -3,
