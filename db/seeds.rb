@@ -2819,6 +2819,24 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Gestalt Haus",
+  owner_id: 2,
+  description: "The home of Beers Brats and Bikes this Sausage and Beer hangout is well known throughout the whole Bay Area and to visitors from all over the world as a place to stop, relax, and enjoy over thirty Draft Beers and some 20 styles of Sausages",
+  price_range: 2,
+  address: "28 Bolinas Rd, Fairfax, CA 94930",
+  phone: "(415) 721-7895",
+  contact: "https://gestalthausoffairfax.com/contact-us",
+  website: "https://gestalthausoffairfax.com/",
+  lat: 37.986649,
+  lng: -122.589342,
+  img_url: "https://scontent.fsnc1-4.fna.fbcdn.net/v/t31.0-8/703515_10151174046090765_474873486_o.jpg?oh=bf165c35dcdf40acca97e5666ca1178c&oe=59868DB7",
+  opening: 41400,
+  closing: 86400,
+  seats: 0,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
