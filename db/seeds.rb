@@ -2189,11 +2189,11 @@ Restaurant.create!(
   website: "http://www.gourmethausstaudt.com/",
   lat: 37.486112,
   lng: -122.233532,
-  img_url: "",
+  img_url: "http://www.gourmethausstaudt.com/images/building_front.jpg",
   opening: 36000,
   closing: 72000,
   seats: 0,
-  menu: "https://s1.yimg.com/bt/api/res/1.2/d4lfbQxtZ8U5gUreu866cA--/YXBwaWQ9c3JjaGZldGQ7dz0xMDAwO2g9NzUw/https://s.yimg.com/vp/11af/11af942260ac625ddb71b9a3084e6948.jpg"
+  menu: ""
 )
 
 Restaurant.create!(
