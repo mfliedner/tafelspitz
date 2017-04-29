@@ -2523,7 +2523,7 @@ Corporate and private catering available on the first come, first serve basis du
   img_url: "http://bestrussianfood.com/wp-content/uploads/2014/10/samovar_store1.jpg",
   opening: 39600,
   closing: 75600,
-  seats: 0,
+  seats: -3,
   menu: ""
 )
 
