@@ -2837,6 +2837,24 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Pomelo - Outer Noe Valley",
+  owner_id: 2,
+  description: "Globe-trotting menu served in a casual dining room with open-kitchen views, plus sidewalk seating.",
+  price_range: 2,
+  address: "1793 Church St, San Francisco, CA 94131",
+  phone: "(415) 285-2257",
+  mailto: "pomelo@pomelosf.com",
+  website: "http://www.pomelosf.com/",
+  lat: 37.742304,
+  lng: -122.426386,
+  img_url: "http://www.pomelosf.com/WP_20130805_010.jpg",
+  opening: 36000,
+  closing: 52200,
+  seats: -3,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
