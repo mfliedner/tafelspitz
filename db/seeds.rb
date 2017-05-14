@@ -2855,6 +2855,24 @@ Restaurant.create!(
   menu: ""
 )
 
+Restaurant.create!(
+  name: "Pomelo - Inner Sunset",
+  owner_id: 2,
+  description: "Compact space with open kitchen featuring globetrotting menu combining Asian & European cuisines.",
+  price_range: 2,
+  address: "92 Judah St, San Francisco, CA 94122",
+  phone: "(415) 731-6175",
+  mailto: "pomelo@pomelosf.com",
+  website: "http://www.pomelosf.com/",
+  lat: 37.762463,
+  lng: -122.462615,
+  img_url: "http://www.pomelosf.com/pomelo%20Judah.jpg",
+  opening: 63000,
+  closing: 79200,
+  seats: -3,
+  menu: ""
+)
+
 User.create!(
   email: "guest",
   password: "password"
