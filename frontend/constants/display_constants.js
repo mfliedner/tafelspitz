@@ -10,7 +10,9 @@ const DisplayConstants = {
     "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM", "9:30 PM", "10:00 PM", "10:30 PM",
     "11:00 PM", "11:30 PM"],
   LIKED: "\u2665",
-  NOT_LIKED: "\u2661"
+  NOT_LIKED: "\u2661",
+  STATIC_MAP_API: "http://maps.google.com/maps/api/staticmap?center=",
+  STATIC_MAP_PARAMS: "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
 };
 
 module.exports = DisplayConstants;

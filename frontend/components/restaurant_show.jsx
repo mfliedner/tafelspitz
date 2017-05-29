@@ -200,9 +200,7 @@ const RestaurantShow = React.createClass({
     }
     const restaurant = this.state.restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
-    const mapParams = "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
-    let staticMap = "http://maps.google.com/maps/api/staticmap?center=";
-    staticMap += coords + mapParams + coords;
+    let staticMap = STATIC_MAP_API + coords + STATIC_MAP_PARAMS + coords;
 
     if (restaurant.phone && restaurant.phone.length > 4) {
       phoneHead = "Phone: ";
