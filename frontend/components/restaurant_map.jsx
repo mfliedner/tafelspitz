@@ -3,6 +3,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const FilterActions = require('../actions/filter_actions');
+const DisplayConstants = require('../constants/display_constants');
 const hashHistory = require('react-router').hashHistory;
 
 const _getCoordsObj = function(latLng) {
@@ -13,8 +14,8 @@ const _getCoordsObj = function(latLng) {
 }
 
 const mapOptions = {
-  center: {lat: 37.773972, lng: -122.431297}, //San Francisco
-  zoom: 12
+  center: {lat: DisplayConstants.DEFAULT_CENTER_LAT, lng: DisplayConstants.DEFAULT_CENTER_LNG}, //San Francisco
+  zoom: DisplayConstants.DEFAULT_MAP_ZOOM
 };
 
 const MapContainer = React.createClass({

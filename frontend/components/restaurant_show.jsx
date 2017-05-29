@@ -200,7 +200,7 @@ const RestaurantShow = React.createClass({
     }
     const restaurant = this.state.restaurant;
     const coords = restaurant.lat + "%2C" + restaurant.lng;
-    let staticMap = STATIC_MAP_API + coords + STATIC_MAP_PARAMS + coords;
+    let staticMap = DisplayConstants.STATIC_MAP_API + coords + DisplayConstants.STATIC_MAP_PARAMS + coords;
 
     if (restaurant.phone && restaurant.phone.length > 4) {
       phoneHead = "Phone: ";

@@ -11,6 +11,9 @@ const DisplayConstants = {
     "11:00 PM", "11:30 PM"],
   LIKED: "\u2665",
   NOT_LIKED: "\u2661",
+  DEFAULT_CENTER_LAT: 37.773972,
+  DEFAULT_CENTER_LNG: -122.431297,
+  DEFAULT_MAP_ZOOM: 12,
   STATIC_MAP_API: "http://maps.google.com/maps/api/staticmap?center=",
   STATIC_MAP_PARAMS: "&size=772x136&zoom=15&scale=2&maptype=roadmap&format=jpg&markers=icon%3Ahttp%3A%2F%2Fmedia.otstatic.com%2Fimg%2Fmap-marker-blue-1e9959e1eab6a1311c5bc48b4086b596.png%7C"
 };
